@@ -20,13 +20,14 @@ internal object TranscriptionTasks {
             status = if (json.optBoolean("busy")) "任务已中断，可继续" else json.optString("status"),
             completed = json.optInt("completed"), total = json.optInt("total"),
             hasPartial = json.optInt("completed") > 0,
+            provider = AsrProvider.fromId(json.optString("provider", AsrProvider.SILICON_FLOW.id))
         )
         mutable.value = mutable.value + (file.canonicalPath to state)
     }
-    @Synchronized fun begin(file: File): Boolean {
+    @Synchronized fun begin(file: File, provider: AsrProvider = AsrProvider.SILICON_FLOW): Boolean {
         if (mutable.value.any { it.value.busy }) return false
         val old = mutable.value[file.canonicalPath] ?: TranscriptionUiState()
-        mutable.value = mutable.value + (file.canonicalPath to old.copy(busy = true, complete = false, text = "", status = "准备音频", progress = null, message = null))
+        mutable.value = mutable.value + (file.canonicalPath to old.copy(busy = true, complete = false, text = "", status = "准备音频", progress = null, message = null, provider = provider))
         return true
     }
     @Synchronized fun update(context: Context, file: File, transform: (TranscriptionUiState) -> TranscriptionUiState) {
@@ -34,7 +35,12 @@ internal object TranscriptionTasks {
         mutable.value = mutable.value + (file.canonicalPath to state)
         val target = record(context, file)
         val pending = File(target.path + ".tmp")
-        val json = JSONObject().put("busy", state.busy).put("status", state.status).put("completed", state.completed).put("total", state.total)
+        val json = JSONObject()
+            .put("busy", state.busy)
+            .put("status", state.status)
+            .put("completed", state.completed)
+            .put("total", state.total)
+            .put("provider", state.provider.id)
         pending.writeText(json.toString())
         check(pending.renameTo(target)) { "无法保存任务状态" }
     }

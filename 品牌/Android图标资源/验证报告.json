@@ -1,0 +1,78 @@
+{
+  "adaptive_layers": [
+    {
+      "file": "android/res/drawable-mdpi/xiaofu_launcher_foreground.png",
+      "size": 108,
+      "max_visible_radius_dp": 29.129,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-mdpi/xiaofu_launcher_monochrome.png",
+      "size": 108,
+      "max_visible_radius_dp": 31.185,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-hdpi/xiaofu_launcher_foreground.png",
+      "size": 162,
+      "max_visible_radius_dp": 29.758,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-hdpi/xiaofu_launcher_monochrome.png",
+      "size": 162,
+      "max_visible_radius_dp": 32.087,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-xhdpi/xiaofu_launcher_foreground.png",
+      "size": 216,
+      "max_visible_radius_dp": 29.751,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-xhdpi/xiaofu_launcher_monochrome.png",
+      "size": 216,
+      "max_visible_radius_dp": 31.837,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-xxhdpi/xiaofu_launcher_foreground.png",
+      "size": 324,
+      "max_visible_radius_dp": 29.557,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-xxhdpi/xiaofu_launcher_monochrome.png",
+      "size": 324,
+      "max_visible_radius_dp": 31.851,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-xxxhdpi/xiaofu_launcher_foreground.png",
+      "size": 432,
+      "max_visible_radius_dp": 29.762,
+      "safe_radius_dp": 33
+    },
+    {
+      "file": "android/res/drawable-xxxhdpi/xiaofu_launcher_monochrome.png",
+      "size": 432,
+      "max_visible_radius_dp": 31.86,
+      "safe_radius_dp": 33
+    }
+  ],
+  "legacy_dimensions": "passed",
+  "play": {
+    "size": [
+      512,
+      512
+    ],
+    "alpha": "fully opaque",
+    "bytes": 172184,
+    "sRGB_profile": true
+  },
+  "visual_check": "circle, rounded square, squircle and monochrome previews inspected",
+  "aapt2_compile": "passed",
+  "aapt2_link": "passed",
+  "device_installation": "not performed"
+}

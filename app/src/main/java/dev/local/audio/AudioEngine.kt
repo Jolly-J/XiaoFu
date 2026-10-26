@@ -45,8 +45,14 @@ data class AudioSource(
     val isLossless: Boolean get() = mime == MediaFormat.MIMETYPE_AUDIO_AAC
 }
 
-enum class OutputFormat(val extension: String, val mime: String) {
-    M4A("m4a", "audio/mp4"), WAV("wav", "audio/wav")
+enum class OutputFormat(
+    val extension: String,
+    val mime: String,
+    val tag: String,
+    val description: String
+) {
+    M4A("m4a", "audio/mp4", "体积小", "M4A：压缩率高、体积小，适合日常存储与转写"),
+    WAV("wav", "audio/wav", "高保真", "WAV：无损采样、高保真，文件体积相对较大")
 }
 
 data class AudioExport(val file: File, val durationUs: Long, val mime: String = "audio/mp4")

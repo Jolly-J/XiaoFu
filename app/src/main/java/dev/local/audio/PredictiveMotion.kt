@@ -3,8 +3,11 @@ package dev.local.audio
 import kotlin.math.ln
 
 /** Port of 咔捕 lib/app_theme.dart's progress mapping and layered slide/fade (no scaling). */
-internal fun dampedBackTarget(raw: Double): Double =
-    (ln(1.0 + 2.4 * raw.coerceIn(0.0, 1.0)) / ln(3.4)).coerceIn(0.0, .96)
+internal fun dampedBackTarget(raw: Double): Double {
+    // Shorter drag travel: pulling ~45%-50% of screen reaches full target instead of dragging across entire screen
+    val effectiveRaw = (raw / 0.48).coerceIn(0.0, 1.0)
+    return (ln(1.0 + 2.4 * effectiveRaw) / ln(3.4)).coerceIn(0.0, .96)
+}
 
 internal fun dampedDisplacement(progress: Double): Double =
     ln(1.0 + 4.5 * progress.coerceIn(0.0, 1.0)) / ln(5.5)

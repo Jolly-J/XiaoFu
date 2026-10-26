@@ -2,7 +2,9 @@ package dev.local.audio
 
 import androidx.activity.compose.PredictiveBackHandler
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.AnimationSpec
 import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -21,12 +23,15 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
-private enum class MotionPhase { Idle, Entering, Dragging, Returning, Leaving }
+internal enum class MotionPhase { Idle, Entering, Dragging, Returning, Leaving }
+
+internal val LocalMotionProgress = compositionLocalOf { 0f }
+internal val LocalMotionPhase = compositionLocalOf { MotionPhase.Idle }
 
 /**
  * One progress drives the outgoing page, themed mask, and actual previous page.
  * Keeps all live routes composed (and per-route saveable state) until the pop completes.
- * Geometry deliberately contains only horizontal translation and opacity: scale is always 1.
+ * Supports Container Morphing for audio-to-transcript workflows, and layered horizontal slide for settings/history.
  */
 @Composable
 internal fun SmoothBackHost(
@@ -45,14 +50,28 @@ internal fun SmoothBackHost(
     val savedPages = rememberSaveableStateHolder()
     val currentPop by rememberUpdatedState(onPop)
     val currentStack by rememberUpdatedState(backStack)
-    val settleCurve = remember { CubicBezierEasing(.18f, 1f, .04f, 1f) }
+    val standardCurve = remember { CubicBezierEasing(0.12f, 0.96f, 0.22f, 1.0f) }
+    val morphExitSpring = remember {
+        spring<Float>(
+            dampingRatio = 0.82f,
+            stiffness = 260f,
+            visibilityThreshold = 0.0005f
+        )
+    }
+    val morphEnterSpring = remember {
+        spring<Float>(
+            dampingRatio = 0.65f,
+            stiffness = 220f,
+            visibilityThreshold = 0.0005f
+        )
+    }
 
-    fun settle(end: Double, duration: Int, finished: () -> Unit) {
+    fun settle(end: Double, spec: AnimationSpec<Float>, finished: () -> Unit) {
         motionJob?.cancel()
         val token = ++generation
         motionJob = scope.launch {
             val value = Animatable(progress.toFloat())
-            value.animateTo(end.toFloat(), tween(duration.coerceAtLeast(1), easing = settleCurve)) {
+            value.animateTo(end.toFloat(), spec) {
                 if (generation == token) progress = this.value.toDouble()
             }
             if (generation == token) finished()
@@ -70,24 +89,39 @@ internal fun SmoothBackHost(
         if (displayed.size < 2 || phase != MotionPhase.Idle) return
         val destination = displayed.dropLast(1)
         phase = MotionPhase.Leaving
-        // Programmatic maybePop-like return follows the same three layers.
-        settle(1.0, 300) { completePop(destination, true) }
+        val leavingMorph = displayed.lastOrNull()?.startsWith("transcript:") == true
+        if (leavingMorph) {
+            settle(1.0, morphExitSpring) { completePop(destination, true) }
+        } else {
+            settle(1.0, tween(320, easing = standardCurve)) { completePop(destination, true) }
+        }
     }
 
     LaunchedEffect(backStack) {
         if (backStack == displayed) return@LaunchedEffect
         motionJob?.cancel()
         generation++
+        val enteringMorph = backStack.lastOrNull()?.startsWith("transcript:") == true
+        val leavingMorph = displayed.lastOrNull()?.startsWith("transcript:") == true
         if (backStack.size < displayed.size && displayed.take(backStack.size) == backStack) {
             phase = MotionPhase.Leaving
-            settle(1.0, (800 * (1 - progress)).toInt()) { completePop(currentStack.toList(), false) }
+            if (leavingMorph) {
+                settle(1.0, morphExitSpring) { completePop(currentStack.toList(), false) }
+            } else {
+                val baseDur = 340
+                val dur = (baseDur * (1 - progress)).toInt().coerceIn(180, baseDur)
+                settle(1.0, tween(dur, easing = standardCurve)) { completePop(currentStack.toList(), false) }
+            }
         } else if (backStack.size > displayed.size && backStack.take(displayed.size) == displayed) {
             displayed = backStack.toList()
             progress = 1.0
             phase = MotionPhase.Entering
-            settle(0.0, 300) { progress = 0.0; phase = MotionPhase.Idle }
+            if (enteringMorph) {
+                settle(0.0, morphEnterSpring) { progress = 0.0; phase = MotionPhase.Idle }
+            } else {
+                settle(0.0, tween(340, easing = standardCurve)) { progress = 0.0; phase = MotionPhase.Idle }
+            }
         } else {
-            // Replacement/deep link: stale gestures must never pop the new target.
             displayed = backStack.toList()
             progress = 0.0
             phase = MotionPhase.Idle
@@ -122,19 +156,31 @@ internal fun SmoothBackHost(
                 if (generation == token) {
                     motionJob?.cancel()
                     phase = MotionPhase.Leaving
-                    // Same continuation as Flutter TransitionRoute: from current p, never reset.
-                    val duration = if (receivedGesture) (800 * (1 - progress)).toInt() else 300
-                    settle(1.0, duration) { completePop(destination, true) }
+                    val leavingMorph = displayed.lastOrNull()?.startsWith("transcript:") == true
+                    if (leavingMorph) {
+                        settle(1.0, morphExitSpring) { completePop(destination, true) }
+                    } else {
+                        val baseDur = 340
+                        val duration = if (receivedGesture) (baseDur * (1 - progress)).toInt().coerceIn(180, baseDur) else baseDur
+                        settle(1.0, tween(duration, easing = standardCurve)) { completePop(destination, true) }
+                    }
                 }
             } catch (cancelled: CancellationException) {
-                // AndroidX cancels the gesture coroutine on onBackCancelled. Resume in
-                // the still-live host scope; lifecycle disposal cancels that scope too.
                 if (generation == token && scope.isActive) {
                     motionJob?.cancel()
                     phase = MotionPhase.Returning
-                    settle(0.0, (800 * progress).toInt().coerceAtMost(300)) {
-                        progress = 0.0
-                        phase = MotionPhase.Idle
+                    val morph = displayed.lastOrNull()?.startsWith("transcript:") == true
+                    if (morph) {
+                        settle(0.0, morphEnterSpring) {
+                            progress = 0.0
+                            phase = MotionPhase.Idle
+                        }
+                    } else {
+                        val baseDur = 320
+                        settle(0.0, tween((baseDur * progress).toInt().coerceIn(180, baseDur), easing = standardCurve)) {
+                            progress = 0.0
+                            phase = MotionPhase.Idle
+                        }
                     }
                 }
             }
@@ -142,14 +188,13 @@ internal fun SmoothBackHost(
     }
 
     val transitioning = phase != MotionPhase.Idle && displayed.size > 1
+    val isMorphRoute = displayed.lastOrNull()?.startsWith("transcript:") == true
     val colors = MaterialTheme.colorScheme
     Box(Modifier.fillMaxSize().clipToBounds().background(colors.background)) {
         displayed.forEachIndexed { index, route ->
             val foreground = index == displayed.lastIndex
             val previous = index == displayed.lastIndex - 1
-            if (foreground && transitioning) {
-                // Source uses both incoming opacity and a separate mask. Do not replace with
-                // an ordinary two-page crossfade: that exposes overlapping text too early.
+            if (foreground && transitioning && !isMorphRoute) {
                 Box(Modifier.fillMaxSize().graphicsLayer { alpha = backLayers(progress).maskAlpha }
                     .background(colors.background))
             }
@@ -157,25 +202,45 @@ internal fun SmoothBackHost(
             val semantics = if (interactive) Modifier else Modifier.clearAndSetSemantics { }
             key(route) {
                 Box(Modifier.fillMaxSize().then(semantics).graphicsLayer {
-                    val layers = backLayers(progress)
-                    alpha = when {
-                        !transitioning && foreground -> 1f
-                        transitioning && foreground -> layers.foregroundAlpha
-                        transitioning && previous -> layers.backgroundAlpha
-                        else -> 0f
+                    if (isMorphRoute) {
+                        if (foreground) {
+                            alpha = 1f
+                            translationX = 0f
+                        } else if (previous) {
+                            val p = progress.toFloat().coerceIn(0f, 1f)
+                            val scale = 0.94f + 0.06f * p
+                            scaleX = scale
+                            scaleY = scale
+                            alpha = (0.45f + 0.55f * p).coerceIn(0f, 1f)
+                            translationX = 0f
+                        } else {
+                            alpha = 0f
+                        }
+                    } else {
+                        val layers = backLayers(progress)
+                        alpha = when {
+                            !transitioning && foreground -> 1f
+                            transitioning && foreground -> layers.foregroundAlpha
+                            transitioning && previous -> layers.backgroundAlpha
+                            else -> 0f
+                        }
+                        translationX = if (!transitioning) 0f else when {
+                            foreground -> size.width * layers.foregroundXFraction
+                            previous -> size.width * layers.backgroundXFraction
+                            else -> 0f
+                        }
                     }
-                    translationX = if (!transitioning) 0f else when {
-                        foreground -> size.width * layers.foregroundXFraction
-                        previous -> size.width * layers.backgroundXFraction
-                        else -> 0f
-                    }
-                    // No scale, corner animation, vertical drag, or page shadow.
                 }.pointerInput(interactive) {
                     if (!interactive) awaitPointerEventScope {
                         while (true) awaitPointerEvent(PointerEventPass.Initial).changes.forEach { it.consume() }
                     }
                 }) {
-                    savedPages.SaveableStateProvider(route) { content(route, ::requestBack) }
+                    CompositionLocalProvider(
+                        LocalMotionProgress provides progress.toFloat(),
+                        LocalMotionPhase provides phase
+                    ) {
+                        savedPages.SaveableStateProvider(route) { content(route, ::requestBack) }
+                    }
                 }
             }
         }

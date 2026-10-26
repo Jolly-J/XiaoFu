@@ -1,0 +1,13 @@
+将以下两个属性合并到现有 AndroidManifest.xml 的 <application> 标签；不要覆盖整个文件。
+android:icon="@mipmap/ic_launcher"
+android:roundIcon="@mipmap/ic_launcher_round"
+
+例如：
+<application
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    ... >
+    ...
+</application>
+
+“...”仅是省略占位，不是可编译 XML。

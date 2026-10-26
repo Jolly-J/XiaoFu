@@ -1,0 +1,212 @@
+[
+  {
+    "path": "android/AndroidManifest.application-snippet.txt",
+    "bytes": 393,
+    "sha256": "fd1b74f0c29ab9cab24f3be6300bbfce162f2fb25fd47db1c511a49e4e167f03"
+  },
+  {
+    "path": "android/res/drawable-hdpi/xiaofu_launcher_foreground.png",
+    "bytes": 12416,
+    "sha256": "8e86a475cf4b238f522a5ae14a084bf6c713a1b116da1e04038415d06a3388e4"
+  },
+  {
+    "path": "android/res/drawable-hdpi/xiaofu_launcher_monochrome.png",
+    "bytes": 4402,
+    "sha256": "e104510542a5c919b7e1c3b6a98f7b0690b829da15502be11becd53b41a16b72"
+  },
+  {
+    "path": "android/res/drawable-mdpi/xiaofu_launcher_foreground.png",
+    "bytes": 6292,
+    "sha256": "d6ead1085353f129b9f46c0f89c774b0de23911e6b0fa5ce34a2ac4dccb7dd5d"
+  },
+  {
+    "path": "android/res/drawable-mdpi/xiaofu_launcher_monochrome.png",
+    "bytes": 2980,
+    "sha256": "d9651b46314611668b1ed90b4b249eac2004ee7881f027bef41426c67d653dd7"
+  },
+  {
+    "path": "android/res/drawable-xhdpi/xiaofu_launcher_foreground.png",
+    "bytes": 19960,
+    "sha256": "506eab6dca4dcdb94d1742ac27486d560deeaf1e673f6a8661405bcbe3d94d2c"
+  },
+  {
+    "path": "android/res/drawable-xhdpi/xiaofu_launcher_monochrome.png",
+    "bytes": 7153,
+    "sha256": "ae0c324aae6c01b810b15832a7f0b59b26366e1d2fcb8389a08446f6ca9e68e3"
+  },
+  {
+    "path": "android/res/drawable-xxhdpi/xiaofu_launcher_foreground.png",
+    "bytes": 40981,
+    "sha256": "1687de85d9a4848c1a0aa50f6168a8fad26e4f2a342a44199b4c2bc8e479eb37"
+  },
+  {
+    "path": "android/res/drawable-xxhdpi/xiaofu_launcher_monochrome.png",
+    "bytes": 13284,
+    "sha256": "1918c1715b78ee14a9e90186d2c301e9809562240d2b17324054fbc994e03611"
+  },
+  {
+    "path": "android/res/drawable-xxxhdpi/xiaofu_launcher_foreground.png",
+    "bytes": 67425,
+    "sha256": "dd6a9ce6eecd09a8a8ef94d082209c72608fdcbd4c6a11699dd2686bdc203428"
+  },
+  {
+    "path": "android/res/drawable-xxxhdpi/xiaofu_launcher_monochrome.png",
+    "bytes": 23273,
+    "sha256": "c201bf55226c1be3b0c8afbd1b4fd17082419ed84e3964a235ff76b8fdf6730f"
+  },
+  {
+    "path": "android/res/mipmap-anydpi-v26/ic_launcher.xml",
+    "bytes": 278,
+    "sha256": "515210bb589e4628ac50d54a69712c2d7cfe76634b38f9845bf8131557ed66b8"
+  },
+  {
+    "path": "android/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+    "bytes": 278,
+    "sha256": "515210bb589e4628ac50d54a69712c2d7cfe76634b38f9845bf8131557ed66b8"
+  },
+  {
+    "path": "android/res/mipmap-anydpi-v33/ic_launcher.xml",
+    "bytes": 353,
+    "sha256": "e82a283c50960657611f191149f5b6ada96ba2b454144f2dd8c0a9bfd16ef24f"
+  },
+  {
+    "path": "android/res/mipmap-anydpi-v33/ic_launcher_round.xml",
+    "bytes": 353,
+    "sha256": "e82a283c50960657611f191149f5b6ada96ba2b454144f2dd8c0a9bfd16ef24f"
+  },
+  {
+    "path": "android/res/mipmap-hdpi/ic_launcher.png",
+    "bytes": 6106,
+    "sha256": "3c04aaf5e264f881bd08aa66752422e44adee31c09d0c89f38f653af47513c2b"
+  },
+  {
+    "path": "android/res/mipmap-hdpi/ic_launcher_round.png",
+    "bytes": 6780,
+    "sha256": "0a479ffe696f4fce280163bf54d033fd1bdb0c9872c46ef6dfdc12b1c277dcac"
+  },
+  {
+    "path": "android/res/mipmap-mdpi/ic_launcher.png",
+    "bytes": 3326,
+    "sha256": "6c90f5c1e0b353d90c5b50ed7fa902b71a20b2e70a270b7f97145e3c157308d2"
+  },
+  {
+    "path": "android/res/mipmap-mdpi/ic_launcher_round.png",
+    "bytes": 3698,
+    "sha256": "46ce32eff23d3fcf10fc9601e1dd0557f26d2f6e4441e85f1cd46afb90228538"
+  },
+  {
+    "path": "android/res/mipmap-xhdpi/ic_launcher.png",
+    "bytes": 9759,
+    "sha256": "6b65efb53b940616a8277627911fb064e51ee31325f29dd581766e7276725b69"
+  },
+  {
+    "path": "android/res/mipmap-xhdpi/ic_launcher_round.png",
+    "bytes": 10836,
+    "sha256": "48c9bc5f9962794adef9b2df7f0c969a186ceef21873880d7353cd91afeedeab"
+  },
+  {
+    "path": "android/res/mipmap-xxhdpi/ic_launcher.png",
+    "bytes": 19092,
+    "sha256": "45d14e56184c0bee46578e849f1db5e97158a70e0f7fe97cd21074c2e21fb761"
+  },
+  {
+    "path": "android/res/mipmap-xxhdpi/ic_launcher_round.png",
+    "bytes": 20772,
+    "sha256": "2667c6cfd3ff1c80904463790e95a2e599008c12b066beffe2dcee7c20410995"
+  },
+  {
+    "path": "android/res/mipmap-xxxhdpi/ic_launcher.png",
+    "bytes": 30844,
+    "sha256": "084a6143e57fe889327727854cfc94a30096dfb1e16085ae8f0e54de4591866f"
+  },
+  {
+    "path": "android/res/mipmap-xxxhdpi/ic_launcher_round.png",
+    "bytes": 33275,
+    "sha256": "3e96387aebdab29c06e238c9a70a4bd899426d5502132f61d2f2406ed6b655da"
+  },
+  {
+    "path": "android/res/values/xiaofu_launcher_colors.xml",
+    "bytes": 125,
+    "sha256": "4f0430d4689cee834f6167e4d0b01c2a09e5c3ed7df941c0b6b78660b1d39c7c"
+  },
+  {
+    "path": "使用说明.txt",
+    "bytes": 2741,
+    "sha256": "8d129054519803a2d123324b545f1684d6a6d5dbccb5fb6677e68cb8a5822592"
+  },
+  {
+    "path": "商店图标/google-play-512.png",
+    "bytes": 172184,
+    "sha256": "18d323c013f78707b8c39bbc97cb0656cefb3a93fd3bb9dca79a369599b39195"
+  },
+  {
+    "path": "导出脚本/export.swift",
+    "bytes": 6101,
+    "sha256": "169da251bf73cc2d7bb469a9a78fbb26c4808eb13a64ad1c5215038fdefeea47"
+  },
+  {
+    "path": "源图/foreground-generated.png",
+    "bytes": 1693957,
+    "sha256": "27a16bc573292130fcd6393755876b74c2508ce87480ef93879e1ca85a143a97"
+  },
+  {
+    "path": "源图/foreground-prompt.txt",
+    "bytes": 1527,
+    "sha256": "588394faef7d030bbe789106e306ce8a229241fd2515f981d52de3b49af1040d"
+  },
+  {
+    "path": "源图/monochrome-generated.png",
+    "bytes": 301949,
+    "sha256": "632574a05751ee1dd519ecd587297312da3f9df40805dfabffb03aac5111aa1c"
+  },
+  {
+    "path": "源图/monochrome-prompt.txt",
+    "bytes": 1125,
+    "sha256": "25360e807e5d0eb3ba5ca9b74abb9bde5b3d1539cc685536c645aa94bde4df43"
+  },
+  {
+    "path": "通用分层素材/background-1080.png",
+    "bytes": 22956,
+    "sha256": "b117a183598763df6045a3f96efacebd7204859fe8623c9ea36d3d8db2dedcc3"
+  },
+  {
+    "path": "通用分层素材/foreground-1080.png",
+    "bytes": 358501,
+    "sha256": "172e1e3bb2676793f4f792706242b87a72557ba0e3dd5aad902b2e16bea6d6f3"
+  },
+  {
+    "path": "通用分层素材/monochrome-1080.png",
+    "bytes": 115862,
+    "sha256": "1c5f67f2497b13f464394c038d7f4322cfcf3965afa7dbf6e30fcc0f080bcca4"
+  },
+  {
+    "path": "预览/circle.png",
+    "bytes": 96869,
+    "sha256": "b49e9ce8feef54ef797d38a2557a01c0ae71c93c62435fa6ee613414fac6daeb"
+  },
+  {
+    "path": "预览/rounded.png",
+    "bytes": 92838,
+    "sha256": "7114bc54ae1d73f7da478e74d05d130599ad4ae6deb558b4aa758ff27bb56e99"
+  },
+  {
+    "path": "预览/squircle.png",
+    "bytes": 95002,
+    "sha256": "d519f6c2d08924004a60b106755497ef6187f7d23873ccf438253861facda6ba"
+  },
+  {
+    "path": "预览/themed.png",
+    "bytes": 29345,
+    "sha256": "ef86c8cb13f54a21652fada0c5a1114482b4e7648a4afbea2d9c47a5adc4f213"
+  },
+  {
+    "path": "预览/不同形状预览.png",
+    "bytes": 112296,
+    "sha256": "2e3ccf762b4b7beb77f8ece00dc316938b8f45f6db99d32eed1f54f270480f15"
+  },
+  {
+    "path": "验证报告.json",
+    "bytes": 2112,
+    "sha256": "2acf1326d433a74139f66980d6d7fc6c93d67e34b016d93488538a5203629e11"
+  }
+]

@@ -1,0 +1,44 @@
+小幅 Android 图标资源包
+制作日期：2026-10-26
+背景色：#332C30（深可可色）
+
+1. 这次交付什么
+- android/res：Android 原生分层资源，可合并至应用模块的 src/main/res。
+- 通用分层素材/foreground-1080.png：透明前景，已经排好108dp画布留白。
+- 通用分层素材/background-1080.png：完全不透明、无圆角的背景。
+- 通用分层素材/monochrome-1080.png：主题单色图层，系统使用透明度来着色。
+- 商店图标/google-play-512.png：512×512 sRGB RGBA PNG，背景完全不透明，无预制圆角和外阴影。
+- 预览：常见裁切形状的离线模拟，不是真机截图。
+- 源图：image_gen 生成的原始前景与单色版本及其完整提示词。
+
+2. 给开发的接入方法
+先备份项目中原来的同名图标。合并 android/res 到 app/src/main/res（实际模块名可能不同）。
+如果原项目已有同目录同名文件，应以本包版本替换；检查其他 ic_launcher/ic_launcher_round 资源变体，避免旧矢量或 .webp 同名资源重复定义或覆盖新版。
+按 AndroidManifest.application-snippet.txt 合并 application 图标属性。
+v26 XML 供 Android 8.0+ 使用，v33 XML 额外提供 Android 13+ 单色主题层。
+编译目标 compileSdk 需至少为33；minSdk不需因此提高。
+旧系统回退图标在五档 mipmap 密度目录中。
+
+3. 不要再次加留白
+通用分层前景和 drawable 密度图片已经含安全区留白。直接引用，不再加 inset，也不要再用 Image Asset Studio 默认缩放套一遍。
+不带安全区留白的 image_gen 源图仅供后续设计修改，不直接当 adaptive foreground 使用。
+如果只用 Android Studio 导入分层，请以预览核对缩放，避免二次缩小。
+
+4. 尺寸与构图
+adaptive 前景/单色图层：108dp，对应 mdpi 108、hdpi 162、xhdpi 216、xxhdpi 324、xxxhdpi 432 px。
+回退桌面图标：48、72、96、144、192 px。
+主体按半径32dp放置，处于中心66dp直径的安全圆内；背景铺满108dp。
+裁切预览按中心72dp视口模拟，外18dp不展示。
+主体材质、配色、无嘴巴设定沿用用户参考；AI分层重绘存在细微像素差异，非原图的无损抠图。
+
+5. 验证范围
+检查图片尺寸、透明度、主体安全区、PNG文件完整性、XML资源引用。
+使用本机 Android SDK AAPT2 编译与链接资源，结果见验证报告。
+不包含实际应用工程接入、安装或手机桌面验收。
+
+官方依据
+Android adaptive icons：
+https://developer.android.com/develop/ui/compose/system/icon_design_adaptive
+Google Play icon design specifications：
+https://developer.android.com/distribute/google-play/resources/icon-design-specifications
+

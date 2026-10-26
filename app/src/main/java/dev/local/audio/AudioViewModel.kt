@@ -64,6 +64,11 @@ class AudioViewModel(app: Application) : AndroidViewModel(app) {
     }
     fun format(format: OutputFormat) { if (!mutable.value.busy) mutable.update { it.copy(format = format) } }
     fun cancel() { work?.cancel() }
+    fun reset() {
+        if (mutable.value.busy) cancel()
+        mutable.update { it.copy(source = null, inspecting = false, result = null, progress = 0f, message = null, failureMessage = null) }
+        refresh()
+    }
     fun message(text: String) { mutable.update { it.copy(message = text) } }
     fun dismissFailure() { mutable.update { it.copy(failureMessage = null) } }
     fun clearMessage() { mutable.update { it.copy(message = null) } }
