@@ -1,0 +1,1216 @@
+--------- beginning of main
+10-25 13:05:45.834  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s expire 2 lines
+10-25 13:05:45.837  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:05:45.845  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:45.851  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:45.855  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:45.908  1679  3171 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:05:45.928  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:45.933  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:45.935  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:46.058  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a3a0e2f)
+10-25 13:05:46.061  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a3a0e2f)
+10-25 13:05:47.059  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2648c3c)
+10-25 13:05:47.061  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2648c3c)
+10-25 13:05:48.059  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9f22dc5)
+10-25 13:05:48.061  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9f22dc5)
+10-25 13:05:49.058  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@16db31a)
+10-25 13:05:49.060  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@16db31a)
+10-25 13:05:50.059  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8635e4b)
+10-25 13:05:50.062  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8635e4b)
+10-25 13:05:50.190  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:05:50.241  3096  3111 I TestRunner: finished: aacLcH264(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:50.276  3096  3111 I TestRunner: started: nonnegativeControl(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:50.322  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20729
+10-25 13:05:50.456  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=258 flags=1
+10-25 13:05:50.457  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=258 flags=1
+10-25 13:05:50.458  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=146 flags=1
+10-25 13:05:50.523  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:05:50.571  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20729
+10-25 13:05:50.616  3096  3107 I dev.local.audi: Background concurrent copying GC freed 11583(558KB) AllocSpace objects, 6(8MB) LOS objects, 49% free, 5MB/11MB, paused 294us total 192.060ms
+10-25 13:05:50.661  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:05:50.708  3096  3174 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:05:50.708  3096  3174 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:05:50.846  3096  3174 I MPEG4Writer: Received total/0-length (88/0) buffers and encoded 88 frames. - Audio
+10-25 13:05:50.846  3096  3174 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:05:50.848  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:05:50.849  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:05:50.849  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:05:50.849  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:05:50.849  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:05:50.849  3096  3173 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:05:50.850  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:05:50.853  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:05:50.855  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:05:50.876  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20829
+10-25 13:05:50.978  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=258 flags=1
+10-25 13:05:50.979  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=258 flags=1
+10-25 13:05:50.980  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=146 flags=1
+10-25 13:05:51.047  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:05:51.059  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@20c3028)
+10-25 13:05:51.061  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@20c3028)
+10-25 13:05:51.113  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20729
+10-25 13:05:51.176  3096  3176 I OMXClient: IOmx service obtained
+10-25 13:05:51.184  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:05:51.201  1679  2179 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:05:51.209  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:05:51.214  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:51.217  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:05:51.225  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:51.229  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:51.231  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:51.349  1679  3177 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->1 channels
+10-25 13:05:51.368  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:51.374  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:51.375  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:52.060  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ccce141)
+10-25 13:05:52.062  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ccce141)
+10-25 13:05:52.318  3096  3111 I CompatMatrix: WAV rate=44100 channels=1 bytes=180224 seconds=2.043356009070295 expected=2.0
+10-25 13:05:52.350  3096  3111 I TestRunner: finished: nonnegativeControl(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:52.370  3096  3111 I TestRunner: started: pipeOffsetKnownLengthPreservesOnlyDeclaredMedia(dev.local.audio.CompatibilityMatrixTest)
+--------- beginning of system
+10-25 13:05:52.477  1690  1770 W ActivityManager: Slow operation: 52ms so far, now at startProcess: returned from zygote!
+10-25 13:05:52.478  1690  1770 W ActivityManager: Slow operation: 53ms so far, now at startProcess: done updating battery stats
+10-25 13:05:52.478  1690  1770 W ActivityManager: Slow operation: 53ms so far, now at startProcess: building log message
+10-25 13:05:52.478  1690  1770 I ActivityManager: Start proc 3179:dev.local.audio.test/u0a68 for content provider dev.local.audio.test/dev.local.audio.CompatibilityProvider
+10-25 13:05:52.478  1690  1770 W ActivityManager: Slow operation: 53ms so far, now at startProcess: starting to update pids map
+10-25 13:05:52.479  1690  1770 W ActivityManager: Slow operation: 53ms so far, now at startProcess: done updating pids map
+10-25 13:05:52.494  3179  3179 I ocal.audio.tes: Late-enabling -Xcheck:jni
+10-25 13:05:52.556  3179  3179 W ocal.audio.tes: Unexpected CPU variant for X86 using defaults: x86_64
+10-25 13:05:52.662  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:05:52.662  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:05:52.835  1690  3069 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_HTTPS https://www.google.com/generate_204 Probe failed with exception java.net.UnknownHostException: www.google.com: TLS-bypass resolution failed
+10-25 13:05:52.846  1690  3070 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 Probe failed with exception java.net.UnknownHostException: connectivitycheck.gstatic.com: TLS-bypass resolution failed
+10-25 13:05:52.849  1690  1890 D ConnectivityService: NetworkAgentInfo [WIFI () - 101] validation failed
+10-25 13:05:52.866  3179  3179 I ocal.audio.tes: The ClassLoaderContext is a special shared library.
+10-25 13:05:52.870  3179  3179 I ocal.audio.tes: The ClassLoaderContext is a special shared library.
+10-25 13:05:53.025  3096  3113 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:53.060  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@923e6e6)
+10-25 13:05:53.062  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@923e6e6)
+10-25 13:05:53.278  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:05:53.279  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:05:53.280  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:05:53.532  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:05:53.631  3096  3107 I dev.local.audi: Background concurrent copying GC freed 7247(437KB) AllocSpace objects, 6(8MB) LOS objects, 49% free, 5MB/11MB, paused 111us total 363.738ms
+10-25 13:05:53.645  3096  3113 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:53.749  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:05:53.768  3096  3198 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:05:53.768  3096  3198 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:05:54.060  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@879427)
+10-25 13:05:54.062  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@879427)
+10-25 13:05:54.253  3096  3198 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:05:54.253  3096  3198 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:05:54.255  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:05:54.256  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:05:54.256  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:05:54.256  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:05:54.256  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:05:54.258  3096  3197 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:05:54.258  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:05:54.258  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:05:54.265  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:05:54.283  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:05:54.435  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:05:54.437  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:05:54.438  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:05:54.641  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:05:54.740  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:54.837  3096  3200 I OMXClient: IOmx service obtained
+10-25 13:05:54.840  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:05:54.854  1679  2179 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:05:54.863  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:05:54.868  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:54.870  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:05:54.877  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:54.884  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:54.887  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:54.923  1679  3201 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:05:54.939  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:54.943  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:05:54.945  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:05:55.060  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@60826d4)
+10-25 13:05:55.065  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@60826d4)
+10-25 13:05:56.065  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@945507d)
+10-25 13:05:56.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@945507d)
+10-25 13:05:57.060  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@eb78b72)
+10-25 13:05:57.062  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@eb78b72)
+10-25 13:05:58.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ccf4bc3)
+10-25 13:05:58.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ccf4bc3)
+10-25 13:05:58.193  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:05:58.232  3096  3111 I TestRunner: finished: pipeOffsetKnownLengthPreservesOnlyDeclaredMedia(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:58.251  3096  3111 I TestRunner: started: pipePrematureEofFailsAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:58.398  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:58.398  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:58.440  3096  3111 I TestRunner: finished: pipePrematureEofFailsAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:58.457  3096  3111 I TestRunner: started: providerNonSeekablePipe(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:05:58.550  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:58.551  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:58.760  3096  3113 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:58.760  3096  3113 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:58.848  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:05:58.869  3096  3207 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:05:58.869  3096  3207 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:05:59.061  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@92adc40)
+10-25 13:05:59.066  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@92adc40)
+10-25 13:05:59.344  3096  3207 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:05:59.344  3096  3207 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:05:59.349  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:05:59.349  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:05:59.349  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:05:59.349  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:05:59.349  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:05:59.351  3096  3206 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:05:59.354  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:05:59.355  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:05:59.361  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:05:59.381  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:05:59.543  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:05:59.544  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:05:59.545  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:05:59.752  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:05:59.763  3096  3107 I dev.local.audi: Background concurrent copying GC freed 15228(670KB) AllocSpace objects, 12(8MB) LOS objects, 49% free, 5MB/11MB, paused 141us total 181.244ms
+10-25 13:05:59.858  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:59.859  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:05:59.965  3096  3209 I OMXClient: IOmx service obtained
+10-25 13:05:59.967  1679  2159 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:05:59.983  1679  2159 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:05:59.993  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:05:59.999  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:00.037  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:00.041  1687  1709 D hwcomposer: hw_composer sent 12 syncs in 60s
+10-25 13:06:00.047  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:00.050  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 1 line
+10-25 13:06:00.051  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:00.060  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6eecbe)
+10-25 13:06:00.062  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6eecbe)
+10-25 13:06:00.064  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:00.117  1679  3210 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:00.136  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:00.140  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:00.143  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:01.061  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f131235)
+10-25 13:06:01.063  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f131235)
+10-25 13:06:02.064  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4a916ca)
+10-25 13:06:02.066  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4a916ca)
+10-25 13:06:02.923  2091  2115 I m.android.phon: Background concurrent copying GC freed 18513(1619KB) AllocSpace objects, 0(0B) LOS objects, 50% free, 1663KB/3MB, paused 140us total 180.257ms
+10-25 13:06:03.062  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b2c703b)
+10-25 13:06:03.064  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b2c703b)
+10-25 13:06:03.719  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:06:03.748  3096  3111 I TestRunner: finished: providerNonSeekablePipe(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:03.772  3096  3111 I TestRunner: started: negativeEditListPrimingIsPreserved(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:03.813  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20793
+10-25 13:06:03.960  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=258 flags=1
+10-25 13:06:03.961  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=258 flags=1
+10-25 13:06:03.962  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=146 flags=1
+10-25 13:06:04.011  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:06:04.050  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20793
+10-25 13:06:04.063  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4bff358)
+10-25 13:06:04.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4bff358)
+10-25 13:06:04.143  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:04.234  3096  3214 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:04.234  3096  3214 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:04.352  3096  3214 I MPEG4Writer: Received total/0-length (88/0) buffers and encoded 88 frames. - Audio
+10-25 13:06:04.352  3096  3214 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:04.354  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:04.354  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:06:04.354  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:06:04.354  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:04.355  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:06:04.357  3096  3213 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:04.357  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:06:04.358  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:04.361  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:04.400  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20829
+10-25 13:06:04.479  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=258 flags=1
+10-25 13:06:04.480  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=258 flags=1
+10-25 13:06:04.481  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=146 flags=1
+10-25 13:06:04.536  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:06:04.548  1690  2566 D WificondControl: Scan result ready event
+10-25 13:06:04.631  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20793
+10-25 13:06:04.696  3096  3216 I OMXClient: IOmx service obtained
+10-25 13:06:04.699  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:04.713  1679  2179 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:04.721  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:04.730  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:04.732  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:04.739  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:04.746  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:04.747  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:04.773  3096  3107 I dev.local.audi: Background concurrent copying GC freed 10154(515KB) AllocSpace objects, 6(8MB) LOS objects, 49% free, 5MB/11MB, paused 245us total 218.667ms
+10-25 13:06:04.824  1679  3217 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->1 channels
+10-25 13:06:04.839  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:04.844  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:04.846  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:05.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fef9cb1)
+10-25 13:06:05.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fef9cb1)
+10-25 13:06:05.667  3096  3111 I CompatMatrix: WAV rate=44100 channels=1 bytes=180224 seconds=2.043356009070295 expected=2.0
+10-25 13:06:05.691  3096  3111 I TestRunner: finished: negativeEditListPrimingIsPreserved(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:05.712  3096  3111 I TestRunner: started: fragmentedMp4(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:05.763  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136219
+10-25 13:06:05.822  1662  1749 E MPEG4Extractor: No width or height, assuming worst case 1080p
+10-25 13:06:05.899  1662  1749 E MPEG4Extractor: No width or height, assuming worst case 1080p
+10-25 13:06:05.919  1662  3175 D MediaBufferGroup: creating MemoryDealer
+10-25 13:06:05.936  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:06:05.937  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=0
+10-25 13:06:05.938  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=0
+10-25 13:06:06.063  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ca9d596)
+10-25 13:06:06.065  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ca9d596)
+10-25 13:06:06.142  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:06.174  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136219
+10-25 13:06:06.229  1662  3175 E MPEG4Extractor: No width or height, assuming worst case 1080p
+10-25 13:06:06.256  1662  3175 D MediaBufferGroup: creating MemoryDealer
+10-25 13:06:06.275  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:06.293  3096  3220 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:06.293  3096  3220 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:06.745  3096  3220 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:06:06.745  3096  3220 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:06.748  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:06.748  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:06:06.748  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:06:06.748  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:06.748  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:06:06.749  3096  3219 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:06.749  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:06:06.749  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:06.757  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:06.777  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:06:06.924  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:06:06.925  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:06:06.926  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:06:07.062  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b67d517)
+10-25 13:06:07.066  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b67d517)
+10-25 13:06:07.121  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:07.179  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136219
+10-25 13:06:07.219  3096  3107 I dev.local.audi: Background concurrent copying GC freed 7906(391KB) AllocSpace objects, 7(8MB) LOS objects, 49% free, 5MB/11MB, paused 9.285ms total 298.490ms
+10-25 13:06:07.241  1662  3175 E MPEG4Extractor: No width or height, assuming worst case 1080p
+10-25 13:06:07.262  1662  1749 D MediaBufferGroup: creating MemoryDealer
+10-25 13:06:07.280  3096  3221 I OMXClient: IOmx service obtained
+10-25 13:06:07.282  1679  2159 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:07.297  1679  2159 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:07.306  1529  1529 W AshmemAllocator: ashmem_create_region(144179) returning hidl_memory(0x7d1c228310f0, 144179)
+10-25 13:06:07.315  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:07.317  1529  1529 W AshmemAllocator: ashmem_create_region(144179) returning hidl_memory(0x7d1c228310f0, 144179)
+10-25 13:06:07.325  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:07.330  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:07.333  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:07.372  1679  3222 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:07.389  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:07.393  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:07.395  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:08.065  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4eced04)
+10-25 13:06:08.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4eced04)
+10-25 13:06:09.064  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e3052ed)
+10-25 13:06:09.066  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e3052ed)
+10-25 13:06:10.063  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@425b522)
+10-25 13:06:10.065  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@425b522)
+10-25 13:06:10.547  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:06:10.569  3096  3111 I TestRunner: finished: fragmentedMp4(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:10.590  3096  3111 I TestRunner: started: movContainer(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:10.644  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134978
+10-25 13:06:10.818  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:06:10.819  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:06:10.820  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:06:11.018  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:11.056  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134978
+10-25 13:06:11.065  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b8aabb3)
+10-25 13:06:11.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b8aabb3)
+10-25 13:06:11.161  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:11.181  3096  3225 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:11.181  3096  3225 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:11.664  3096  3225 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:06:11.664  3096  3225 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:11.665  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:11.666  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:06:11.666  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:06:11.666  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:11.666  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:06:11.667  3096  3224 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:11.667  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:06:11.668  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:11.675  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:11.691  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:06:11.853  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:06:11.858  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:06:11.859  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:06:12.037  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:12.064  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9cdd570)
+10-25 13:06:12.066  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9cdd570)
+10-25 13:06:12.089  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134978
+10-25 13:06:12.141  3096  3107 I dev.local.audi: Background concurrent copying GC freed 11378(533KB) AllocSpace objects, 5(8MB) LOS objects, 49% free, 5MB/11MB, paused 469us total 284.844ms
+10-25 13:06:12.200  3096  3226 I OMXClient: IOmx service obtained
+10-25 13:06:12.202  1679  1679 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:12.216  1679  1679 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:12.224  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:12.229  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:12.232  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:12.239  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:12.244  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:12.248  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:12.294  1679  3227 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:12.310  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:12.315  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:12.318  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:13.064  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@84c30e9)
+10-25 13:06:13.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@84c30e9)
+10-25 13:06:14.064  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c8e016e)
+10-25 13:06:14.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c8e016e)
+10-25 13:06:15.065  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5fa500f)
+10-25 13:06:15.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5fa500f)
+10-25 13:06:15.891  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:06:15.919  3096  3111 I TestRunner: finished: movContainer(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:15.948  3096  3111 I TestRunner: started: providerUnknownLengthZeroOffset(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:16.046  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134927
+10-25 13:06:16.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a92d89c)
+10-25 13:06:16.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a92d89c)
+10-25 13:06:16.283  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:06:16.283  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:06:16.407  3096  3111 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134927
+10-25 13:06:16.511  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:06:16.523  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:06:16.524  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:06:16.759  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:16.840  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134927
+10-25 13:06:16.935  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:16.959  3096  3230 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:16.959  3096  3230 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:17.064  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@32df2a5)
+10-25 13:06:17.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@32df2a5)
+10-25 13:06:17.458  3096  3230 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:06:17.458  3096  3230 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:17.460  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:17.460  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:06:17.460  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:06:17.461  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:17.461  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:06:17.461  3096  3229 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:17.461  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:06:17.462  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:17.471  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:17.488  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:06:17.747  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:06:17.749  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:06:17.759  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:06:18.040  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:18.105  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b1cc67a)
+10-25 13:06:18.107  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b1cc67a)
+10-25 13:06:18.139  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134927
+10-25 13:06:18.247  3096  3107 I dev.local.audi: Background concurrent copying GC freed 11510(529KB) AllocSpace objects, 5(8MB) LOS objects, 49% free, 5MB/11MB, paused 144us total 524.621ms
+10-25 13:06:18.276  3096  3231 I OMXClient: IOmx service obtained
+10-25 13:06:18.279  1679  1679 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:18.293  1679  1679 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:18.305  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:18.309  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:18.311  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:18.320  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:18.333  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:18.335  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:18.374  1679  3232 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:18.390  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:18.404  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:18.406  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:19.065  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c15de2b)
+10-25 13:06:19.067  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c15de2b)
+10-25 13:06:19.529  1690  3148 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_DNS www.google.com 40076ms FAIL
+10-25 13:06:19.535  1690  3149 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_DNS connectivitycheck.gstatic.com 40085ms FAIL
+10-25 13:06:20.067  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f42e288)
+10-25 13:06:20.070  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f42e288)
+10-25 13:06:21.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@db01421)
+10-25 13:06:21.072  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@db01421)
+10-25 13:06:21.824  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:06:21.851  3096  3111 I TestRunner: finished: providerUnknownLengthZeroOffset(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:21.869  3096  3111 I TestRunner: started: providerNonzeroOffsetKnownLength(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:22.067  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ca0d046)
+10-25 13:06:22.071  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ca0d046)
+10-25 13:06:22.243  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:06:22.245  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:06:22.246  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:06:22.475  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:22.612  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:06:22.612  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:06:22.652  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:22.680  3096  3237 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:22.680  3096  3237 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:23.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c123207)
+10-25 13:06:23.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c123207)
+10-25 13:06:23.258  3096  3237 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:06:23.259  3096  3237 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:23.260  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:23.260  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:06:23.260  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:06:23.261  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:23.261  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:06:23.262  3096  3236 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:23.262  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:06:23.263  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:23.268  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:23.297  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:06:23.477  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:06:23.478  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:06:23.479  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:06:23.666  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:23.736  3096  3107 I dev.local.audi: Background concurrent copying GC freed 11567(528KB) AllocSpace objects, 5(8MB) LOS objects, 50% free, 5MB/11MB, paused 145us total 266.272ms
+10-25 13:06:23.851  3096  3238 I OMXClient: IOmx service obtained
+10-25 13:06:23.853  1679  1679 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:23.865  1679  1679 E OMXNodeInstance: getConfig(0xf39a7260:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:23.876  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:23.883  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:23.886  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:23.892  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:23.906  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:23.908  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:23.945  1679  3239 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:23.960  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:23.965  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:23.968  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:24.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7679f34)
+10-25 13:06:24.070  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7679f34)
+10-25 13:06:25.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fd8d15d)
+10-25 13:06:25.070  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fd8d15d)
+10-25 13:06:26.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a09aad2)
+10-25 13:06:26.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a09aad2)
+10-25 13:06:27.027  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:06:27.054  3096  3111 I TestRunner: finished: providerNonzeroOffsetKnownLength(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:27.069  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@895e7a3)
+10-25 13:06:27.070  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@895e7a3)
+10-25 13:06:27.078  3096  3111 I TestRunner: started: opusWebm(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:27.127  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/141955
+10-25 13:06:27.230  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/141955
+10-25 13:06:27.339  3096  3246 I OMXClient: IOmx service obtained
+10-25 13:06:27.341  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.opus.decoder) in omx@1.0-service process
+10-25 13:06:27.352  1679  2179 E OMXNodeInstance: getConfig(0xf39a7260:google.opus.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:27.359  1529  1529 W AshmemAllocator: ashmem_create_region(5760) returning hidl_memory(0x7d1c228310f0, 5760)
+10-25 13:06:27.364  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:27.366  1529  1529 W AshmemAllocator: ashmem_create_region(5760) returning hidl_memory(0x7d1c228310f0, 5760)
+10-25 13:06:27.373  1529  1529 W AshmemAllocator: ashmem_create_region(92160) returning hidl_memory(0x7d1c228310f0, 92160)
+10-25 13:06:27.431  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 6 lines
+10-25 13:06:27.434  1529  1529 W AshmemAllocator: ashmem_create_region(92160) returning hidl_memory(0x7d1c228310f0, 92160)
+10-25 13:06:27.650  3096  3249 I OMXClient: IOmx service obtained
+10-25 13:06:27.655  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.aac.encoder) in omx@1.0-service process
+10-25 13:06:27.673  1679  2179 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.encoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:27.681  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:27.686  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:27.689  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:27.695  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:27.699  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:27.701  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:27.743  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:27.779  3096  3253 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:27.779  3096  3253 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:28.066  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f797aa0)
+10-25 13:06:28.070  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f797aa0)
+10-25 13:06:29.067  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1d62659)
+10-25 13:06:29.068  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1d62659)
+10-25 13:06:29.536  1690  2294 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_FALLBACK http://www.google.com/gen_204 Probe failed with exception java.net.UnknownHostException: www.google.com: TLS-bypass resolution failed
+10-25 13:06:30.067  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9b3a21e)
+10-25 13:06:30.069  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9b3a21e)
+10-25 13:06:31.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e155aff)
+10-25 13:06:31.076  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e155aff)
+10-25 13:06:32.067  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@10ba0cc)
+10-25 13:06:32.070  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@10ba0cc)
+10-25 13:06:33.068  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6b9cf15)
+10-25 13:06:33.071  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6b9cf15)
+10-25 13:06:33.201  1690  2566 E memtrack: Couldn't load memtrack module
+10-25 13:06:33.201  1690  2566 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:06:34.069  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@973c22a)
+10-25 13:06:34.073  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@973c22a)
+10-25 13:06:35.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1eea81b)
+10-25 13:06:35.073  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1eea81b)
+10-25 13:06:35.523  3096  3253 I MPEG4Writer: Received total/0-length (376/0) buffers and encoded 376 frames. - Audio
+10-25 13:06:35.524  3096  3253 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:35.526  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:35.526  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:06:35.526  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:06:35.526  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:35.526  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:06:35.527  3096  3252 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:35.528  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:06:35.528  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:35.596  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:35.616  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/195736
+10-25 13:06:35.755  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=512 flags=1
+10-25 13:06:35.756  3096  3111 I CompatMatrix: sdk=28 sample=1 time=28833 track=0 size=590 flags=1
+10-25 13:06:35.757  3096  3111 I CompatMatrix: sdk=28 sample=2 time=50166 track=0 size=691 flags=1
+10-25 13:06:35.935  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=376
+10-25 13:06:35.968  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/141955
+10-25 13:06:36.060  3096  3255 I OMXClient: IOmx service obtained
+10-25 13:06:36.063  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.opus.decoder) in omx@1.0-service process
+10-25 13:06:36.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9b7fdb8)
+10-25 13:06:36.074  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9b7fdb8)
+10-25 13:06:36.079  1679  2179 E OMXNodeInstance: getConfig(0xf39a7bc0:google.opus.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:36.092  1529  1529 W AshmemAllocator: ashmem_create_region(5760) returning hidl_memory(0x7d1c228310f0, 5760)
+10-25 13:06:36.096  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:36.099  1529  1529 W AshmemAllocator: ashmem_create_region(5760) returning hidl_memory(0x7d1c228310f0, 5760)
+10-25 13:06:36.105  1529  1529 W AshmemAllocator: ashmem_create_region(92160) returning hidl_memory(0x7d1c228310f0, 92160)
+10-25 13:06:36.204  1676  1811 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+10-25 13:06:36.154  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 6 lines
+10-25 13:06:36.156  1529  1529 W AshmemAllocator: ashmem_create_region(92160) returning hidl_memory(0x7d1c228310f0, 92160)
+10-25 13:06:37.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6f54791)
+10-25 13:06:37.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6f54791)
+10-25 13:06:38.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d63d6f6)
+10-25 13:06:38.077  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d63d6f6)
+10-25 13:06:39.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@745aaf7)
+10-25 13:06:39.072  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@745aaf7)
+10-25 13:06:40.077  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4cb3d64)
+10-25 13:06:40.082  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4cb3d64)
+10-25 13:06:40.565  3096  3111 I CompatMatrix: WAV rate=48000 channels=2 bytes=1538592 seconds=8.0135 expected=8.0
+10-25 13:06:40.589  3096  3111 I TestRunner: finished: opusWebm(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:40.611  3096  3111 I TestRunner: started: negativeOneMicrosecondIsNotEos(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:40.734  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=258 flags=1
+10-25 13:06:40.736  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23220 track=1 size=258 flags=1
+10-25 13:06:40.737  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46440 track=1 size=146 flags=1
+10-25 13:06:40.801  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:06:40.866  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20793
+10-25 13:06:41.027  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=258 flags=1
+10-25 13:06:41.028  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23220 track=1 size=258 flags=1
+10-25 13:06:41.029  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46440 track=1 size=146 flags=1
+10-25 13:06:41.045  3096  3107 I dev.local.audi: Background concurrent copying GC freed 24627(1102KB) AllocSpace objects, 7(8MB) LOS objects, 38% free, 9MB/15MB, paused 195us total 264.650ms
+10-25 13:06:41.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@695cbcd)
+10-25 13:06:41.074  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@695cbcd)
+10-25 13:06:41.086  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:06:41.120  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20793
+10-25 13:06:41.177  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:41.229  3096  3259 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:41.229  3096  3259 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:41.450  3096  3259 I MPEG4Writer: Received total/0-length (88/0) buffers and encoded 88 frames. - Audio
+10-25 13:06:41.450  3096  3259 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:41.452  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:41.452  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:06:41.452  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:06:41.452  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:41.453  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:06:41.458  3096  3258 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:41.459  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:06:41.459  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:41.471  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:41.502  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20829
+10-25 13:06:41.576  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=258 flags=1
+10-25 13:06:41.577  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=258 flags=1
+10-25 13:06:41.578  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=146 flags=1
+10-25 13:06:41.615  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=88
+10-25 13:06:41.648  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/20793
+10-25 13:06:41.707  3096  3260 I OMXClient: IOmx service obtained
+10-25 13:06:41.709  1679  2159 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:41.722  1679  2159 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:41.731  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:41.736  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:41.738  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:41.746  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:41.750  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:41.752  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:41.824  1679  3261 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->1 channels
+10-25 13:06:41.840  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:41.845  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:41.847  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:42.070  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6e6c82)
+10-25 13:06:42.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6e6c82)
+10-25 13:06:42.866  3096  3111 I CompatMatrix: WAV rate=44100 channels=1 bytes=178176 seconds=2.020136054421769 expected=2.0
+10-25 13:06:42.880  3096  3111 I TestRunner: finished: negativeOneMicrosecondIsNotEos(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:42.907  3096  3111 I TestRunner: started: stalledPipeCancellationIsPromptAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:43.071  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b9acece)
+10-25 13:06:43.073  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b9acece)
+10-25 13:06:44.063  3096  3111 I TestRunner: finished: stalledPipeCancellationIsPromptAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:44.073  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d4101ef)
+10-25 13:06:44.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d4101ef)
+10-25 13:06:44.086  3096  3111 I TestRunner: started: genuinePlatformHeAacV2(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:44.134  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/51100
+10-25 13:06:44.271  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=278 flags=1
+10-25 13:06:44.274  3096  3111 I CompatMatrix: sdk=28 sample=1 time=46439 track=1 size=279 flags=1
+10-25 13:06:44.275  3096  3111 I CompatMatrix: sdk=28 sample=2 time=92879 track=1 size=294 flags=1
+10-25 13:06:44.380  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=172
+10-25 13:06:44.421  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/51100
+10-25 13:06:44.493  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:44.501  3096  3107 I dev.local.audi: Background concurrent copying GC freed 9113(578KB) AllocSpace objects, 10(12MB) LOS objects, 49% free, 5MB/11MB, paused 170us total 253.135ms
+10-25 13:06:44.529  3096  3266 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:44.529  3096  3266 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:44.751  3096  3266 I MPEG4Writer: Received total/0-length (172/0) buffers and encoded 172 frames. - Audio
+10-25 13:06:44.752  3096  3266 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:44.753  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:44.753  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:06:44.753  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:06:44.754  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:44.754  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:06:44.755  3096  3265 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:44.756  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:06:44.757  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:44.760  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:44.779  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/51149
+10-25 13:06:44.874  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=278 flags=1
+10-25 13:06:44.875  3096  3111 I CompatMatrix: sdk=28 sample=1 time=46439 track=0 size=279 flags=1
+10-25 13:06:44.876  3096  3111 I CompatMatrix: sdk=28 sample=2 time=92879 track=0 size=294 flags=1
+10-25 13:06:44.964  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=172
+10-25 13:06:44.998  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/51100
+10-25 13:06:45.060  3096  3267 I OMXClient: IOmx service obtained
+10-25 13:06:45.062  1679  2159 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:45.071  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@11ed4fc)
+10-25 13:06:45.074  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@11ed4fc)
+10-25 13:06:45.081  1679  2159 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:45.089  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:45.095  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:45.097  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:45.105  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:45.111  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:45.114  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:45.188  1679  3268 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:45.206  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:45.210  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:45.214  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:46.074  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5eda785)
+10-25 13:06:46.076  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5eda785)
+10-25 13:06:47.073  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@51909da)
+10-25 13:06:47.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@51909da)
+10-25 13:06:47.628  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1409024 seconds=7.987664399092971 expected=8.0
+10-25 13:06:47.648  3096  3111 I TestRunner: finished: genuinePlatformHeAacV2(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:47.676  3096  3111 I TestRunner: started: genuinePlatformHeAac(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:47.728  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/67076
+10-25 13:06:47.964  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=371 flags=1
+10-25 13:06:47.967  3096  3111 I CompatMatrix: sdk=28 sample=1 time=46439 track=1 size=459 flags=1
+10-25 13:06:47.968  3096  3111 I CompatMatrix: sdk=28 sample=2 time=92879 track=1 size=321 flags=1
+10-25 13:06:48.072  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@545ce0b)
+10-25 13:06:48.081  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@545ce0b)
+10-25 13:06:48.181  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=172
+10-25 13:06:48.218  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/67076
+10-25 13:06:48.309  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:48.313  3096  3107 I dev.local.audi: Background concurrent copying GC freed 8025(408KB) AllocSpace objects, 6(8MB) LOS objects, 49% free, 5MB/11MB, paused 138us total 391.426ms
+10-25 13:06:48.341  3096  3271 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:48.341  3096  3271 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:48.621  3096  3271 I MPEG4Writer: Received total/0-length (172/0) buffers and encoded 172 frames. - Audio
+10-25 13:06:48.621  3096  3271 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:48.624  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:48.624  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:06:48.624  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:06:48.624  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:48.624  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:06:48.626  3096  3270 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:48.627  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:06:48.627  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:48.631  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:48.654  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/67125
+10-25 13:06:48.758  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=371 flags=1
+10-25 13:06:48.759  3096  3111 I CompatMatrix: sdk=28 sample=1 time=46439 track=0 size=459 flags=1
+10-25 13:06:48.760  3096  3111 I CompatMatrix: sdk=28 sample=2 time=92879 track=0 size=321 flags=1
+10-25 13:06:48.835  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=172
+10-25 13:06:48.866  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/67076
+10-25 13:06:48.932  3096  3272 I OMXClient: IOmx service obtained
+10-25 13:06:48.934  1679  1679 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:48.948  1679  1679 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:48.955  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:48.959  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:48.961  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:48.968  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:48.974  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:48.976  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:49.064  1679  3273 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:49.100  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:49.106  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:49.109  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:49.116  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b0244e8)
+10-25 13:06:49.117  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b0244e8)
+10-25 13:06:50.073  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4663701)
+10-25 13:06:50.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4663701)
+10-25 13:06:51.072  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@de9a6)
+10-25 13:06:51.074  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@de9a6)
+10-25 13:06:51.291  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1409024 seconds=7.987664399092971 expected=8.0
+10-25 13:06:51.307  3096  3111 I TestRunner: finished: genuinePlatformHeAac(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:51.330  3096  3111 I TestRunner: started: mp3TrackInMp4(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:51.383  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/132387
+10-25 13:06:51.394  1662  3175 E MPEG4Extractor: MP3 track in MP4/3GPP file is not supported
+10-25 13:06:51.419  3096  3111 E TestRunner: failed: mp3TrackInMp4(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:51.425  3096  3111 E TestRunner: ----- begin exception -----
+10-25 13:06:51.425  3096  3111 E TestRunner: java.lang.IllegalArgumentException: 这个视频没有可提取的音轨。请选择带声音的视频。
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at dev.local.audio.AudioEngine$inspect$2.invokeSuspend(AudioEngine.kt:216)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+10-25 13:06:51.425  3096  3111 E TestRunner: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+10-25 13:06:51.425  3096  3111 E TestRunner: ----- end exception -----
+10-25 13:06:51.440  3096  3111 I TestRunner: finished: mp3TrackInMp4(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:51.456  3096  3111 I TestRunner: started: multiAudioTrackSelectsFirstDeterministically(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:51.580  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 13:06:51.677  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 13:06:51.994  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:06:51.996  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:06:51.997  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:06:52.073  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f813fe7)
+10-25 13:06:52.074  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f813fe7)
+10-25 13:06:52.462  3096  3107 I dev.local.audi: Background concurrent copying GC freed 9775(578KB) AllocSpace objects, 6(8MB) LOS objects, 49% free, 5MB/11MB, paused 144us total 461.935ms
+10-25 13:06:52.577  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:52.610  3096  3113 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 13:06:52.703  3096  3113 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:52.808  3096  3276 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:52.808  3096  3276 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:53.073  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f2ac794)
+10-25 13:06:53.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f2ac794)
+10-25 13:06:53.641  3096  3276 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:06:53.641  3096  3276 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:53.643  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:53.644  3096  3113 D MPEG4Writer: Audio track source stopping
+10-25 13:06:53.644  3096  3113 D MPEG4Writer: Audio track source stopped
+10-25 13:06:53.644  3096  3113 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:53.644  3096  3113 D MPEG4Writer: Stopping writer thread
+10-25 13:06:53.646  3096  3275 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:53.646  3096  3113 D MPEG4Writer: Writer thread stopped
+10-25 13:06:53.647  3096  3113 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:53.655  3096  3113 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:53.676  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:06:53.835  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:06:53.836  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:06:53.837  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:06:54.005  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:54.033  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 13:06:54.074  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e7e423d)
+10-25 13:06:54.076  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e7e423d)
+10-25 13:06:54.122  3096  3277 I OMXClient: IOmx service obtained
+10-25 13:06:54.126  1679  1679 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:54.141  1679  1679 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:54.150  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:54.155  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:54.157  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:54.163  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:54.167  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:54.171  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:54.303  1679  3278 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:54.320  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:54.325  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:54.327  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:55.074  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c1efa32)
+10-25 13:06:55.076  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c1efa32)
+10-25 13:06:56.073  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e17f383)
+10-25 13:06:56.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e17f383)
+10-25 13:06:57.074  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6b6c900)
+10-25 13:06:57.075  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6b6c900)
+10-25 13:06:57.821  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:06:57.838  3096  3111 I TestRunner: finished: multiAudioTrackSelectsFirstDeterministically(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:57.866  3096  3111 I TestRunner: started: reliablePipeErrorIsNotSuccessAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:57.999  3096  3111 I TestRunner: finished: reliablePipeErrorIsNotSuccessAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:58.016  3096  3111 I TestRunner: started: emptyPipeFailsAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:58.075  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@311c539)
+10-25 13:06:58.078  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@311c539)
+10-25 13:06:58.084  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:06:58.084  3096  3165 W ParcelFileDescriptor: Peer didn't provide a comm channel; unable to check for errors
+10-25 13:06:58.109  3096  3111 I TestRunner: finished: emptyPipeFailsAndCleansStaging(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:58.128  3096  3111 I TestRunner: started: hevcContainer(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:06:58.172  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136977
+10-25 13:06:58.230  1662  3175 I SampleTable: There are reordered frames present.
+10-25 13:06:58.318  1662  3175 I SampleTable: There are reordered frames present.
+10-25 13:06:58.389  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:06:58.392  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:06:58.393  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:06:58.591  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:58.628  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136977
+10-25 13:06:58.707  3096  3107 I dev.local.audi: Background concurrent copying GC freed 13696(734KB) AllocSpace objects, 9(8MB) LOS objects, 49% free, 5MB/11MB, paused 176us total 359.139ms
+10-25 13:06:58.712  1662  3175 I SampleTable: There are reordered frames present.
+10-25 13:06:58.765  3096  3165 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:06:58.794  3096  3283 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:06:58.794  3096  3283 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:06:59.074  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bbe877e)
+10-25 13:06:59.077  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bbe877e)
+10-25 13:06:59.238  3096  3283 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:06:59.238  3096  3283 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:06:59.240  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:59.240  3096  3165 D MPEG4Writer: Audio track source stopping
+10-25 13:06:59.240  3096  3165 D MPEG4Writer: Audio track source stopped
+10-25 13:06:59.240  3096  3165 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:06:59.240  3096  3165 D MPEG4Writer: Stopping writer thread
+10-25 13:06:59.242  3096  3282 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:06:59.243  3096  3165 D MPEG4Writer: Writer thread stopped
+10-25 13:06:59.243  3096  3165 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:06:59.249  3096  3165 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:06:59.266  3096  3166 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:06:59.443  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:06:59.445  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:06:59.446  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:06:59.601  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:06:59.628  1690  3148 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_HTTPS https://www.google.com/generate_204 Probe failed with exception java.net.UnknownHostException: www.google.com: TLS-bypass resolution failed
+10-25 13:06:59.642  1690  3149 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 Probe failed with exception java.net.UnknownHostException: connectivitycheck.gstatic.com: TLS-bypass resolution failed
+10-25 13:06:59.651  3096  3166 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136977
+10-25 13:06:59.655  1690  1890 D ConnectivityService: NetworkAgentInfo [MOBILE (LTE) - 100] validation failed
+10-25 13:06:59.711  1662  1934 I SampleTable: There are reordered frames present.
+10-25 13:06:59.741  3096  3284 I OMXClient: IOmx service obtained
+10-25 13:06:59.744  1679  2179 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:06:59.758  1679  2179 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:06:59.767  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:59.771  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:59.774  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:06:59.780  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:59.787  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:59.792  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:59.832  1679  3285 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:06:59.847  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:06:59.852  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:06:59.854  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:07:00.049  1687  1709 D hwcomposer: hw_composer sent 19 syncs in 60s
+10-25 13:07:00.075  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c3f752c)
+10-25 13:07:00.078  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c3f752c)
+10-25 13:07:01.074  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4379d8a)
+10-25 13:07:01.077  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4379d8a)
+10-25 13:07:02.076  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6a4ffb)
+10-25 13:07:02.079  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6a4ffb)
+10-25 13:07:03.075  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8c4b818)
+10-25 13:07:03.079  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8c4b818)
+10-25 13:07:03.193  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:07:03.209  3096  3111 I TestRunner: finished: hevcContainer(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:07:03.237  3096  3111 I TestRunner: started: providerKnownLength(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:07:03.333  3179  3190 I ocal.audio.tes: CollectorTransition concurrent copying GC freed 122(46KB) AllocSpace objects, 0(0B) LOS objects, 60% free, 1022KB/2MB, paused 116us total 182.734ms
+10-25 13:07:03.567  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=1 size=296 flags=1
+10-25 13:07:03.568  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=1 size=336 flags=1
+10-25 13:07:03.569  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=1 size=300 flags=1
+10-25 13:07:03.773  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:07:03.964  3096  3107 I dev.local.audi: Background concurrent copying GC freed 11524(531KB) AllocSpace objects, 5(8MB) LOS objects, 49% free, 5MB/11MB, paused 261us total 404.491ms
+10-25 13:07:03.973  3096  3166 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: -1 bps and the estimated moov size 3191 bytes
+10-25 13:07:03.991  3096  3288 I MPEG4Writer: setStartTimestampUs: 0
+10-25 13:07:03.991  3096  3288 I MPEG4Writer: Earliest track starting time: 0
+10-25 13:07:04.077  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@669e271)
+10-25 13:07:04.079  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@669e271)
+10-25 13:07:04.507  3096  3288 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 13:07:04.507  3096  3288 I MPEG4Writer: Audio track drift time: 0 us
+10-25 13:07:04.509  3096  3166 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:07:04.509  3096  3166 D MPEG4Writer: Audio track source stopping
+10-25 13:07:04.509  3096  3166 D MPEG4Writer: Audio track source stopped
+10-25 13:07:04.509  3096  3166 D MPEG4Writer: Audio track stopped. Stop source
+10-25 13:07:04.509  3096  3166 D MPEG4Writer: Stopping writer thread
+10-25 13:07:04.510  3096  3287 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 13:07:04.511  3096  3166 D MPEG4Writer: Writer thread stopped
+10-25 13:07:04.511  3096  3166 I MPEG4Writer: Ajust the moov start time from 0 us -> 0 us
+10-25 13:07:04.517  3096  3166 D MPEG4Writer: Audio track stopping. Stop source
+10-25 13:07:04.534  3096  3165 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134170
+10-25 13:07:04.708  3096  3111 I CompatMatrix: sdk=28 sample=0 time=0 track=0 size=296 flags=1
+10-25 13:07:04.709  3096  3111 I CompatMatrix: sdk=28 sample=1 time=23219 track=0 size=336 flags=1
+10-25 13:07:04.710  3096  3111 I CompatMatrix: sdk=28 sample=2 time=46439 track=0 size=300 flags=1
+10-25 13:07:04.861  3096  3111 I CompatMatrix: sdk=28 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 13:07:04.971  1690  3241 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_DNS www.google.com 40076ms FAIL
+10-25 13:07:04.974  1690  3242 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_DNS connectivitycheck.gstatic.com 40083ms FAIL
+10-25 13:07:05.040  3096  3292 I OMXClient: IOmx service obtained
+10-25 13:07:05.042  1679  1679 I OMXMaster: makeComponentInstance(OMX.google.aac.decoder) in omx@1.0-service process
+10-25 13:07:05.056  1679  1679 E OMXNodeInstance: getConfig(0xf39a7bc0:google.aac.decoder, ConfigAndroidVendorExtension(0x6f100004)) ERROR: Undefined(0x80001001)
+10-25 13:07:05.063  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:07:05.068  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:07:05.073  1529  1529 W AshmemAllocator: ashmem_create_region(8192) returning hidl_memory(0x7d1c228310f0, 8192)
+10-25 13:07:05.076  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@27a0856)
+10-25 13:07:05.078  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@27a0856)
+10-25 13:07:05.084  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:07:05.089  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:07:05.091  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:07:05.130  1679  3293 I SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 13:07:05.146  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:07:05.151  1529  1529 I chatty  : uid=1000(system) allocator@1.0-s identical 2 lines
+10-25 13:07:05.154  1529  1529 W AshmemAllocator: ashmem_create_region(32768) returning hidl_memory(0x7d1c228310f0, 32768)
+10-25 13:07:06.076  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@503f0d7)
+10-25 13:07:06.081  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@503f0d7)
+10-25 13:07:07.082  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3593dc4)
+10-25 13:07:07.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3593dc4)
+10-25 13:07:07.967  1690  2623 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_FALLBACK http://play.googleapis.com/generate_204 Probe failed with exception java.net.UnknownHostException: play.googleapis.com: TLS-bypass resolution failed
+10-25 13:07:08.078  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@76934ad)
+10-25 13:07:08.082  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@76934ad)
+10-25 13:07:09.077  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a653e2)
+10-25 13:07:09.083  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a653e2)
+10-25 13:07:09.109  3096  3111 I CompatMatrix: WAV rate=44100 channels=2 bytes=1417216 seconds=8.034104308390022 expected=8.0
+10-25 13:07:09.125  3096  3111 I TestRunner: finished: providerKnownLength(dev.local.audio.CompatibilityMatrixTest)
+10-25 13:07:09.155  3096  3111 I TestRunner: run finished: 36 tests, 1 failed, 0 ignored
+10-25 13:07:09.369  1690  3065 I ActivityManager: Force stopping dev.local.audio appid=10067 user=0: finished inst
+10-25 13:07:09.371  1690  3065 I ActivityManager: Killing 3096:dev.local.audio/u0a67 (adj 0): stop dev.local.audio
+10-25 13:07:09.476  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:07:09.476  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:07:09.499  1690  1769 W Looper  : Slow dispatch took 124ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=53
+10-25 13:07:09.514  1690  3295 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+10-25 13:07:09.514  1690  3295 W Binder  : java.lang.Throwable
+10-25 13:07:09.514  1690  3295 W Binder  : 	at android.os.BinderProxy.transact(Binder.java:1114)
+10-25 13:07:09.514  1690  3295 W Binder  : 	at android.app.IInstrumentationWatcher$Stub$Proxy.instrumentationFinished(IInstrumentationWatcher.java:164)
+10-25 13:07:09.514  1690  3295 W Binder  : 	at com.android.server.am.InstrumentationReporter$MyThread.run(InstrumentationReporter.java:86)
+10-25 13:07:09.539  3087  3087 D AndroidRuntime: Shutting down VM
+10-25 13:07:09.592  1648  1648 I Zygote  : Process 3096 exited due to signal (9)
+10-25 13:07:09.603  1690  1771 E libprocessgroup: getpgid(3096) failed: No such process
+10-25 13:07:09.604  1690  1771 W libprocessgroup: kill(-3096, 9) failed: No such process
+10-25 13:07:09.604  1690  1771 W libprocessgroup: kill(3096, 9) failed: No such process
+10-25 13:07:09.653  1690  1771 W libprocessgroup: kill(-3096, 9) failed: No such process
+10-25 13:07:09.654  1690  1771 I libprocessgroup: Successfully killed process cgroup uid 10067 pid 3096 in 271ms
+10-25 13:07:09.723  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:07:09.723  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:07:09.799  1690  3295 I ActivityManager: Failure reporting to instrumentation watcher: comp=ComponentInfo{dev.local.audio.test/androidx.test.runner.AndroidJUnitRunner} results=Bundle[mParcelledData.dataSize=1940]
+10-25 13:07:09.849  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:07:09.849  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:07:10.077  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f8e7230)
+10-25 13:07:10.081  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f8e7230)
+10-25 13:07:11.079  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7916ea9)
+10-25 13:07:11.082  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7916ea9)
+10-25 13:07:12.078  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@859cc2e)
+10-25 13:07:12.080  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@859cc2e)
+10-25 13:07:13.078  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@40623cf)
+10-25 13:07:13.080  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@40623cf)
+10-25 13:07:14.078  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6a0815c)
+10-25 13:07:14.081  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6a0815c)
+10-25 13:07:15.083  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2e94c65)
+10-25 13:07:15.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2e94c65)
+10-25 13:07:16.124  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dba7d3a)
+10-25 13:07:16.141  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dba7d3a)
+10-25 13:07:17.079  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6b2deb)
+10-25 13:07:17.081  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6b2deb)
+10-25 13:07:18.079  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7625748)
+10-25 13:07:18.081  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7625748)
+10-25 13:07:19.080  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@52749e1)
+10-25 13:07:19.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@52749e1)
+10-25 13:07:20.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f433306)
+10-25 13:07:20.093  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f433306)
+10-25 13:07:21.080  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5ccbdc7)
+10-25 13:07:21.084  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5ccbdc7)
+10-25 13:07:22.080  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8e99ff4)
+10-25 13:07:22.083  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@8e99ff4)
+10-25 13:07:23.080  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4eda31d)
+10-25 13:07:23.085  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4eda31d)
+10-25 13:07:24.081  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64f7992)
+10-25 13:07:24.084  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@64f7992)
+10-25 13:07:25.083  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fcd6f63)
+10-25 13:07:25.084  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fcd6f63)
+10-25 13:07:26.080  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bfac760)
+10-25 13:07:26.085  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bfac760)
+10-25 13:07:27.081  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6c65419)
+10-25 13:07:27.084  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6c65419)
+10-25 13:07:28.081  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4679cde)
+10-25 13:07:28.083  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4679cde)
+10-25 13:07:29.082  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@39d9ebf)
+10-25 13:07:29.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@39d9ebf)
+10-25 13:07:30.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@734f98c)
+10-25 13:07:30.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@734f98c)
+10-25 13:07:31.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3df18d5)
+10-25 13:07:31.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@3df18d5)
+10-25 13:07:32.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@94ca8ea)
+10-25 13:07:32.089  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@94ca8ea)
+10-25 13:07:33.084  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1767db)
+10-25 13:07:33.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1767db)
+10-25 13:07:33.483  1690  2469 E memtrack: Couldn't load memtrack module
+10-25 13:07:33.483  1690  2469 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:07:34.084  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9fe2278)
+10-25 13:07:34.093  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9fe2278)
+10-25 13:07:35.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@856d51)
+10-25 13:07:35.088  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@856d51)
+10-25 13:07:36.083  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dc469b6)
+10-25 13:07:36.085  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@dc469b6)
+10-25 13:07:36.213  1676  1811 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+10-25 13:07:37.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d9aa6b7)
+10-25 13:07:37.087  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d9aa6b7)
+10-25 13:07:38.083  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@22eee24)
+10-25 13:07:38.085  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@22eee24)
+10-25 13:07:39.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e628d8d)
+10-25 13:07:39.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e628d8d)
+10-25 13:07:40.084  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f256b42)
+10-25 13:07:40.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f256b42)
+10-25 13:07:41.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a8f753)
+10-25 13:07:41.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a8f753)
+10-25 13:07:42.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7ec890)
+10-25 13:07:42.087  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7ec890)
+10-25 13:07:43.084  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6777589)
+10-25 13:07:43.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6777589)
+10-25 13:07:44.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7a2f98e)
+10-25 13:07:44.089  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7a2f98e)
+10-25 13:07:45.084  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a41b5af)
+10-25 13:07:45.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a41b5af)
+10-25 13:07:45.189  1690  3241 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_HTTPS https://www.google.com/generate_204 Probe failed with exception java.net.UnknownHostException: www.google.com: TLS-bypass resolution failed
+10-25 13:07:45.195  1690  3242 D NetworkMonitor/NetworkAgentInfo [WIFI () - 101]: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 Probe failed with exception java.net.UnknownHostException: connectivitycheck.gstatic.com: TLS-bypass resolution failed
+10-25 13:07:45.207  1690  1890 D ConnectivityService: NetworkAgentInfo [WIFI () - 101] validation failed
+10-25 13:07:46.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7afddbc)
+10-25 13:07:46.087  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@7afddbc)
+10-25 13:07:47.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6d8e145)
+10-25 13:07:47.086  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6d8e145)
+10-25 13:07:48.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f59209a)
+10-25 13:07:48.089  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f59209a)
+10-25 13:07:49.085  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1fdfdcb)
+10-25 13:07:49.088  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1fdfdcb)
+10-25 13:07:50.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@27b19a8)
+10-25 13:07:50.088  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@27b19a8)
+10-25 13:07:51.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2b4cc1)
+10-25 13:07:51.088  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2b4cc1)
+10-25 13:07:52.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@218ac66)
+10-25 13:07:52.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@218ac66)
+10-25 13:07:53.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5ecaba7)
+10-25 13:07:53.088  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5ecaba7)
+10-25 13:07:54.086  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c3c2854)
+10-25 13:07:54.091  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c3c2854)
+10-25 13:07:55.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@edef3fd)
+10-25 13:07:55.088  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@edef3fd)
+10-25 13:07:56.089  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5f328f2)
+10-25 13:07:56.091  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@5f328f2)
+10-25 13:07:57.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c2e5b43)
+10-25 13:07:57.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c2e5b43)
+10-25 13:07:58.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@85d75c0)
+10-25 13:07:58.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@85d75c0)
+10-25 13:07:59.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c2bd2f9)
+10-25 13:07:59.089  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c2bd2f9)
+10-25 13:08:00.041  1690  1690 I ActivityManager: Killing 2720:com.android.managedprovisioning/u0a33 (adj 906): empty #17
+10-25 13:08:00.058  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.068  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:00.068  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:00.088  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@251689f)
+10-25 13:08:00.140  1687  1709 D hwcomposer: hw_composer sent 12 syncs in 60s
+10-25 13:08:00.213  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.253  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.292  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:00.292  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:00.296  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.428  1690  1771 I chatty  : uid=1000(system) ActivityManager identical 3 lines
+10-25 13:08:00.514  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.553  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:00.554  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:00.558  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.603  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.626  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:00.626  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:00.643  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.683  1690  1771 I chatty  : uid=1000(system) ActivityManager identical 1 line
+10-25 13:08:00.724  1690  1771 W libprocessgroup: kill(-2720, 9) failed: No such process
+10-25 13:08:00.725  1690  1771 I libprocessgroup: Successfully killed process cgroup uid 10033 pid 2720 in 670ms
+10-25 13:08:00.722  1648  1648 I Zygote  : Process 2720 exited due to signal (9)
+10-25 13:08:00.819  1690  1769 W Looper  : Slow dispatch took 109ms android.ui h=com.android.server.am.ActivityManagerService$UiHandler c=null m=53
+10-25 13:08:00.830  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@251689f)
+10-25 13:08:01.087  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4842dec)
+10-25 13:08:01.090  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4842dec)
+10-25 13:08:02.088  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2cda5b5)
+10-25 13:08:02.092  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2cda5b5)
+10-25 13:08:03.088  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@90ae44a)
+10-25 13:08:03.089  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@90ae44a)
+10-25 13:08:04.093  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@66defbb)
+10-25 13:08:04.096  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@66defbb)
+10-25 13:08:05.089  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@17c3cd8)
+10-25 13:08:05.092  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@17c3cd8)
+10-25 13:08:06.091  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@37fe831)
+10-25 13:08:06.093  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@37fe831)
+10-25 13:08:07.090  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d1afb16)
+10-25 13:08:07.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d1afb16)
+10-25 13:08:08.090  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@601cc97)
+10-25 13:08:08.092  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@601cc97)
+10-25 13:08:09.090  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ee44e84)
+10-25 13:08:09.094  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ee44e84)
+10-25 13:08:10.101  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@539d66d)
+10-25 13:08:10.104  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@539d66d)
+10-25 13:08:11.094  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e43b2a2)
+10-25 13:08:11.095  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e43b2a2)
+10-25 13:08:12.225  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e8c9b33)
+10-25 13:08:12.229  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e8c9b33)
+10-25 13:08:13.093  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@599cef0)
+10-25 13:08:13.098  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@599cef0)
+10-25 13:08:14.093  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d2a6c69)
+10-25 13:08:14.095  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d2a6c69)
+10-25 13:08:15.094  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a4e56ee)
+10-25 13:08:15.096  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a4e56ee)
+10-25 13:08:16.094  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bebb78f)
+10-25 13:08:16.096  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@bebb78f)
+10-25 13:08:17.094  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ce4ea1c)
+10-25 13:08:17.096  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ce4ea1c)
+10-25 13:08:18.094  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a746625)
+10-25 13:08:18.097  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a746625)
+10-25 13:08:19.096  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4cf3fa)
+10-25 13:08:19.097  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4cf3fa)
+10-25 13:08:20.095  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@763dab)
+10-25 13:08:20.101  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@763dab)
+10-25 13:08:21.096  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6648c08)
+10-25 13:08:21.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6648c08)
+10-25 13:08:22.096  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1aa3fa1)
+10-25 13:08:22.099  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1aa3fa1)
+10-25 13:08:23.097  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c6655c6)
+10-25 13:08:23.099  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c6655c6)
+10-25 13:08:24.096  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2d90987)
+10-25 13:08:24.098  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2d90987)
+10-25 13:08:25.096  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cba60b4)
+10-25 13:08:25.099  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cba60b4)
+10-25 13:08:26.096  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@40a34dd)
+10-25 13:08:26.098  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@40a34dd)
+10-25 13:08:27.097  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4620852)
+10-25 13:08:27.098  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4620852)
+10-25 13:08:28.098  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@db2b723)
+10-25 13:08:28.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@db2b723)
+10-25 13:08:29.097  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6d420)
+10-25 13:08:29.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f6d420)
+10-25 13:08:30.097  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e7a41d9)
+10-25 13:08:30.099  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e7a41d9)
+10-25 13:08:31.099  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f4579e)
+10-25 13:08:31.102  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f4579e)
+10-25 13:08:32.098  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cefa27f)
+10-25 13:08:32.099  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@cefa27f)
+10-25 13:08:33.098  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2c5124c)
+10-25 13:08:33.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2c5124c)
+10-25 13:08:33.740  1690  2466 E memtrack: Couldn't load memtrack module
+10-25 13:08:33.740  1690  2466 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:34.103  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c442295)
+10-25 13:08:34.105  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@c442295)
+10-25 13:08:35.098  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fca4faa)
+10-25 13:08:35.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fca4faa)
+10-25 13:08:36.099  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4e5e79b)
+10-25 13:08:36.104  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4e5e79b)
+10-25 13:08:36.217  1676  1811 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+10-25 13:08:37.099  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f570738)
+10-25 13:08:37.100  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f570738)
+10-25 13:08:38.099  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9915311)
+10-25 13:08:38.101  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9915311)
+10-25 13:08:39.099  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a55bc76)
+10-25 13:08:39.101  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a55bc76)
+10-25 13:08:40.099  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f316277)
+10-25 13:08:40.107  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f316277)
+10-25 13:08:40.924  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:40.924  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.043  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:41.043  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.100  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d592a02)
+10-25 13:08:41.120  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:41.121  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.185  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:41.185  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.277  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:41.278  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.343  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:41.343  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.430  1690  1767 E memtrack: Couldn't load memtrack module
+10-25 13:08:41.430  1690  1767 W android.os.Debug: failed to get memory consumption info: -1
+10-25 13:08:41.548  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d592a02)
+10-25 13:08:42.100  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@94faf13)
+10-25 13:08:42.106  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@94faf13)
+10-25 13:08:43.101  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9f78550)
+10-25 13:08:43.104  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9f78550)
+10-25 13:08:43.792  1690  3312 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_DNS connectivitycheck.gstatic.com 40103ms FAIL
+10-25 13:08:43.805  1690  3311 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_DNS www.google.com 40114ms FAIL
+10-25 13:08:44.106  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4e25349)
+10-25 13:08:44.109  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@4e25349)
+10-25 13:08:44.786  1690  2565 D WificondControl: Scan result ready event
+10-25 13:08:45.101  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d33e44e)
+10-25 13:08:45.105  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d33e44e)
+10-25 13:08:46.103  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fc296f)
+10-25 13:08:46.106  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@fc296f)
+10-25 13:08:46.751  1690  2294 D NetworkMonitor/NetworkAgentInfo [MOBILE (LTE) - 100]: PROBE_FALLBACK http://play.googleapis.com/generate_204 Probe failed with exception java.net.UnknownHostException: play.googleapis.com: TLS-bypass resolution failed
+10-25 13:08:47.103  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ad7a67c)
+10-25 13:08:47.104  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ad7a67c)
+10-25 13:08:48.103  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@273db05)
+10-25 13:08:48.104  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@273db05)
+10-25 13:08:49.102  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2edf75a)
+10-25 13:08:49.105  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@2edf75a)
+10-25 13:08:50.102  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a4bed8b)
+10-25 13:08:50.111  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a4bed8b)
+10-25 13:08:51.102  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@936ae68)
+10-25 13:08:51.104  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@936ae68)
+10-25 13:08:52.104  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1dc2281)
+10-25 13:08:52.108  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@1dc2281)
+10-25 13:08:53.103  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e042f26)
+10-25 13:08:53.105  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@e042f26)
+10-25 13:08:54.104  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b89d767)
+10-25 13:08:54.106  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@b89d767)
+10-25 13:08:54.847  1690  1885 W AlarmManager: Unrecognized alarm listener com.android.server.wifi.WifiConfigStore$1@66b006e
+10-25 13:08:54.888  1690  1885 D WifiConfigStore: Writing to stores completed in 41 ms.
+10-25 13:08:55.103  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9fc4914)
+10-25 13:08:55.105  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@9fc4914)
+10-25 13:08:56.104  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@82765bd)
+10-25 13:08:56.106  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@82765bd)
+10-25 13:08:57.104  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6f417b2)
+10-25 13:08:57.106  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6f417b2)
+10-25 13:08:57.974  3328  3328 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-25 13:08:58.104  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ad28303)
+10-25 13:08:58.106  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ad28303)
+10-25 13:08:58.487  3328  3328 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+10-25 13:08:58.726  3328  3328 D AndroidRuntime: Calling main entry TrackProbe
+10-25 13:08:58.741  3328  3328 I app_process: Thread[1,tid=3328,Native,Thread*=0x7d92e0c14c00,peer=0x12c01da0,"main"] recursive attempt to load library "/system/lib64/libmedia_jni.so"
+10-25 13:08:58.747  3328  3328 D MtpDeviceJNI: register_android_mtp_MtpDevice
+10-25 13:08:58.749  3328  3328 I app_process: Thread[1,tid=3328,Native,Thread*=0x7d92e0c14c00,peer=0x12c01da0,"main"] recursive attempt to load library "/system/lib64/libmedia_jni.so"
+10-25 13:08:58.750  3328  3328 I app_process: Thread[1,tid=3328,Native,Thread*=0x7d92e0c14c00,peer=0x12c01da0,"main"] recursive attempt to load library "/system/lib64/libmedia_jni.so"
+10-25 13:08:58.831  1662  3296 E MPEG4Extractor: MP3 track in MP4/3GPP file is not supported
+10-25 13:08:58.869  3328  3328 D AndroidRuntime: Shutting down VM
+10-25 13:08:59.106  1690  1996 I GnssLocationProvider: WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6dee280)
+10-25 13:08:59.108  1690  1767 I GnssLocationProvider: WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@6dee280)

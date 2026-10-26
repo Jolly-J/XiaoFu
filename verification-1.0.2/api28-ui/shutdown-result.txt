@@ -1,0 +1,1 @@
+adb emu kill acknowledged OK; emulator terminated by SIGUSR1; runner session 62115 completed with exit 138. No running device session remains.

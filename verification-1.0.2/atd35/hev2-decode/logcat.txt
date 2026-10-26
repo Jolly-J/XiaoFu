@@ -1,0 +1,1026 @@
+--------- beginning of main
+10-25 12:11:57.937  4432  4608 D CCodecConfig: no c2 equivalents for encoder-delay
+10-25 12:11:57.939  4432  4608 D CCodecConfig: no c2 equivalents for durationUs
+10-25 12:11:57.939  4432  4608 D CCodecConfig: no c2 equivalents for encoder-padding
+10-25 12:11:57.939  4432  4608 D CCodecConfig: no c2 equivalents for flags
+10-25 12:11:57.942   446  4549 E Codec2-ComponentInterface: We have a failed config
+10-25 12:11:57.944  4432  4608 D CCodecConfig: config failed => CORRUPTED
+10-25 12:11:57.949  4432  4608 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 128155
+10-25 12:11:57.957  4432  4608 W Codec2Client: query -- param skipped: index = 1107298332.
+10-25 12:11:57.959  4432  4608 D CCodec  : client requested max input size 438, which is smaller than what component recommended (8192); overriding with component recommendation.
+10-25 12:11:57.960  4432  4608 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+10-25 12:11:57.960  4432  4608 D CCodec  : encoding statistics level = 0
+10-25 12:11:57.961  4432  4608 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t bitrate = 128155
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t channel-count = 2
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t max-input-size = 8192
+10-25 12:11:57.961  4432  4608 D CCodec  :   string mime = "audio/mpeg"
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:11:57.961  4432  4608 D CCodec  : }
+10-25 12:11:57.961  4432  4608 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t channel-count = 2
+10-25 12:11:57.961  4432  4608 D CCodec  :   string mime = "audio/raw"
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t encoder-delay = 1105
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t encoder-padding = 39
+10-25 12:11:57.961  4432  4608 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-25 12:11:57.961  4432  4608 D CCodec  : }
+10-25 12:11:57.966  4432  4608 I CCodecConfig: query failed after returning 8 values (BAD_INDEX)
+10-25 12:11:57.978  4432  4608 W Codec2Client: query -- param skipped: index = 1342179345.
+10-25 12:11:57.979  4432  4608 W Codec2Client: query -- param skipped: index = 2415921170.
+10-25 12:11:57.994   446  1060 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d77e8 : 0(0 size) total buffers - 0(0 size) used buffers - 170/172 (recycle/alloc) - 2/172 (fetch/transfer)
+10-25 12:11:57.996  4432  4608 D CCodecBufferChannel: [c2.android.mp3.decoder#242] Created input block pool with allocatorID 16 => poolID 36 - OK (0)
+10-25 12:11:58.002   446  1060 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d77e8 cached: 0/0M, 0/0% in use; allocs: 172, 99% recycled; transfers: 172, 99% unfetched
+10-25 12:11:58.011  4432  4608 I CCodecBufferChannel: [c2.android.mp3.decoder#242] Created output block pool with allocatorID 16 => poolID 78 - OK
+10-25 12:11:58.016  4432  4608 D CCodecBufferChannel: [c2.android.mp3.decoder#242] Configured output block pool ids 78 => OK
+10-25 12:11:58.018   446  3900 E Codec2-ComponentInterface: We have a failed config
+10-25 12:11:58.027   446  4609 D SimpleC2Component: Using output block pool with poolID 78 => got 78 - 0
+10-25 12:11:58.108   446  4609 I C2SoftMp3Dec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 12:12:01.863   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d5788 : 0(0 size) total buffers - 0(0 size) used buffers - 306/309 (recycle/alloc) - 3/309 (fetch/transfer)
+10-25 12:12:01.864   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d3288 : 0(0 size) total buffers - 0(0 size) used buffers - 343/345 (recycle/alloc) - 2/345 (fetch/transfer)
+10-25 12:12:01.866   446   981 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 2
+10-25 12:12:02.630  4432  4467 D BufferPoolAccessor2.0: bufferpool2 0x71738a73a5e8 : 0(0 size) total buffers - 0(0 size) used buffers - 308/314 (recycle/alloc) - 7/616 (fetch/transfer)
+10-25 12:12:02.630  4432  4467 D BufferPoolAccessor2.0: bufferpool2 0x71738a73bd08 : 0(0 size) total buffers - 0(0 size) used buffers - 307/312 (recycle/alloc) - 5/616 (fetch/transfer)
+10-25 12:12:02.630  4432  4467 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 2
+10-25 12:12:02.867   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d7ed8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+10-25 12:12:02.867   446   981 D BufferPoolAccessor2.0: evictor expired: 3, evicted: 1
+10-25 12:12:03.039  4432  4608 D BufferPoolAccessor2.0: bufferpool2 0x71738a73f488 : 5(40960 size) total buffers - 4(32768 size) used buffers - 257/262 (recycle/alloc) - 5/513 (fetch/transfer)
+10-25 12:12:03.083   446  4609 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d77e8 : 1(4608 size) total buffers - 1(4608 size) used buffers - 258/259 (recycle/alloc) - 1/258 (fetch/transfer)
+10-25 12:12:03.633  4432  4467 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-25 12:12:03.874   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-25 12:12:04.009  4432  4608 D CCodecBufferChannel: [c2.android.mp3.decoder#242] MediaCodec discarded an unknown buffer
+10-25 12:12:04.014  4432  4608 D CCodecBufferChannel: [c2.android.mp3.decoder#242] MediaCodec discarded an unknown buffer
+10-25 12:12:04.016  4432  4608 D CCodecBufferChannel: [c2.android.mp3.decoder#242] MediaCodec discarded an unknown buffer
+10-25 12:12:04.048  4432  4608 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:04.198   446  4549 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:04.198   446  4549 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:04.202   446  4549 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d7ed8 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+10-25 12:12:04.213  4432  4446 I CompatMatrix: WAV rate=44100 channels=2 bytes=1414688 seconds=8.019773242630386 expected=8.0
+10-25 12:12:04.282  4432  4446 I TestRunner: finished: mp3TrackInMp4(dev.local.audio.CompatibilityMatrixTest)
+10-25 12:12:04.325  4432  4446 I TestRunner: started: multiAudioTrackSelectsFirstDeterministically(dev.local.audio.CompatibilityMatrixTest)
+10-25 12:12:04.604  4432  4453 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 12:12:04.826  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 12:12:05.348  4432  4446 I CompatMatrix: sdk=35 sample=0 time=-23219 track=1 size=296 flags=1
+10-25 12:12:05.356  4432  4446 I CompatMatrix: sdk=35 sample=1 time=0 track=1 size=336 flags=1
+10-25 12:12:05.360  4432  4446 I CompatMatrix: sdk=35 sample=2 time=23219 track=1 size=300 flags=1
+10-25 12:12:05.818  4432  4437 I dev.local.audio: Background concurrent mark compact GC freed 1048KB AllocSpace bytes, 6(8280KB) LOS objects, 49% free, 6413KB/12MB, paused 734us,10.398ms total 679.016ms
+10-25 12:12:06.428  4432  4446 I CompatMatrix: sdk=35 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 12:12:06.489  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 12:12:06.651  4432  4451 D MPEG4Writer: PreAllocation enabled
+10-25 12:12:06.654  4432  4451 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-25 12:12:06.655  4432  4451 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-25 12:12:06.662  4432  4451 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-25 12:12:06.663  4432  4451 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-25 12:12:06.857  4432  4613 I MPEG4Writer: setStartTimestampUs: 0
+10-25 12:12:06.860  4432  4613 I MPEG4Writer: Earliest track starting time: 0
+10-25 12:12:08.600  4432  4451 D MPEG4Writer: reset()
+10-25 12:12:08.601  4432  4451 D MPEG4Writer: Audio track stopping. Stop source
+10-25 12:12:08.602  4432  4451 D MPEG4Writer: Audio track source stopping
+10-25 12:12:08.602  4432  4451 D MPEG4Writer: Audio track source stopped
+10-25 12:12:08.603  4432  4613 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-25 12:12:08.603  4432  4613 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 12:12:08.604  4432  4613 I MPEG4Writer: Audio track drift time: 0 us
+10-25 12:12:08.606  4432  4451 D MPEG4Writer: Audio track stopped. Status:0. Stop source
+10-25 12:12:08.608  4432  4611 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 12:12:08.610  4432  4451 D MPEG4Writer: WriterThread stopped. Status:0
+10-25 12:12:08.610  4432  4451 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-25 12:12:08.611  4432  4451 I MPEG4Writer: MOOV atom was written to the file
+10-25 12:12:08.611  4432  4451 D MPEG4Writer: release()
+10-25 12:12:08.611  4432  4451 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:138367 mOffset:2092 mMdatEndOffset:134179 diff:4188
+10-25 12:12:08.628  4432  4451 D MPEG4Writer: final fsync() takes 16 ms, file size 134179
+10-25 12:12:08.630  4432  4451 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-25 12:12:08.630  4432  4451 D MPEG4Writer: Top 5 write durations(microseconds): #1:615 #2:2325 #3:2687 #4:3312 #5:3508
+10-25 12:12:08.630  4432  4451 D MPEG4Writer: reset()
+10-25 12:12:08.630  4432  4451 D MPEG4Writer: Audio track stopping. Stop source
+10-25 12:12:08.631  4432  4451 E MPEG4Writer: Stop() called but track is not started or stopped
+10-25 12:12:08.669  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134179
+10-25 12:12:08.924  4432  4446 I CompatMatrix: sdk=35 sample=0 time=0 track=0 size=296 flags=1
+10-25 12:12:08.925  4432  4446 I CompatMatrix: sdk=35 sample=1 time=23219 track=0 size=336 flags=1
+10-25 12:12:08.928  4432  4446 I CompatMatrix: sdk=35 sample=2 time=46439 track=0 size=300 flags=1
+10-25 12:12:09.268  4432  4446 I CompatMatrix: sdk=35 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 12:12:09.332  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/204672
+10-25 12:12:09.479  4432  4451 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-25 12:12:09.492  4432  4614 D CCodec  : allocate(c2.android.aac.decoder)
+10-25 12:12:09.505  4432  4614 I CCodec  : setting up 'default' as default (vendor) store
+10-25 12:12:09.537  4432  4468 D BufferPoolAccessor2.0: bufferpool2 0x71738a73a5e8 : 0(0 size) total buffers - 0(0 size) used buffers - 308/314 (recycle/alloc) - 7/616 (fetch/transfer)
+10-25 12:12:09.539  4432  4468 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x71738a73a5e8 cached: 0/0M, 0/0% in use; allocs: 314, 98% recycled; transfers: 616, 99% unfetched
+10-25 12:12:09.546  4432  4468 D BufferPoolAccessor2.0: bufferpool2 0x71738a73bd08 : 0(0 size) total buffers - 0(0 size) used buffers - 307/312 (recycle/alloc) - 5/616 (fetch/transfer)
+10-25 12:12:09.548  4432  4468 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x71738a73bd08 cached: 0/0M, 0/0% in use; allocs: 312, 98% recycled; transfers: 616, 99% unfetched
+10-25 12:12:09.556  4432  4614 I CCodec  : Created component [c2.android.aac.decoder]
+10-25 12:12:09.558  4432  4468 D BufferPoolAccessor2.0: bufferpool2 0x71738a73f488 : 0(0 size) total buffers - 0(0 size) used buffers - 309/314 (recycle/alloc) - 5/616 (fetch/transfer)
+10-25 12:12:09.558  4432  4468 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x71738a73f488 cached: 0/0M, 0/0% in use; allocs: 314, 98% recycled; transfers: 616, 99% unfetched
+10-25 12:12:09.562  4432  4614 D CCodecConfig: read media type: audio/mp4a-latm
+10-25 12:12:09.597  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-25 12:12:09.600  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-25 12:12:09.602  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-25 12:12:09.604  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-25 12:12:09.605  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-25 12:12:09.609  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-25 12:12:09.611  4432  4614 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-25 12:12:09.636  4432  4614 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:12:09.638  4432  4614 D CCodecConfig: c2 config diff is Dict {
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 coded.aac-packaging.value = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 coded.pl.level = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 coded.pl.profile = 8192
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::i32 coding.drc.album-mode.value = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::float coding.drc.attenuation-factor.value = 1
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::float coding.drc.boost-factor.value = 1
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::i32 coding.drc.compression-mode.value = 3
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::i32 coding.drc.effect-type.value = 3
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::float coding.drc.encoded-level.value = 0.25
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::float coding.drc.reference-level.value = -16
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 8192
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   string input.media-type.value = "audio/mp4a-latm"
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 output.delay.value = 2
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::float output.drc.output-loudness.value = 0.25
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 raw.channel-mask.value = 0
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 raw.max-channel-count.value = 8
+10-25 12:12:09.638  4432  4614 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:12:09.638  4432  4614 D CCodecConfig: }
+10-25 12:12:09.661  4432  4614 D CCodec  : [c2.android.aac.decoder] buffers are bound to CCodec for this session
+10-25 12:12:09.662  4432  4614 D CCodecConfig: no c2 equivalents for track-id
+10-25 12:12:09.662  4432  4614 D CCodecConfig: no c2 equivalents for language
+10-25 12:12:09.662  4432  4614 D CCodecConfig: no c2 equivalents for encoder-delay
+10-25 12:12:09.663  4432  4614 D CCodecConfig: no c2 equivalents for durationUs
+10-25 12:12:09.663  4432  4614 D CCodecConfig: no c2 equivalents for encoder-padding
+10-25 12:12:09.663  4432  4614 D CCodecConfig: no c2 equivalents for flags
+10-25 12:12:09.668   446  4549 E Codec2-ComponentInterface: We have a failed config
+10-25 12:12:09.669  4432  4614 D CCodecConfig: config failed => CORRUPTED
+10-25 12:12:09.671  4432  4614 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 130568
+10-25 12:12:09.671  4432  4614 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-25 12:12:09.678  4432  4614 W Codec2Client: query -- param skipped: index = 1107298332.
+10-25 12:12:09.678  4432  4614 D CCodec  : client requested max input size 508, which is smaller than what component recommended (8192); overriding with component recommendation.
+10-25 12:12:09.678  4432  4614 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+10-25 12:12:09.679  4432  4614 D CCodec  : encoding statistics level = 0
+10-25 12:12:09.679  4432  4614 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t bitrate = 130568
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t channel-count = 2
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t channel-mask = 0
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t level = 0
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t max-input-size = 8192
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:12:09.679  4432  4614 D CCodec  :   string mime = "audio/mp4a-latm"
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t profile = 2
+10-25 12:12:09.679  4432  4614 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:12:09.679  4432  4614 D CCodec  : }
+10-25 12:12:09.680  4432  4614 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-drc-output-loudness = -1
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t channel-count = 2
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t channel-mask = 0
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:12:09.680  4432  4614 D CCodec  :   string mime = "audio/raw"
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t encoder-delay = 1024
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t encoder-padding = 0
+10-25 12:12:09.680  4432  4614 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-25 12:12:09.680  4432  4614 D CCodec  : }
+10-25 12:12:09.683  4432  4614 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:12:09.698  4432  4614 W Codec2Client: query -- param skipped: index = 1342179345.
+10-25 12:12:09.699  4432  4614 W Codec2Client: query -- param skipped: index = 2415921170.
+10-25 12:12:09.699  4432  4614 W Codec2Client: query -- param skipped: index = 1610614798.
+10-25 12:12:09.716   446  4549 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d5788 : 0(0 size) total buffers - 0(0 size) used buffers - 306/309 (recycle/alloc) - 3/309 (fetch/transfer)
+10-25 12:12:09.721   446  3901 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d3288 : 0(0 size) total buffers - 0(0 size) used buffers - 343/345 (recycle/alloc) - 2/345 (fetch/transfer)
+10-25 12:12:09.725   446  3900 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d77e8 : 0(0 size) total buffers - 0(0 size) used buffers - 307/309 (recycle/alloc) - 2/309 (fetch/transfer)
+10-25 12:12:09.727  4432  4614 D CCodecBufferChannel: [c2.android.aac.decoder#272] Created input block pool with allocatorID 16 => poolID 37 - OK (0)
+10-25 12:12:09.734   446  3901 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d3288 cached: 0/0M, 0/0% in use; allocs: 345, 99% recycled; transfers: 345, 99% unfetched
+10-25 12:12:09.738  4432  4614 I CCodecBufferChannel: [c2.android.aac.decoder#272] Created output block pool with allocatorID 16 => poolID 80 - OK
+10-25 12:12:09.741  4432  4614 D CCodecBufferChannel: [c2.android.aac.decoder#272] Configured output block pool ids 80 => OK
+10-25 12:12:09.742   446  4374 E Codec2-ComponentInterface: We have a failed config
+10-25 12:12:09.743   446  4549 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d5788 cached: 0/0M, 0/0% in use; allocs: 309, 99% recycled; transfers: 309, 99% unfetched
+10-25 12:12:09.745   446  3900 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d77e8 cached: 0/0M, 0/0% in use; allocs: 309, 99% recycled; transfers: 309, 99% unfetched
+10-25 12:12:09.758   446  4615 D SimpleC2Component: Using output block pool with poolID 80 => got 80 - 0
+10-25 12:12:09.881   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-25 12:12:09.993   446  4615 I C2SoftAacDec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 12:12:10.045  4432  4614 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-mask.value = 12
+10-25 12:12:10.051  4432  4614 D CCodecBuffers: [c2.android.aac.decoder#272:Output[N]] popFromStashAndRegister: at -23219us, output format changed to AMessage(what = 0x00000000) = {
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-drc-album-mode = 0
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-drc-boost-level = 127
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-drc-cut-level = 127
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-drc-effect-type = 3
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-drc-output-loudness = -1
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-encoded-target-level = -1
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-max-output-channel_count = 8
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t aac-target-ref-level = 64
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t buffer-batch-max-output-size = 0
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t channel-count = 2
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t channel-mask = 12
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t max-output-channel-count = 8
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   string mime = "audio/raw"
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t sample-rate = 44100
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t encoder-delay = 1024
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t encoder-padding = 0
+10-25 12:12:10.051  4432  4614 D CCodecBuffers:   int32_t android._config-pcm-encoding = 2
+10-25 12:12:10.051  4432  4614 D CCodecBuffers: }
+10-25 12:12:14.645  4432  4467 D BufferPoolAccessor2.0: evictor expired: 3, evicted: 0
+10-25 12:12:14.760  4432  4468 D BufferPoolAccessor2.0: bufferpool2 0x71738a73bd08 : 5(40960 size) total buffers - 5(40960 size) used buffers - 199/204 (recycle/alloc) - 5/200 (fetch/transfer)
+10-25 12:12:14.886   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d7ed8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+10-25 12:12:14.897   446   981 D BufferPoolAccessor2.0: evictor expired: 4, evicted: 1
+10-25 12:12:15.143   446  4615 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d9158 : 1(4096 size) total buffers - 1(4096 size) used buffers - 207/208 (recycle/alloc) - 1/208 (fetch/transfer)
+--------- beginning of kernel
+10-25 12:12:17.237     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=2 c=900000 fc=3000000 cc=10 chg=a
+10-25 12:12:18.394  4432  4614 D CCodecBufferChannel: [c2.android.aac.decoder#272] MediaCodec discarded an unknown buffer
+10-25 12:12:18.397  4432  4614 D CCodecBufferChannel: [c2.android.aac.decoder#272] MediaCodec discarded an unknown buffer
+10-25 12:12:18.399  4432  4614 D CCodecBufferChannel: [c2.android.aac.decoder#272] MediaCodec discarded an unknown buffer
+10-25 12:12:18.418  4432  4614 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:18.420   446  3900 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:18.452   446  3900 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:18.473   446  3900 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d7ed8 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+10-25 12:12:18.493  4432  4446 I CompatMatrix: WAV rate=44100 channels=2 bytes=1413120 seconds=8.010884353741497 expected=8.0
+10-25 12:12:18.554  4432  4446 I TestRunner: finished: multiAudioTrackSelectsFirstDeterministically(dev.local.audio.CompatibilityMatrixTest)
+10-25 12:12:18.581  4432  4446 I TestRunner: started: hevcContainer(dev.local.audio.CompatibilityMatrixTest)
+10-25 12:12:18.658  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136977
+10-25 12:12:18.751   432  3555 I SampleTable: There are reordered frames present.
+10-25 12:12:18.883   432   432 I SampleTable: There are reordered frames present.
+10-25 12:12:18.986  4432  4446 I CompatMatrix: sdk=35 sample=0 time=-23219 track=1 size=296 flags=1
+10-25 12:12:18.993  4432  4446 I CompatMatrix: sdk=35 sample=1 time=0 track=1 size=336 flags=1
+10-25 12:12:18.995  4432  4446 I CompatMatrix: sdk=35 sample=2 time=23219 track=1 size=300 flags=1
+10-25 12:12:19.391  4432  4446 I CompatMatrix: sdk=35 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 12:12:19.494  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136977
+10-25 12:12:19.497  4432  4437 I dev.local.audio: Background concurrent mark compact GC freed 620KB AllocSpace bytes, 5(8244KB) LOS objects, 49% free, 6441KB/12MB, paused 1.279ms,9.227ms total 560.381ms
+10-25 12:12:19.588   432  3555 I SampleTable: There are reordered frames present.
+10-25 12:12:19.633  4432  4451 D MPEG4Writer: PreAllocation enabled
+10-25 12:12:19.636  4432  4451 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-25 12:12:19.637  4432  4451 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-25 12:12:19.642  4432  4451 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-25 12:12:19.647  4432  4451 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-25 12:12:19.691  4432  4619 I MPEG4Writer: setStartTimestampUs: 0
+10-25 12:12:19.693  4432  4619 I MPEG4Writer: Earliest track starting time: 0
+10-25 12:12:20.753  4432  4619 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-25 12:12:20.754  4432  4619 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 12:12:20.755  4432  4619 I MPEG4Writer: Audio track drift time: 0 us
+10-25 12:12:20.757  4432  4451 D MPEG4Writer: reset()
+10-25 12:12:20.757  4432  4451 D MPEG4Writer: Audio track stopping. Stop source
+10-25 12:12:20.758  4432  4451 D MPEG4Writer: Audio track source stopping
+10-25 12:12:20.758  4432  4451 D MPEG4Writer: Audio track source stopped
+10-25 12:12:20.759  4432  4451 D MPEG4Writer: Audio track stopped. Status:0. Stop source
+10-25 12:12:20.761  4432  4617 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 12:12:20.763  4432  4451 D MPEG4Writer: WriterThread stopped. Status:0
+10-25 12:12:20.764  4432  4451 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-25 12:12:20.765  4432  4451 I MPEG4Writer: MOOV atom was written to the file
+10-25 12:12:20.765  4432  4451 D MPEG4Writer: release()
+10-25 12:12:20.765  4432  4451 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:138367 mOffset:2092 mMdatEndOffset:134179 diff:4188
+10-25 12:12:20.779  4432  4451 D MPEG4Writer: final fsync() takes 12 ms, file size 134179
+10-25 12:12:20.781  4432  4451 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-25 12:12:20.782  4432  4451 D MPEG4Writer: Top 5 write durations(microseconds): #1:494 #2:583 #3:691 #4:1859 #5:2911
+10-25 12:12:20.782  4432  4451 D MPEG4Writer: reset()
+10-25 12:12:20.782  4432  4451 D MPEG4Writer: Audio track stopping. Stop source
+10-25 12:12:20.783  4432  4451 E MPEG4Writer: Stop() called but track is not started or stopped
+10-25 12:12:20.834  4432  4453 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134179
+10-25 12:12:21.116  4432  4446 I CompatMatrix: sdk=35 sample=0 time=0 track=0 size=296 flags=1
+10-25 12:12:21.119  4432  4446 I CompatMatrix: sdk=35 sample=1 time=23219 track=0 size=336 flags=1
+10-25 12:12:21.127  4432  4446 I CompatMatrix: sdk=35 sample=2 time=46439 track=0 size=300 flags=1
+10-25 12:12:21.460  4432  4446 I CompatMatrix: sdk=35 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 12:12:21.515  4432  4453 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/136977
+10-25 12:12:21.605   432   471 I SampleTable: There are reordered frames present.
+10-25 12:12:21.659  4432  4453 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-25 12:12:21.669  4432  4620 D CCodec  : allocate(c2.android.aac.decoder)
+10-25 12:12:21.681  4432  4620 I CCodec  : setting up 'default' as default (vendor) store
+10-25 12:12:21.723  4432  4620 I CCodec  : Created component [c2.android.aac.decoder]
+10-25 12:12:21.729  4432  4620 D CCodecConfig: read media type: audio/mp4a-latm
+10-25 12:12:21.754  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-25 12:12:21.838  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-25 12:12:21.840  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-25 12:12:21.845  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-25 12:12:21.848  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-25 12:12:21.849  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-25 12:12:21.851  4432  4620 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-25 12:12:21.880  4432  4620 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:12:21.881  4432  4620 D CCodecConfig: c2 config diff is Dict {
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 coded.aac-packaging.value = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 coded.pl.level = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 coded.pl.profile = 8192
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::i32 coding.drc.album-mode.value = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::float coding.drc.attenuation-factor.value = 1
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::float coding.drc.boost-factor.value = 1
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::i32 coding.drc.compression-mode.value = 3
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::i32 coding.drc.effect-type.value = 3
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::float coding.drc.encoded-level.value = 0.25
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::float coding.drc.reference-level.value = -16
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 8192
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   string input.media-type.value = "audio/mp4a-latm"
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 output.delay.value = 2
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::float output.drc.output-loudness.value = 0.25
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 raw.channel-mask.value = 0
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 raw.max-channel-count.value = 8
+10-25 12:12:21.881  4432  4620 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:12:21.881  4432  4620 D CCodecConfig: }
+10-25 12:12:21.898  4432  4620 D CCodec  : [c2.android.aac.decoder] buffers are bound to CCodec for this session
+10-25 12:12:21.899  4432  4620 D CCodecConfig: no c2 equivalents for track-id
+10-25 12:12:21.899  4432  4620 D CCodecConfig: no c2 equivalents for language
+10-25 12:12:21.899  4432  4620 D CCodecConfig: no c2 equivalents for encoder-delay
+10-25 12:12:21.899  4432  4620 D CCodecConfig: no c2 equivalents for durationUs
+10-25 12:12:21.900  4432  4620 D CCodecConfig: no c2 equivalents for encoder-padding
+10-25 12:12:21.900  4432  4620 D CCodecConfig: no c2 equivalents for flags
+10-25 12:12:21.904   446  3900 E Codec2-ComponentInterface: We have a failed config
+10-25 12:12:21.906  4432  4620 D CCodecConfig: config failed => CORRUPTED
+10-25 12:12:21.911  4432  4620 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 130568
+10-25 12:12:21.911  4432  4620 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-25 12:12:21.915  4432  4620 W Codec2Client: query -- param skipped: index = 1107298332.
+10-25 12:12:21.916  4432  4620 D CCodec  : client requested max input size 508, which is smaller than what component recommended (8192); overriding with component recommendation.
+10-25 12:12:21.916  4432  4620 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+10-25 12:12:21.916  4432  4620 D CCodec  : encoding statistics level = 0
+10-25 12:12:21.917  4432  4620 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t bitrate = 130568
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t channel-count = 2
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t channel-mask = 0
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t level = 0
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t max-input-size = 8192
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:12:21.917  4432  4620 D CCodec  :   string mime = "audio/mp4a-latm"
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t profile = 2
+10-25 12:12:21.917  4432  4620 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:12:21.917  4432  4620 D CCodec  : }
+10-25 12:12:21.919  4432  4620 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-drc-output-loudness = -1
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t channel-count = 2
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t channel-mask = 0
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:12:21.919  4432  4620 D CCodec  :   string mime = "audio/raw"
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t encoder-delay = 1024
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t encoder-padding = 0
+10-25 12:12:21.919  4432  4620 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-25 12:12:21.919  4432  4620 D CCodec  : }
+10-25 12:12:21.922  4432  4620 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:12:21.935  4432  4620 W Codec2Client: query -- param skipped: index = 1342179345.
+10-25 12:12:21.935  4432  4620 W Codec2Client: query -- param skipped: index = 2415921170.
+10-25 12:12:21.935  4432  4620 W Codec2Client: query -- param skipped: index = 1610614798.
+10-25 12:12:21.944  4432  4620 D CCodecBufferChannel: [c2.android.aac.decoder#147] Created input block pool with allocatorID 16 => poolID 38 - OK (0)
+10-25 12:12:21.974  4432  4620 I CCodecBufferChannel: [c2.android.aac.decoder#147] Created output block pool with allocatorID 16 => poolID 82 - OK
+10-25 12:12:21.977  4432  4620 D CCodecBufferChannel: [c2.android.aac.decoder#147] Configured output block pool ids 82 => OK
+10-25 12:12:21.980   446  3900 E Codec2-ComponentInterface: We have a failed config
+10-25 12:12:21.998   446  4621 D SimpleC2Component: Using output block pool with poolID 82 => got 82 - 0
+10-25 12:12:22.077   446  4621 I C2SoftAacDec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 12:12:22.131  4432  4620 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-mask.value = 12
+10-25 12:12:22.134  4432  4620 D CCodecBuffers: [c2.android.aac.decoder#147:Output[N]] popFromStashAndRegister: at -23219us, output format changed to AMessage(what = 0x00000000) = {
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-drc-album-mode = 0
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-drc-boost-level = 127
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-drc-cut-level = 127
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-drc-effect-type = 3
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-drc-output-loudness = -1
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-encoded-target-level = -1
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-max-output-channel_count = 8
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t aac-target-ref-level = 64
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t buffer-batch-max-output-size = 0
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t channel-count = 2
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t channel-mask = 12
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t max-output-channel-count = 8
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   string mime = "audio/raw"
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t sample-rate = 44100
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t encoder-delay = 1024
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t encoder-padding = 0
+10-25 12:12:22.134  4432  4620 D CCodecBuffers:   int32_t android._config-pcm-encoding = 2
+10-25 12:12:22.134  4432  4620 D CCodecBuffers: }
+10-25 12:12:23.655  4432  4467 D BufferPoolAccessor2.0: bufferpool2 0x71738a73bd08 : 0(0 size) total buffers - 0(0 size) used buffers - 347/352 (recycle/alloc) - 5/348 (fetch/transfer)
+10-25 12:12:23.656  4432  4467 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 12:12:23.914   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d9158 : 0(0 size) total buffers - 0(0 size) used buffers - 344/346 (recycle/alloc) - 2/346 (fetch/transfer)
+10-25 12:12:23.917   446   981 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 1
+10-25 12:12:26.930   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d7ed8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+10-25 12:12:26.939   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 12:12:27.033  4432  4620 D BufferPoolAccessor2.0: bufferpool2 0x71738a745108 : 5(40960 size) total buffers - 4(32768 size) used buffers - 228/233 (recycle/alloc) - 5/230 (fetch/transfer)
+10-25 12:12:27.063   446  4621 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d77e8 : 1(4096 size) total buffers - 1(4096 size) used buffers - 226/227 (recycle/alloc) - 1/226 (fetch/transfer)
+10-25 12:12:29.632  4432  4620 D CCodecBufferChannel: [c2.android.aac.decoder#147] MediaCodec discarded an unknown buffer
+10-25 12:12:29.634  4432  4620 D CCodecBufferChannel: [c2.android.aac.decoder#147] MediaCodec discarded an unknown buffer
+10-25 12:12:29.634  4432  4620 D CCodecBufferChannel: [c2.android.aac.decoder#147] MediaCodec discarded an unknown buffer
+10-25 12:12:29.655  4432  4620 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:29.658   446  3900 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:29.693   446  3900 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:29.719   446  3900 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d7ed8 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+10-25 12:12:29.738  4432  4446 I CompatMatrix: WAV rate=44100 channels=2 bytes=1413120 seconds=8.010884353741497 expected=8.0
+10-25 12:12:29.798  4432  4446 I TestRunner: finished: hevcContainer(dev.local.audio.CompatibilityMatrixTest)
+10-25 12:12:29.826  4432  4446 I TestRunner: started: providerKnownLength(dev.local.audio.CompatibilityMatrixTest)
+--------- beginning of system
+10-25 12:12:29.936   541   665 W ContentProviderHelper: Slow operation: 58ms so far, now at getContentProviderImpl: done!
+10-25 12:12:29.976   329   383 I netd    : tetherGetStats() -> {[]} <22.60ms>
+10-25 12:12:30.420  4432  4446 I CompatMatrix: sdk=35 sample=0 time=-23219 track=1 size=296 flags=1
+10-25 12:12:30.423  4432  4446 I CompatMatrix: sdk=35 sample=1 time=0 track=1 size=336 flags=1
+10-25 12:12:30.430  4432  4446 I CompatMatrix: sdk=35 sample=2 time=23219 track=1 size=300 flags=1
+10-25 12:12:30.886  4432  4446 I CompatMatrix: sdk=35 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 12:12:31.002  4432  4437 I dev.local.audio: Background concurrent mark compact GC freed 576KB AllocSpace bytes, 5(8244KB) LOS objects, 49% free, 6445KB/12MB, paused 11.494ms,10.572ms total 609.057ms
+10-25 12:12:31.164  4432  4453 D MPEG4Writer: PreAllocation enabled
+10-25 12:12:31.167  4432  4453 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-25 12:12:31.168  4432  4453 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-25 12:12:31.173  4432  4453 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-25 12:12:31.178  4432  4453 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-25 12:12:31.226  4432  4625 I MPEG4Writer: setStartTimestampUs: 0
+10-25 12:12:31.227  4432  4625 I MPEG4Writer: Earliest track starting time: 0
+10-25 12:12:32.350  4432  4453 D MPEG4Writer: reset()
+10-25 12:12:32.352  4432  4453 D MPEG4Writer: Audio track stopping. Stop source
+10-25 12:12:32.352  4432  4453 D MPEG4Writer: Audio track source stopping
+10-25 12:12:32.352  4432  4453 D MPEG4Writer: Audio track source stopped
+10-25 12:12:32.353  4432  4625 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-25 12:12:32.353  4432  4625 I MPEG4Writer: Received total/0-length (346/0) buffers and encoded 346 frames. - Audio
+10-25 12:12:32.353  4432  4625 I MPEG4Writer: Audio track drift time: 0 us
+10-25 12:12:32.356  4432  4453 D MPEG4Writer: Audio track stopped. Status:0. Stop source
+10-25 12:12:32.359  4432  4623 D MPEG4Writer: 0 chunks are written in the last batch
+10-25 12:12:32.362  4432  4453 D MPEG4Writer: WriterThread stopped. Status:0
+10-25 12:12:32.362  4432  4453 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-25 12:12:32.363  4432  4453 I MPEG4Writer: MOOV atom was written to the file
+10-25 12:12:32.363  4432  4453 D MPEG4Writer: release()
+10-25 12:12:32.363  4432  4453 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:138367 mOffset:2092 mMdatEndOffset:134179 diff:4188
+10-25 12:12:32.378  4432  4453 D MPEG4Writer: final fsync() takes 13 ms, file size 134179
+10-25 12:12:32.381  4432  4453 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-25 12:12:32.382  4432  4453 D MPEG4Writer: Top 5 write durations(microseconds): #1:865 #2:1694 #3:2016 #4:4872 #5:19774
+10-25 12:12:32.383  4432  4453 D MPEG4Writer: reset()
+10-25 12:12:32.384  4432  4453 D MPEG4Writer: Audio track stopping. Stop source
+10-25 12:12:32.384  4432  4453 E MPEG4Writer: Stop() called but track is not started or stopped
+10-25 12:12:32.424  4432  4451 W FileSource: offset/length adjusted from 0/576460752303423487 to 0/134179
+10-25 12:12:32.698  4432  4446 I CompatMatrix: sdk=35 sample=0 time=0 track=0 size=296 flags=1
+10-25 12:12:32.699  4432  4446 I CompatMatrix: sdk=35 sample=1 time=23219 track=0 size=336 flags=1
+10-25 12:12:32.701  4432  4446 I CompatMatrix: sdk=35 sample=2 time=46439 track=0 size=300 flags=1
+10-25 12:12:33.006  4432  4446 I CompatMatrix: sdk=35 EOS time=-1 track=-1 size=-1 flags=-1 count=346
+10-25 12:12:33.223  4432  4451 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-25 12:12:33.236  4432  4626 D CCodec  : allocate(c2.android.aac.decoder)
+10-25 12:12:33.256  4432  4626 I CCodec  : setting up 'default' as default (vendor) store
+10-25 12:12:33.289  4432  4468 D BufferPoolAccessor2.0: bufferpool2 0x71738a73bd08 : 0(0 size) total buffers - 0(0 size) used buffers - 347/352 (recycle/alloc) - 5/348 (fetch/transfer)
+10-25 12:12:33.293  4432  4468 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x71738a73bd08 cached: 0/0M, 0/0% in use; allocs: 352, 99% recycled; transfers: 348, 99% unfetched
+10-25 12:12:33.300  4432  4626 I CCodec  : Created component [c2.android.aac.decoder]
+10-25 12:12:33.304  4432  4626 D CCodecConfig: read media type: audio/mp4a-latm
+10-25 12:12:33.331  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-25 12:12:33.334  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-25 12:12:33.337  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-25 12:12:33.339  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-25 12:12:33.341  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-25 12:12:33.342  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-25 12:12:33.344  4432  4626 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-25 12:12:33.380  4432  4626 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:12:33.383  4432  4626 D CCodecConfig: c2 config diff is Dict {
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 coded.aac-packaging.value = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 coded.pl.level = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 coded.pl.profile = 8192
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::i32 coding.drc.album-mode.value = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::float coding.drc.attenuation-factor.value = 1
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::float coding.drc.boost-factor.value = 1
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::i32 coding.drc.compression-mode.value = 3
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::i32 coding.drc.effect-type.value = 3
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::float coding.drc.encoded-level.value = 0.25
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::float coding.drc.reference-level.value = -16
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 8192
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   string input.media-type.value = "audio/mp4a-latm"
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 output.delay.value = 2
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::float output.drc.output-loudness.value = 0.25
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 raw.channel-mask.value = 0
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 raw.max-channel-count.value = 8
+10-25 12:12:33.383  4432  4626 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:12:33.383  4432  4626 D CCodecConfig: }
+10-25 12:12:33.402  4432  4626 D CCodec  : [c2.android.aac.decoder] buffers are bound to CCodec for this session
+10-25 12:12:33.402  4432  4626 D CCodecConfig: no c2 equivalents for track-id
+10-25 12:12:33.403  4432  4626 D CCodecConfig: no c2 equivalents for language
+10-25 12:12:33.403  4432  4626 D CCodecConfig: no c2 equivalents for encoder-delay
+10-25 12:12:33.403  4432  4626 D CCodecConfig: no c2 equivalents for durationUs
+10-25 12:12:33.403  4432  4626 D CCodecConfig: no c2 equivalents for encoder-padding
+10-25 12:12:33.403  4432  4626 D CCodecConfig: no c2 equivalents for flags
+10-25 12:12:33.406   446  1060 E Codec2-ComponentInterface: We have a failed config
+10-25 12:12:33.408  4432  4626 D CCodecConfig: config failed => CORRUPTED
+10-25 12:12:33.412  4432  4626 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 130568
+10-25 12:12:33.412  4432  4626 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-25 12:12:33.418  4432  4626 W Codec2Client: query -- param skipped: index = 1107298332.
+10-25 12:12:33.418  4432  4626 D CCodec  : client requested max input size 508, which is smaller than what component recommended (8192); overriding with component recommendation.
+10-25 12:12:33.418  4432  4626 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+10-25 12:12:33.418  4432  4626 D CCodec  : encoding statistics level = 0
+10-25 12:12:33.419  4432  4626 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t bitrate = 130568
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t channel-count = 2
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t channel-mask = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t level = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t max-input-size = 8192
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:12:33.419  4432  4626 D CCodec  :   string mime = "audio/mp4a-latm"
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t profile = 2
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:12:33.419  4432  4626 D CCodec  : }
+10-25 12:12:33.419  4432  4626 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-drc-output-loudness = -1
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t channel-count = 2
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t channel-mask = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:12:33.419  4432  4626 D CCodec  :   string mime = "audio/raw"
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t sample-rate = 44100
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t encoder-delay = 1024
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t encoder-padding = 0
+10-25 12:12:33.419  4432  4626 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-25 12:12:33.419  4432  4626 D CCodec  : }
+10-25 12:12:33.421  4432  4626 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:12:33.428  4432  4626 W Codec2Client: query -- param skipped: index = 1342179345.
+10-25 12:12:33.429  4432  4626 W Codec2Client: query -- param skipped: index = 2415921170.
+10-25 12:12:33.429  4432  4626 W Codec2Client: query -- param skipped: index = 1610614798.
+10-25 12:12:33.444  4432  4626 D CCodecBufferChannel: [c2.android.aac.decoder#591] Created input block pool with allocatorID 16 => poolID 39 - OK (0)
+10-25 12:12:33.447   446  4549 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d9158 : 0(0 size) total buffers - 0(0 size) used buffers - 344/346 (recycle/alloc) - 2/346 (fetch/transfer)
+10-25 12:12:33.463  4432  4626 I CCodecBufferChannel: [c2.android.aac.decoder#591] Created output block pool with allocatorID 16 => poolID 84 - OK
+10-25 12:12:33.464  4432  4626 D CCodecBufferChannel: [c2.android.aac.decoder#591] Configured output block pool ids 84 => OK
+10-25 12:12:33.465   446  1059 E Codec2-ComponentInterface: We have a failed config
+10-25 12:12:33.469   446  4549 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d9158 cached: 0/0M, 0/0% in use; allocs: 346, 99% recycled; transfers: 346, 99% unfetched
+10-25 12:12:33.476   446  4627 D SimpleC2Component: Using output block pool with poolID 84 => got 84 - 0
+10-25 12:12:33.564   446  4627 I C2SoftAacDec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 12:12:33.620  4432  4626 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-mask.value = 12
+10-25 12:12:33.626  4432  4626 D CCodecBuffers: [c2.android.aac.decoder#591:Output[N]] popFromStashAndRegister: at -23219us, output format changed to AMessage(what = 0x00000000) = {
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-drc-album-mode = 0
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-drc-boost-level = 127
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-drc-cut-level = 127
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-drc-effect-type = 3
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-drc-output-loudness = -1
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-encoded-target-level = -1
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-max-output-channel_count = 8
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t aac-target-ref-level = 64
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t buffer-batch-max-output-size = 0
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t channel-count = 2
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t channel-mask = 12
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t max-output-channel-count = 8
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   string mime = "audio/raw"
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t sample-rate = 44100
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t encoder-delay = 1024
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t encoder-padding = 0
+10-25 12:12:33.626  4432  4626 D CCodecBuffers:   int32_t android._config-pcm-encoding = 2
+10-25 12:12:33.626  4432  4626 D CCodecBuffers: }
+10-25 12:12:34.667  4432  4467 D BufferPoolAccessor2.0: bufferpool2 0x71738a745108 : 0(0 size) total buffers - 0(0 size) used buffers - 347/352 (recycle/alloc) - 5/348 (fetch/transfer)
+10-25 12:12:34.668  4432  4467 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 12:12:34.951   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d77e8 : 0(0 size) total buffers - 0(0 size) used buffers - 344/346 (recycle/alloc) - 2/346 (fetch/transfer)
+10-25 12:12:34.952   446   981 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 1
+10-25 12:12:37.240   329   383 I netd    : tetherGetStats() -> {[]} <10.32ms>
+10-25 12:12:38.486  4432  4468 D BufferPoolAccessor2.0: bufferpool2 0x71738a7457f8 : 5(40960 size) total buffers - 5(40960 size) used buffers - 244/249 (recycle/alloc) - 5/245 (fetch/transfer)
+10-25 12:12:38.579   446  4627 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d5788 : 1(4096 size) total buffers - 1(4096 size) used buffers - 245/246 (recycle/alloc) - 1/245 (fetch/transfer)
+10-25 12:12:38.672  4432  4467 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-25 12:12:38.956   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d7ed8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+10-25 12:12:38.958   446   981 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 1
+10-25 12:12:40.698  4432  4626 D CCodecBufferChannel: [c2.android.aac.decoder#591] MediaCodec discarded an unknown buffer
+10-25 12:12:40.699  4432  4626 D CCodecBufferChannel: [c2.android.aac.decoder#591] MediaCodec discarded an unknown buffer
+10-25 12:12:40.700  4432  4626 D CCodecBufferChannel: [c2.android.aac.decoder#591] MediaCodec discarded an unknown buffer
+10-25 12:12:40.726  4432  4628 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:40.758   446  1060 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:40.764   446  1060 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:12:40.767   446  1060 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d7ed8 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+10-25 12:12:40.795  4432  4446 I CompatMatrix: WAV rate=44100 channels=2 bytes=1413120 seconds=8.010884353741497 expected=8.0
+10-25 12:12:40.853  4432  4446 I TestRunner: finished: providerKnownLength(dev.local.audio.CompatibilityMatrixTest)
+10-25 12:12:40.886  4432  4446 I TestRunner: run finished: 31 tests, 2 failed, 0 ignored
+10-25 12:12:41.021   541   665 I ActivityManager: Force stopping dev.local.audio appid=10138 user=0: finished inst
+10-25 12:12:41.035   541   665 E ActivityManager: Unable to freeze binder for 4432: -11
+10-25 12:12:41.052     0     0 I binder  : 541:665 ioctl 400c620e 717240e1e354 returned -11
+10-25 12:12:41.052     0     0 I binder  : 541:665 ioctl 400c620e 717240e1e354 returned -11
+10-25 12:12:41.052   541   574 D DisplayManagerService: Drop pending events for gone uid 10138
+10-25 12:12:41.092   541   665 I ActivityManager: Killing 4432:dev.local.audio/u0a138 (adj 0): stop dev.local.audio due to finished inst
+10-25 12:12:41.100  4422  4422 I app_process: System.exit called, status: 0
+10-25 12:12:41.105  4422  4422 I AndroidRuntime: VM exiting with result code 0.
+10-25 12:12:41.144   435  3263 I ResourceManagerMetrics: pushConcurrentUsageReport: No Video Codec Entry for Application[pid(4432): uid(10138)]
+10-25 12:12:41.166   435  3263 I ResourceManagerMetrics: pushConcurrentUsageReport: Concurrent Codec Usage Report for the Process[pid(4432): uid(10138)] is Peak { AudioEnc[  SW: 1 ] AudioDec[ SW: 1 ] } Peak Pixels: 0
+10-25 12:12:41.228   541   898 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-25 12:12:41.233   541   898 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-25 12:12:41.255   541   898 D InetDiagMessage: Destroyed live tcp sockets for uids={10138} in 97ms
+10-25 12:12:41.265   541   898 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-25 12:12:41.289   541   898 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-25 12:12:41.302   329   383 I netd    : tetherGetStats() -> {[]} <14.77ms>
+10-25 12:12:41.315   541   898 D InetDiagMessage: Destroyed live tcp sockets for uids={20138} in 58ms
+10-25 12:12:41.482   446  1059 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d5788 cached: 0/0M, 0/0% in use; allocs: 346, 99% recycled; transfers: 346, 99% unfetched
+10-25 12:12:41.484   446  1059 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d77e8 : 0(0 size) total buffers - 0(0 size) used buffers - 344/346 (recycle/alloc) - 2/346 (fetch/transfer)
+10-25 12:12:41.509     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+10-25 12:12:41.509     0     0 I binder  : undelivered transaction 719495, process died.
+10-25 12:12:41.496   541   665 V ActivityManager: Got obituary of 4432:dev.local.audio
+10-25 12:12:41.500   446  1059 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d77e8 cached: 0/0M, 0/0% in use; allocs: 346, 99% recycled; transfers: 346, 99% unfetched
+10-25 12:12:41.520   403   403 I adbd    : Remote process closed the socket (on MSG_PEEK)
+10-25 12:12:41.532   541   587 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10138/pid_4432
+10-25 12:12:41.543   330   330 I Zygote  : Process 4432 exited due to signal 9 (Killed)
+10-25 12:12:45.222     0     0 I logd    : logdr: UID=2000 GID=2000 PID=4631 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+10-25 12:12:45.964   446   981 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 0
+10-25 12:12:46.967   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-25 12:14:23.416   541   891 E WifiScoringParams: Invalid frequency(-1), using 5G as default rssi array
+10-25 12:14:23.440     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=2 c=900000 fc=3000000 cc=10 chg=a
+10-25 12:14:23.635   541   541 W Looper  : Slow delivery took 91961ms main h=com.android.server.pm.SnapshotStatistics$1 c=null m=0
+10-25 12:14:23.964   541   677 W system_server: Long monitor contention with owner AlarmManager (704) at void com.android.server.alarm.AlarmManagerService.setImpl(int, long, long, long, android.app.PendingIntent, android.app.IAlarmListener, java.lang.String, int, android.os.WorkSource, android.app.AlarmManager$AlarmClockInfo, int, java.lang.String, android.os.Bundle, int)(AlarmManagerService.java:2279) waiters=0 in void com.android.server.alarm.AlarmManagerService$7.updateAlarmsForUid(int) for 331ms
+10-25 12:14:24.077   541   541 W Looper  : Slow dispatch took 360ms main h=com.android.server.alarm.AlarmManagerService$AlarmHandler c=com.android.server.alarm.AlarmManagerService$2$$ExternalSyntheticLambda0@58ba2b m=0
+10-25 12:14:27.711  4643  4643 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-25 12:14:27.878  4643  4643 I AndroidRuntime: Using default boot image
+10-25 12:14:27.879  4643  4643 I AndroidRuntime: Leaving lock profiling enabled
+10-25 12:14:27.896   541   566 D WifiNl80211Manager: Scan result ready event
+10-25 12:14:27.898   541   566 D WifiNative: Scan result ready event
+10-25 12:14:27.972   541   891 W BestClock: java.time.DateTimeException: Missing network time fix
+10-25 12:14:27.986   541   891 W BestClock: java.time.DateTimeException: Missing network time fix
+10-25 12:14:27.992   541   891 W BestClock: java.time.DateTimeException: Missing network time fix
+10-25 12:14:28.020   541   891 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+10-25 12:14:28.094  4643  4643 I app_process: Core platform API reporting enabled, enforcing=false
+10-25 12:14:28.112  4643  4643 I app_process: Using CollectorTypeCMC GC.
+10-25 12:14:29.636  4643  4643 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-25 12:14:29.883  4643  4643 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+10-25 12:14:29.888  4643  4643 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/8/icu") succeeded. 
+10-25 12:14:29.892  4643  4643 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt75l.dat
+10-25 12:14:29.930  4643  4643 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+10-25 12:14:29.949  4643  4643 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+10-25 12:14:30.135  4643  4643 W app_process: Unexpected CPU variant for x86: x86_64.
+10-25 12:14:30.135  4643  4643 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+10-25 12:14:30.234  4643  4643 W ziparchive: Unable to open '/data/local/tmp/decode-probe.dm': No such file or directory
+10-25 12:14:30.784  4643  4643 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-25 12:14:30.797  4643  4643 D AndroidRuntime: Calling main entry DecodeProbe
+10-25 12:14:31.021  4643  4643 D nativeloader: Load libmedia_jni.so using system ns (caller=/system/framework/framework.jar!classes2.dex): ok
+10-25 12:14:31.027  4643  4643 D MtpDeviceJNI: register_android_mtp_MtpDevice
+10-25 12:14:31.211  4643  4643 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-25 12:14:31.261  4643  4653 D CCodec  : allocate(c2.android.aac.decoder)
+10-25 12:14:31.288  4643  4653 I Codec2Client: Available Codec2 services: "default" "software"
+10-25 12:14:31.311  4643  4653 I CCodec  : setting up 'default' as default (vendor) store
+10-25 12:14:31.407  4643  4653 I CCodec  : Created component [c2.android.aac.decoder]
+10-25 12:14:31.412  4643  4653 D CCodecConfig: read media type: audio/mp4a-latm
+10-25 12:14:31.451  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-25 12:14:31.455  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-25 12:14:31.457  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-25 12:14:31.458  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-25 12:14:31.460  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-25 12:14:31.463  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-25 12:14:31.465  4643  4653 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-25 12:14:31.518  4643  4653 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:14:31.527  4643  4653 D CCodecConfig: c2 config diff is Dict {
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 coded.aac-packaging.value = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 coded.pl.level = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 coded.pl.profile = 8192
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::i32 coding.drc.album-mode.value = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::float coding.drc.attenuation-factor.value = 1
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::float coding.drc.boost-factor.value = 1
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::i32 coding.drc.compression-mode.value = 3
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::i32 coding.drc.effect-type.value = 3
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::float coding.drc.encoded-level.value = 0.25
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::float coding.drc.reference-level.value = -16
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 8192
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   string input.media-type.value = "audio/mp4a-latm"
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 output.delay.value = 2
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::float output.drc.output-loudness.value = 0.25
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 raw.channel-mask.value = 0
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 raw.max-channel-count.value = 8
+10-25 12:14:31.527  4643  4653 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:14:31.527  4643  4653 D CCodecConfig: }
+10-25 12:14:31.564  4643  4653 D CCodec  : [c2.android.aac.decoder] buffers are bound to CCodec for this session
+10-25 12:14:31.568  4643  4653 D CCodecConfig: no c2 equivalents for track-id
+10-25 12:14:31.569  4643  4653 D CCodecConfig: no c2 equivalents for language
+10-25 12:14:31.569  4643  4653 D CCodecConfig: no c2 equivalents for encoder-delay
+10-25 12:14:31.570  4643  4653 D CCodecConfig: no c2 equivalents for durationUs
+10-25 12:14:31.570  4643  4653 D CCodecConfig: no c2 equivalents for encoder-padding
+10-25 12:14:31.570  4643  4653 D CCodecConfig: no c2 equivalents for flags
+10-25 12:14:31.576   446  3900 E Codec2-ComponentInterface: We have a failed config
+10-25 12:14:31.581  4643  4653 D CCodecConfig: config failed => CORRUPTED
+10-25 12:14:31.585  4643  4653 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 48000
+10-25 12:14:31.585  4643  4653 D CCodecConfig:   c2::u32 coded.pl.profile = 8201
+10-25 12:14:31.585  4643  4653 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-25 12:14:31.590  4643  4653 W Codec2Client: query -- param skipped: index = 1107298332.
+10-25 12:14:31.590  4643  4653 D CCodec  : client requested max input size 314, which is smaller than what component recommended (8192); overriding with component recommendation.
+10-25 12:14:31.591  4643  4653 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+10-25 12:14:31.591  4643  4653 D CCodec  : encoding statistics level = 0
+10-25 12:14:31.592  4643  4653 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t bitrate = 48000
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t channel-count = 1
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t channel-mask = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t level = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t max-input-size = 8192
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:14:31.592  4643  4653 D CCodec  :   string mime = "audio/mp4a-latm"
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t profile = 29
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t sample-rate = 22050
+10-25 12:14:31.592  4643  4653 D CCodec  : }
+10-25 12:14:31.592  4643  4653 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-drc-output-loudness = -1
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t channel-count = 1
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t channel-mask = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:14:31.592  4643  4653 D CCodec  :   string mime = "audio/raw"
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t sample-rate = 22050
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t encoder-delay = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t encoder-padding = 0
+10-25 12:14:31.592  4643  4653 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-25 12:14:31.592  4643  4653 D CCodec  : }
+10-25 12:14:31.596  4643  4653 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:14:31.605  4643  4653 W Codec2Client: query -- param skipped: index = 1342179345.
+10-25 12:14:31.605  4643  4653 W Codec2Client: query -- param skipped: index = 2415921170.
+10-25 12:14:31.606  4643  4653 W Codec2Client: query -- param skipped: index = 1610614798.
+10-25 12:14:31.609  4643  4653 D C2Store : Using DMABUF Heaps
+10-25 12:14:31.632  4643  4653 D CCodecBufferChannel: [c2.android.aac.decoder#298] Created input block pool with allocatorID 16 => poolID 17 - OK (0)
+10-25 12:14:31.649  4643  4653 I CCodecBufferChannel: [c2.android.aac.decoder#298] Created output block pool with allocatorID 16 => poolID 86 - OK
+10-25 12:14:31.652  4643  4653 D CCodecBufferChannel: [c2.android.aac.decoder#298] Configured output block pool ids 86 => OK
+10-25 12:14:31.654   446  1059 E Codec2-ComponentInterface: We have a failed config
+10-25 12:14:31.669  4643  4653 I DMABUFHEAPS: Using DMA-BUF heap named: system
+10-25 12:14:31.686   446  4658 D SimpleC2Component: Using output block pool with poolID 86 => got 86 - 0
+10-25 12:14:31.832   446  4658 I C2SoftAacDec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 12:14:31.949  4643  4653 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 2
+10-25 12:14:31.949  4643  4653 D CCodecConfig:   c2::u32 raw.channel-mask.value = 12
+10-25 12:14:31.949  4643  4653 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:14:31.952  4643  4653 D CCodecBuffers: [c2.android.aac.decoder#298:Output[N]] popFromStashAndRegister: at 0us, output format changed to AMessage(what = 0x00000000) = {
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-drc-album-mode = 0
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-drc-boost-level = 127
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-drc-cut-level = 127
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-drc-effect-type = 3
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-drc-output-loudness = -1
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-encoded-target-level = -1
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-max-output-channel_count = 8
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t aac-target-ref-level = 64
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t buffer-batch-max-output-size = 0
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t channel-count = 2
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t channel-mask = 12
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t max-output-channel-count = 8
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   string mime = "audio/raw"
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t sample-rate = 44100
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t encoder-delay = 0
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t encoder-padding = 0
+10-25 12:14:31.952  4643  4653 D CCodecBuffers:   int32_t android._config-pcm-encoding = 2
+10-25 12:14:31.952  4643  4653 D CCodecBuffers: }
+10-25 12:14:36.440   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d5788 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+10-25 12:14:36.443   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 12:14:36.782  4643  4659 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:14:36.792  4643  4653 D BufferPoolAccessor2.0: bufferpool2 0x74824bc8fbc8 : 0(0 size) total buffers - 0(0 size) used buffers - 170/175 (recycle/alloc) - 5/174 (fetch/transfer)
+10-25 12:14:36.808   446  3900 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d85c8 : 0(0 size) total buffers - 0(0 size) used buffers - 169/172 (recycle/alloc) - 3/172 (fetch/transfer)
+10-25 12:14:36.833   446  1059 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:14:36.853   446  1059 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:14:36.872   446  1059 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d5788 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+10-25 12:14:36.942  4643  4643 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-25 12:14:36.956  4643  4661 D CCodec  : allocate(c2.android.aac.decoder)
+10-25 12:14:36.967  4643  4661 I CCodec  : setting up 'default' as default (vendor) store
+10-25 12:14:37.008  4643  4661 I CCodec  : Created component [c2.android.aac.decoder]
+10-25 12:14:37.011  4643  4661 D CCodecConfig: read media type: audio/mp4a-latm
+10-25 12:14:37.036  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-25 12:14:37.040  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-25 12:14:37.046  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-25 12:14:37.050  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-25 12:14:37.052  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-25 12:14:37.054  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-25 12:14:37.056  4643  4661 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-25 12:14:37.086  4643  4661 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:14:37.087  4643  4661 D CCodecConfig: c2 config diff is Dict {
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 coded.aac-packaging.value = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 coded.pl.level = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 coded.pl.profile = 8192
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::i32 coding.drc.album-mode.value = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::float coding.drc.attenuation-factor.value = 1
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::float coding.drc.boost-factor.value = 1
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::i32 coding.drc.compression-mode.value = 3
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::i32 coding.drc.effect-type.value = 3
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::float coding.drc.encoded-level.value = 0.25
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::float coding.drc.reference-level.value = -16
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 8192
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   string input.media-type.value = "audio/mp4a-latm"
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 output.delay.value = 2
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::float output.drc.output-loudness.value = 0.25
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 raw.channel-mask.value = 0
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 raw.max-channel-count.value = 8
+10-25 12:14:37.087  4643  4661 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:14:37.087  4643  4661 D CCodecConfig: }
+10-25 12:14:37.099  4643  4661 D CCodec  : [c2.android.aac.decoder] buffers are bound to CCodec for this session
+10-25 12:14:37.100  4643  4661 D CCodecConfig: no c2 equivalents for track-id
+10-25 12:14:37.100  4643  4661 D CCodecConfig: no c2 equivalents for language
+10-25 12:14:37.100  4643  4661 D CCodecConfig: no c2 equivalents for encoder-delay
+10-25 12:14:37.100  4643  4661 D CCodecConfig: no c2 equivalents for durationUs
+10-25 12:14:37.100  4643  4661 D CCodecConfig: no c2 equivalents for encoder-padding
+10-25 12:14:37.101  4643  4661 D CCodecConfig: no c2 equivalents for flags
+10-25 12:14:37.104   446  1060 E Codec2-ComponentInterface: We have a failed config
+10-25 12:14:37.105  4643  4661 D CCodecConfig: config failed => CORRUPTED
+10-25 12:14:37.108  4643  4661 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 48000
+10-25 12:14:37.108  4643  4661 D CCodecConfig:   c2::u32 coded.pl.profile = 8201
+10-25 12:14:37.108  4643  4661 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-25 12:14:37.113  4643  4661 W Codec2Client: query -- param skipped: index = 1107298332.
+10-25 12:14:37.113  4643  4661 D CCodec  : client requested max input size 314, which is smaller than what component recommended (8192); overriding with component recommendation.
+10-25 12:14:37.113  4643  4661 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+10-25 12:14:37.114  4643  4661 D CCodec  : encoding statistics level = 0
+10-25 12:14:37.114  4643  4661 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t bitrate = 48000
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t channel-count = 1
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t channel-mask = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t level = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t max-input-size = 8192
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:14:37.114  4643  4661 D CCodec  :   string mime = "audio/mp4a-latm"
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t profile = 29
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t sample-rate = 22050
+10-25 12:14:37.114  4643  4661 D CCodec  : }
+10-25 12:14:37.114  4643  4661 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-album-mode = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-boost-level = 127
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-cut-level = 127
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-effect-type = 3
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-drc-output-loudness = -1
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-encoded-target-level = -1
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-max-output-channel_count = 8
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t aac-target-ref-level = 64
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t channel-count = 1
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t channel-mask = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t max-output-channel-count = 8
+10-25 12:14:37.114  4643  4661 D CCodec  :   string mime = "audio/raw"
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t sample-rate = 22050
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t encoder-delay = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t encoder-padding = 0
+10-25 12:14:37.114  4643  4661 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-25 12:14:37.114  4643  4661 D CCodec  : }
+10-25 12:14:37.120  4643  4661 I CCodecConfig: query failed after returning 21 values (BAD_INDEX)
+10-25 12:14:37.126  4643  4661 W Codec2Client: query -- param skipped: index = 1342179345.
+10-25 12:14:37.126  4643  4661 W Codec2Client: query -- param skipped: index = 2415921170.
+10-25 12:14:37.126  4643  4661 W Codec2Client: query -- param skipped: index = 1610614798.
+10-25 12:14:37.135  4643  4661 D CCodecBufferChannel: [c2.android.aac.decoder#136] Created input block pool with allocatorID 16 => poolID 18 - OK (0)
+10-25 12:14:37.147  4643  4661 I CCodecBufferChannel: [c2.android.aac.decoder#136] Created output block pool with allocatorID 16 => poolID 88 - OK
+10-25 12:14:37.149  4643  4661 D CCodecBufferChannel: [c2.android.aac.decoder#136] Configured output block pool ids 88 => OK
+10-25 12:14:37.151   446  3901 E Codec2-ComponentInterface: We have a failed config
+10-25 12:14:37.160   446  4662 D SimpleC2Component: Using output block pool with poolID 88 => got 88 - 0
+10-25 12:14:37.265   446  4662 I C2SoftAacDec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+10-25 12:14:37.354  4643  4661 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 2
+10-25 12:14:37.354  4643  4661 D CCodecConfig:   c2::u32 raw.channel-mask.value = 12
+10-25 12:14:37.354  4643  4661 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-25 12:14:37.356  4643  4661 D CCodecBuffers: [c2.android.aac.decoder#136:Output[N]] popFromStashAndRegister: at 0us, output format changed to AMessage(what = 0x00000000) = {
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-drc-album-mode = 0
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-drc-boost-level = 127
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-drc-cut-level = 127
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-drc-effect-type = 3
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-drc-output-loudness = -1
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-encoded-target-level = -1
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-max-output-channel_count = 8
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t aac-target-ref-level = 64
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t buffer-batch-max-output-size = 0
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t buffer-batch-threshold-output-size = 0
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t channel-count = 2
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t channel-mask = 12
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t max-output-channel-count = 8
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   string mime = "audio/raw"
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t sample-rate = 44100
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t encoder-delay = 0
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t encoder-padding = 0
+10-25 12:14:37.356  4643  4661 D CCodecBuffers:   int32_t android._config-pcm-encoding = 2
+10-25 12:14:37.356  4643  4661 D CCodecBuffers: }
+10-25 12:14:42.219  4643  4657 D BufferPoolAccessor2.0: bufferpool2 0x74824bc94a68 : 5(40960 size) total buffers - 5(40960 size) used buffers - 168/173 (recycle/alloc) - 5/172 (fetch/transfer)
+10-25 12:14:42.238   446  4662 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d7ed8 : 1(8192 size) total buffers - 1(8192 size) used buffers - 165/166 (recycle/alloc) - 1/166 (fetch/transfer)
+10-25 12:14:42.416  4643  4643 D AndroidRuntime: Shutting down VM
+10-25 12:14:42.421  4643  4663 E Codec2Client: release -- transaction failed.
+10-25 12:14:42.422  4643  4661 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:14:42.426  4643  4655 D BufferPoolAccessor2.0: During invalidation found 1 dead clients
+10-25 12:14:42.431  4643  4661 E IPCThreadState: Failed to get extended error: Bad file descriptor
+10-25 12:14:42.432  4643  4661 W app_process: PruneStatusT: Unknown status_t (-9 (Bad file descriptor)) pruned into STATUS_UNKNOWN_ERROR
+10-25 12:14:42.433  4643  4661 E IPCThreadState: Failed to get extended error: Bad file descriptor
+10-25 12:14:42.433  4643  4661 W mediametrics::Item: submitBuffer: failed(-9) to record: 1364 bytes
+10-25 12:14:42.447  4643  4661 W mediametrics::Item: selfrecord: failed to record: {codec, (12-31 16:00:00.000), (, -1, -1), (android.media.mediacodec.app-max-input-size=0, android.media.mediacodec.array-mode=0, android.media.mediacodec.channelCount=1, android.media.mediacodec.codec=c2.android.aac.decoder, android.media.mediacodec.codec-max-input-size=8192, android.media.mediacodec.encoder=0, android.media.mediacodec.flush-count=0, android.media.mediacodec.id=1674098472963276801, android.media.mediacodec.latency.avg=164895, android.media.mediacodec.latency.max=235032, android.media.mediacodec.latency.min=97432, android.media.mediacodec.latency.n=171, android.media.mediacodec.latency.unknown=2, android.media.mediacodec.level=0, android.media.mediacodec.lifetimeMs=5333, android.media.mediacodec.low-latency.first-frame=-1, android.media.mediacodec.low-latency.off=0, android.media.mediacodec.low-latency.on=0, android.media.mediacodec.mime=audio/mp4a-latm, android.media.mediacodec.mode=audio, android.media.mediacodec.operation-mode=1, android.media.mediacodec.outpu
+10-25 12:14:42.448  4643  4661 E IPCThreadState: Failed to get extended error: Bad file descriptor
+10-25 12:14:42.449  4643  4661 W app_process: PruneStatusT: Unknown status_t (-9 (Bad file descriptor)) pruned into STATUS_UNKNOWN_ERROR
+10-25 12:14:42.479   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d85c8 : 0(0 size) total buffers - 0(0 size) used buffers - 169/172 (recycle/alloc) - 3/172 (fetch/transfer)
+10-25 12:14:42.479   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d5788 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+10-25 12:14:42.480   446   981 D BufferPoolAccessor2.0: evictor expired: 3, evicted: 2
+10-25 12:14:42.632  4643  4656 D BufferPoolAccessor2.0: bufferpool2 0x74824bc8fbc8 : 0(0 size) total buffers - 0(0 size) used buffers - 170/175 (recycle/alloc) - 5/174 (fetch/transfer)
+10-25 12:14:42.633  4643  4656 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 12:14:43.455  4643  4643 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:14:43.547  4643  4643 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-25 12:14:43.615  4643  4643 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+--------- beginning of crash
+10-25 12:14:43.635  4643  4656 F libc    : FORTIFY: pthread_mutex_lock called on a destroyed mutex (0x7480ebc96ed8)
+10-25 12:14:43.643  4643  4656 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 4656 (MediaCodec_loop), pid 4643 (Shutdown thread)
+10-25 12:14:43.986  4666  4666 E crash_dump64: failed to get the guest state header for thread 4643: Bad address
+10-25 12:14:43.991  4666  4666 E crash_dump64: failed to get the guest state header for thread 4655: Bad address
+10-25 12:14:43.995  4666  4666 E crash_dump64: failed to get the guest state header for thread 4656: Bad address
+10-25 12:14:44.034  4666  4666 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdTombstoneProto
+10-25 12:14:44.038  4643  4655 F libc    : FORTIFY: pthread_mutex_lock called on a destroyed mutex (0x7480ebc95fa8)
+10-25 12:14:44.086   189   189 I tombstoned: received crash request for pid 4656
+10-25 12:14:44.109  4666  4666 I crash_dump64: performing dump of process 4643 (target tid = 4656)
+10-25 12:14:45.201     0     0 I binder  : undelivered transaction 723779, process died.
+10-25 12:14:45.188   446   979 D BufferPoolConnection: connection 1917348366733 closed on death
+10-25 12:14:45.212     0     0 I binder  : release 4643:4652 transaction 723781 in, still active
+10-25 12:14:45.213     0     0 I binder  : send failed reply for transaction 723781 to 432:1089
+10-25 12:14:45.246   446  3554 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-25 12:14:45.287   435  1029 E mediaserver: unlinkToDeath: removed reference to death recipient but unlink failed: DEAD_OBJECT
+10-25 12:14:45.396   446  3554 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d5788 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+10-25 12:14:45.478   435  1029 E IPCThreadState: attemptIncStrongHandle(2): Not supported
+10-25 12:14:45.598   446  3554 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d7ed8 cached: 0/0M, 0/0% in use; allocs: 172, 99% recycled; transfers: 172, 99% unfetched
+10-25 12:14:45.600   446  3554 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x761a2e9d85c8 cached: 0/0M, 0/0% in use; allocs: 172, 98% recycled; transfers: 172, 98% unfetched
+10-25 12:14:47.479     0     0 I logd    : logdr: UID=2000 GID=2000 PID=4666 n tail=500 logMask=8 pid=4643 start=0ns deadline=0ns
+10-25 12:14:47.496     0     0 I logd    : logdr: UID=2000 GID=2000 PID=4666 n tail=500 logMask=1 pid=4643 start=0ns deadline=0ns
+10-25 12:14:47.552  4666  4666 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+10-25 12:14:47.554  4666  4666 F DEBUG   : Build fingerprint: 'Android/sdk_slim_x86_64/emu64x:15/AE3A.240806.019/12368160:userdebug/test-keys'
+10-25 12:14:47.555  4666  4666 F DEBUG   : Revision: '0'
+10-25 12:14:47.555  4666  4666 F DEBUG   : ABI: 'x86_64'
+10-25 12:14:47.555  4666  4666 F DEBUG   : Timestamp: 2026-10-25 12:14:44.190870134-0700
+10-25 12:14:47.556  4666  4666 F DEBUG   : Process uptime: 20s
+10-25 12:14:47.556  4666  4666 F DEBUG   : Cmdline: app_process /system/bin DecodeProbe /data/local/tmp/platform-he-profile-29.mp4
+10-25 12:14:47.559  4666  4666 F DEBUG   : pid: 4643, tid: 4656, name: MediaCodec_loop  >>> app_process <<<
+10-25 12:14:47.559  4666  4666 F DEBUG   : uid: 2000
+10-25 12:14:47.560  4666  4666 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+10-25 12:14:47.561  4666  4666 F DEBUG   : Abort message: 'FORTIFY: pthread_mutex_lock called on a destroyed mutex (0x7480ebc96ed8)'
+10-25 12:14:47.563  4666  4666 F DEBUG   :     rax 0000000000000000  rbx 000074801ff3e608  rcx 00007482ed33eb90  rdx 0000000000000006
+10-25 12:14:47.564  4666  4666 F DEBUG   :     r8  0000000000000000  r9  0000000000000000  r10 000074801ff3e610  r11 0000000000000217
+10-25 12:14:47.564  4666  4666 F DEBUG   :     r12 00007480ebc96ec8  r13 000003373de4d29c  r14 0000000000001223  r15 0000000000001230
+10-25 12:14:47.565  4666  4666 F DEBUG   :     rdi 0000000000001223  rsi 0000000000001230
+10-25 12:14:47.565  4666  4666 F DEBUG   :     rbp 0000000000000001  rsp 000074801ff3e600  rip 00007482ed33eb90
+10-25 12:14:47.570  4666  4666 F DEBUG   : 9 total frames
+10-25 12:14:47.570  4666  4666 F DEBUG   : backtrace:
+10-25 12:14:47.571  4666  4666 F DEBUG   :       #00 pc 000000000005cb90  /apex/com.android.runtime/lib64/bionic/libc.so (abort+192) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+10-25 12:14:47.571  4666  4666 F DEBUG   :       #01 pc 0000000000060980  /apex/com.android.runtime/lib64/bionic/libc.so (__fortify_fatal(char const*, ...)+160) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+10-25 12:14:47.571  4666  4666 F DEBUG   :       #02 pc 000000000006e75f  /apex/com.android.runtime/lib64/bionic/libc.so (HandleUsingDestroyedMutex(pthread_mutex_t*, char const*)+47) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+10-25 12:14:47.572  4666  4666 F DEBUG   :       #03 pc 000000000006e611  /apex/com.android.runtime/lib64/bionic/libc.so (pthread_mutex_lock+129) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+10-25 12:14:47.572  4666  4666 F DEBUG   :       #04 pc 00000000000ade75  /system/lib64/libc++.so (std::__1::mutex::lock()+5) (BuildId: 756a4b12135b6afbd218ce56105fca791f3c52be)
+10-25 12:14:47.573  4666  4666 F DEBUG   :       #05 pc 000000000001e0c8  /system/lib64/libstagefright_bufferpool@2.0.1.so (android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl::evictorThread(std::__1::map<std::__1::weak_ptr<android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl> const, long, std::__1::owner_less<void>, std::__1::allocator<std::__1::pair<std::__1::weak_ptr<android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl> const, long>>>&, std::__1::mutex&, std::__1::condition_variable&) (.cfi)+120) (BuildId: c567363cc9425a5a5d9dd881185d1371)
+10-25 12:14:47.574  4666  4666 F DEBUG   :       #06 pc 000000000001e48b  /system/lib64/libstagefright_bufferpool@2.0.1.so (void* std::__1::__thread_proxy[abi:nn180000]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, void (*)(std::__1::map<std::__1::weak_ptr<android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl> const, long, std::__1::owner_less<void>, std::__1::allocator<std::__1::pair<std::__1::weak_ptr<android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl> const, long>>>&, std::__1::mutex&, std::__1::condition_variable&), std::__1::reference_wrapper<std::__1::map<std::__1::weak_ptr<android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl> const, long, std::__1::owner_less<void>, std::__1::allocator<std::__1::pair<std::__1::weak_ptr<android::hardware::media::bufferpool::V2_0::implementation::Accessor::Impl> const, long>>>>, std::__1::reference_wrapper<std::__1::mutex>, std::__1::reference_wrapper<std::__1::condition_variable>>>(void*) (.cfi)+59) (BuildId: c567363cc9425a5a5d9dd881185d1371)
+10-25 12:14:47.574  4666  4666 F DEBUG   :       #07 pc 000000000006d62a  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+58) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+10-25 12:14:47.574  4666  4666 F DEBUG   :       #08 pc 0000000000060348  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+56) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+10-25 12:14:47.891   541   995 W NativeCrashListener: Couldn't find ProcessRecord for pid 4643
+10-25 12:14:47.947   189   189 E tombstoned: Tombstone written to: tombstone_00
+10-25 12:14:48.136     0     0 I init    : Untracked pid 4666 exited with status 0
+10-25 12:14:48.137     0     0 I init    : Untracked pid 4666 did not have an associated service entry and will not be reaped
+10-25 12:14:48.138     0     0 I init    : Untracked pid 4668 exited with status 0
+10-25 12:14:48.138     0     0 I init    : Untracked pid 4668 did not have an associated service entry and will not be reaped
+10-25 12:14:48.159   541   682 E NativeTombstoneManager: Tombstone's UID (2000) not an app, ignoring
+10-25 12:14:48.240   541   682 I DropBoxManagerService: add tag=SYSTEM_TOMBSTONE_PROTO_WITH_HEADERS isTagEnabled=true flags=0x4
+10-25 12:14:48.441   541   682 E NativeTombstoneManager: Tombstone's UID (2000) not an app, ignoring
+10-25 12:14:48.535   541   682 I BootReceiver: Copying /data/tombstones/tombstone_00 to DropBox (SYSTEM_TOMBSTONE)
+10-25 12:14:48.539   541   682 I DropBoxManagerService: add tag=SYSTEM_TOMBSTONE isTagEnabled=true flags=0x6
+10-25 12:14:48.586     0     0 I logd    : logdr: UID=2000 GID=2000 PID=4670 n tail=600 logMask=99 pid=0 start=0ns deadline=0ns

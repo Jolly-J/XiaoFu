@@ -1,0 +1,13 @@
+AAC_PROBE sdk=28
+CODEC name=OMX.google.aac.decoder encoder=false profiles=2:0,5:0,29:0,23:0,39:0,20:0,42:0,
+PROFILE name=OMX.google.aac.decoder profile=5 listed=true formatSupported=true
+PROFILE name=OMX.google.aac.decoder profile=29 listed=true formatSupported=true
+CODEC name=OMX.google.aac.encoder encoder=true profiles=2:0,5:0,29:0,23:0,39:0,
+PROFILE name=OMX.google.aac.encoder profile=5 listed=true formatSupported=true
+ENCODE_FORMAT profile=5 format={max-bitrate=64000, sample-rate=44100, mime=audio/mp4a-latm, channel-count=2, bitrate=64000, csd-0=java.nio.HeapByteBuffer[pos=0 lim=4 cap=4]}
+GENERATED profile=5 packets=172 bytes=67125
+PROFILE name=OMX.google.aac.encoder profile=29 listed=true formatSupported=true
+ENCODE_FORMAT profile=29 format={max-bitrate=48000, sample-rate=44100, mime=audio/mp4a-latm, channel-count=2, bitrate=48000, csd-0=java.nio.HeapByteBuffer[pos=0 lim=4 cap=4]}
+GENERATED profile=29 packets=172 bytes=51315
+PROFILE_RESULT profile=5 generated=true
+PROFILE_RESULT profile=29 generated=true

@@ -1,0 +1,1 @@
+/sdcard/picker.xml: 1 file pulled, 0 skipped. 0.4 MB/s (20446 bytes in 0.046s)

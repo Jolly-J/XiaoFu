@@ -1,0 +1,11 @@
+total 20420
+drwxrws--x 2 u0_a138 u0_a138_cache     4096 2026-10-25 11:35 .
+drwx------ 7 u0_a138 u0_a138           4096 2026-10-25 11:32 ..
+-rw------- 1 u0_a138 u0_a138_cache    20793 2026-10-25 11:32 aac-video.mp4
+-rw------- 1 u0_a138 u0_a138_cache    20729 2026-10-25 11:35 compat-aac-nonnegative-control.mp4
+-rw------- 1 u0_a138 u0_a138_cache   134927 2026-10-25 11:35 compat-lc-h264.mp4
+-rw-rw-rw- 1 u0_a138 u0_a138_cache 16267605 2026-10-25 11:28 compat-long-972s.mp4
+-rw------- 1 u0_a138 u0_a138_cache    13283 2026-10-25 11:33 hevc-aac-video.mp4
+-rw------- 1 u0_a138 u0_a138_cache  4372373 2026-10-25 11:33 public-sintel.mp4
+-rw------- 1 u0_a138 u0_a138_cache     1423 2026-10-25 11:32 silent-video.mp4
+-rw------- 1 u0_a138 u0_a138_cache     9182 2026-10-25 11:33 vorbis-video.webm

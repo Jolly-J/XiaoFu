@@ -1,0 +1,153 @@
+{
+  "tests": 36,
+  "passed": 35,
+  "failed": 1,
+  "skipped": 0,
+  "platformLimitation": "Android 9 MP4 extractor explicitly rejects MP3-in-MP4; retained as failed compatibility case",
+  "methods": [
+    {
+      "method": "encryptReplaceAndDelete",
+      "status": 0
+    },
+    {
+      "method": "cancellationRemovesPartialOutput",
+      "status": 0
+    },
+    {
+      "method": "noAudioFailsClearly",
+      "status": 0
+    },
+    {
+      "method": "aacRemuxPreservesEveryPacket",
+      "status": 0
+    },
+    {
+      "method": "vorbisDecodesToWav",
+      "status": 0
+    },
+    {
+      "method": "aacDecodesToValidWav",
+      "status": 0
+    },
+    {
+      "method": "vorbisTranscodesToAac",
+      "status": 0
+    },
+    {
+      "method": "hevcVideoContainerExtractsAudio",
+      "status": 0
+    },
+    {
+      "method": "publicSintelAudioRemuxesWithoutPacketLoss",
+      "status": 0
+    },
+    {
+      "method": "tenMinuteAudioResumesWithoutReuploadingCompletedSegment",
+      "status": 0
+    },
+    {
+      "method": "authAndRateLimitErrorsAreActionable",
+      "status": 0
+    },
+    {
+      "method": "multipartAndTimestampMerge",
+      "status": 0
+    },
+    {
+      "method": "m4aAudioDecodesBeforeMockUpload",
+      "status": 0
+    },
+    {
+      "method": "failedSegmentCanRetry",
+      "status": 0
+    },
+    {
+      "method": "cancellationDisconnectsWaitingRequest",
+      "status": 0
+    },
+    {
+      "method": "aacLcH264",
+      "status": 0
+    },
+    {
+      "method": "nonnegativeControl",
+      "status": 0
+    },
+    {
+      "method": "pipeOffsetKnownLengthPreservesOnlyDeclaredMedia",
+      "status": 0
+    },
+    {
+      "method": "pipePrematureEofFailsAndCleansStaging",
+      "status": 0
+    },
+    {
+      "method": "providerNonSeekablePipe",
+      "status": 0
+    },
+    {
+      "method": "negativeEditListPrimingIsPreserved",
+      "status": 0
+    },
+    {
+      "method": "fragmentedMp4",
+      "status": 0
+    },
+    {
+      "method": "movContainer",
+      "status": 0
+    },
+    {
+      "method": "providerUnknownLengthZeroOffset",
+      "status": 0
+    },
+    {
+      "method": "providerNonzeroOffsetKnownLength",
+      "status": 0
+    },
+    {
+      "method": "opusWebm",
+      "status": 0
+    },
+    {
+      "method": "negativeOneMicrosecondIsNotEos",
+      "status": 0
+    },
+    {
+      "method": "stalledPipeCancellationIsPromptAndCleansStaging",
+      "status": 0
+    },
+    {
+      "method": "genuinePlatformHeAacV2",
+      "status": 0
+    },
+    {
+      "method": "genuinePlatformHeAac",
+      "status": 0
+    },
+    {
+      "method": "mp3TrackInMp4",
+      "status": -2
+    },
+    {
+      "method": "multiAudioTrackSelectsFirstDeterministically",
+      "status": 0
+    },
+    {
+      "method": "reliablePipeErrorIsNotSuccessAndCleansStaging",
+      "status": 0
+    },
+    {
+      "method": "emptyPipeFailsAndCleansStaging",
+      "status": 0
+    },
+    {
+      "method": "hevcContainer",
+      "status": 0
+    },
+    {
+      "method": "providerKnownLength",
+      "status": 0
+    }
+  ]
+}

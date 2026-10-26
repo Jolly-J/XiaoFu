@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.local.audio.DiagnosticsTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-25T18:09:57" hostname="f679ed8d1ab4" time="0.065">
+  <properties/>
+  <testcase name="arbitraryStringsNeverLeak" classname="dev.local.audio.DiagnosticsTest" time="0.033"/>
+  <testcase name="terminalResultsAreImmutableAndElapsedTimeStable" classname="dev.local.audio.DiagnosticsTest" time="0.003"/>
+  <testcase name="simultaneousSamplesAreCountedWithoutLoss" classname="dev.local.audio.DiagnosticsTest" time="0.015"/>
+  <testcase name="actualEncryptedSamplesAreCounted" classname="dev.local.audio.DiagnosticsTest" time="0.001"/>
+  <testcase name="retainsFirstAndExactlyFinalThreeSampleObservations" classname="dev.local.audio.DiagnosticsTest" time="0.0"/>
+  <testcase name="clearDoesNotAllowOldHandleToReturn" classname="dev.local.audio.DiagnosticsTest" time="0.001"/>
+  <testcase name="storeIsBoundedAndStaleHandlesCannotCorruptNewRuns" classname="dev.local.audio.DiagnosticsTest" time="0.009"/>
+  <testcase name="sourceAndUnknownDescriptorLengthAreNumericOnly" classname="dev.local.audio.DiagnosticsTest" time="0.001"/>
+  <testcase name="validNegativeTimestampsAreNotEosOrDrm" classname="dev.local.audio.DiagnosticsTest" time="0.001"/>
+  <testcase name="eosSentinelDoesNotCountAsEncryptedSample" classname="dev.local.audio.DiagnosticsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+total 4488
+drwxrwx--x  2 root sdcard_rw    4096 2026-10-25 13:39 .
+drwxrwx--x 11 root sdcard_rw    4096 2026-10-25 13:33 ..
+-rw-rw----  1 root sdcard_rw   20793 2026-10-25 10:01 final-102-aac-negative.mp4
+-rw-rw----  1 root sdcard_rw  180268 2026-10-25 13:39 final-102-aac-negative_279688423527444331.wav
+-rw-rw----  1 root sdcard_rw    1423 2026-10-25 10:01 final-102-no-audio.mp4
+-rw-rw----  1 root sdcard_rw 4372373 2026-10-25 10:05 sintel-smoke.mp4

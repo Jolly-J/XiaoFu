@@ -1,0 +1,13 @@
+9bd1554e82c5555119f22477493051679f9a0b33242fb81228e18b860ff2b99e  app/src/androidTest/assets/compat/aac-editlist-default.mp4
+894c4eb755389c8a44345ceba1d9522b608e0bbab9c1d7fcd35ea094a66c6661  app/src/androidTest/assets/compat/aac-first-minus-one-us.mp4
+df5bdcaa584071eeaa879d82d70adb27e6b7935b5a3584c59b9b88f874082fa6  app/src/androidTest/assets/compat/aac-nonnegative-control.mp4
+6ab9bf685e1a84935f746ce5d022c30ee5789ec27e7d11f20b12854784509a8d  app/src/androidTest/assets/compat/fragmented.mp4
+1de65b279aff619b530c6782b0b3890e32b79be0f2b0613ddc38e62dcd388656  app/src/androidTest/assets/compat/lc-h264.mp4
+d82f013b89b8351d5865769e08868b160e99d71057b68c93d87acf32baa21c34  app/src/androidTest/assets/compat/lc-hevc.mp4
+78a5b7c12a9bf2f3d58e892562a7a7081d638b8e37b895afb0464362a1bc973b  app/src/androidTest/assets/compat/lc.mov
+9421613c8ca5bced9fdaba7d3930d08e35d7c2ddb8817fd1b50975a9e48876d9  app/src/androidTest/assets/compat/mp3-track.mp4
+47faf14d1c9ef04357e0df9ed6cb564fb1e7ae2cfc4712dbbee3bd636f951463  app/src/androidTest/assets/compat/multitrack.mp4
+32c2230057b149abfd61b0762ad7751c1216b7c57ebed43b90c2cfabe949fd42  app/src/androidTest/assets/compat/opus.webm
+c70e984026aeb1406ec0e3c3ce84a56418963076708a72865c303fdfe81e79c3  app/src/androidTest/assets/compat/platform-he-profile-29.mp4
+a3a6783888c4cf390b01b4af154051731067be921ca4c5bf2343211f934ebdb2  app/src/androidTest/assets/compat/platform-he-profile-5.mp4
+88995d0efa06ebf869d0be6bb54322f05f3c95d2f7faa18f760a2a88fede5a13  compatibility-tests/long-media/long-972s.mp4

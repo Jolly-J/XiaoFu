@@ -1,0 +1,423 @@
+--------- beginning of system
+10-25 11:19:09.883   541   541 I ApexManager: Registering com.android.safetycenter.resources as apk-in-apex of com.android.permission
+10-25 11:19:10.253   541   622 I PackageParsing: Parse times for '/apex/com.android.permission/priv-app/PermissionController@AE3A.240806.019': parse=776ms, update_cache=14 ms
+10-25 11:19:10.264   541   541 I PackageManager: /apex/com.android.permission/priv-app/PermissionController@AE3A.240806.019 changed; collecting certs
+10-25 11:19:10.348   541   541 I ApexManager: Registering com.android.permissioncontroller as apk-in-apex of com.android.permission
+--------- beginning of main
+10-25 11:19:10.405   541   541 D PackageManager: No files in app dir /apex/com.android.permission/app
+10-25 11:19:10.424   380   380 W ServiceManagerCppClient: Waited one second for activity (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+--------- beginning of kernel
+10-25 11:19:10.444     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'activity' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:10.471     0     0 E init    : Control message: Could not find 'aidl/activity' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:10.454   128   658 W libc    : Unable to set property "ctl.interface_start" to "aidl/activity": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:10.474     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service activity as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:10.803   541   621 I PackageParsing: Parse times for '/apex/com.android.healthfitness/priv-app/HealthConnectController@AE3A.240806.019': parse=361ms, update_cache=26 ms
+10-25 11:19:10.810   541   541 I PackageManager: /apex/com.android.healthfitness/priv-app/HealthConnectController@AE3A.240806.019 changed; collecting certs
+10-25 11:19:10.866   541   541 I ApexManager: Registering com.android.healthconnect.controller as apk-in-apex of com.android.healthfitness
+10-25 11:19:10.958   541   541 I PackageManager: /apex/com.android.healthfitness/app/HealthConnectBackupRestore@AE3A.240806.019 changed; collecting certs
+10-25 11:19:11.016   541   541 I ApexManager: Registering com.android.health.connect.backuprestore as apk-in-apex of com.android.healthfitness
+10-25 11:19:11.034   541   541 D PackageManager: No files in app dir /apex/com.android.runtime/priv-app
+10-25 11:19:11.039   541   541 D PackageManager: No files in app dir /apex/com.android.runtime/app
+10-25 11:19:11.047   541   541 W PackageManager: Dropping cache of /apex/com.android.extservices/priv-app/ExtServices-sminus@AE3A.240806.019
+10-25 11:19:11.398   541   619 I PackageParsing: Parse times for '/apex/com.android.extservices/priv-app/ExtServices-sminus@AE3A.240806.019': parse=323ms, update_cache=14 ms
+10-25 11:19:11.401   541   541 I PackageManager: /apex/com.android.extservices/priv-app/ExtServices-sminus@AE3A.240806.019 changed; collecting certs
+10-25 11:19:11.440   541   541 I ApexManager: Registering android.ext.services as apk-in-apex of com.android.extservices
+10-25 11:19:11.444   380   380 W ServiceManagerCppClient: Waited one second for activity (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:11.465     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'activity' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:11.459   128   659 W libc    : Unable to set property "ctl.interface_start" to "aidl/activity": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:11.476     0     0 E init    : Control message: Could not find 'aidl/activity' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:11.478     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service activity as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:11.466   541   541 D PackageManager: No files in app dir /apex/com.android.extservices/app
+10-25 11:19:11.471   541   541 W OverlayConfig: partition_order.xml does not exist.
+10-25 11:19:11.772   541   541 I PackageManager: Finished scanning system apps. Time: 33613 ms, packageCount: 205 , timePerPackage: 163 , cached: 0
+10-25 11:19:11.781   541   541 D PackageManager: No files in app dir /data/app
+10-25 11:19:11.793   541   541 I PackageManager: Finished scanning non-system apps. Time: 21 ms, packageCount: 0 , timePerPackage: 0 , cached: 0
+10-25 11:19:11.809   541   541 W PackageManager: There should probably be a verifier, but, none were found
+10-25 11:19:11.822   541   541 W PackageManager: There should probably be exactly one storage manager; found 0: matches=[]
+10-25 11:19:11.831   541   541 W PackageManager: Missing required system package: .
+10-25 11:19:11.831   541   541 W PackageManager: Missing required system package: .
+10-25 11:19:11.832   541   541 W PackageManager: Missing required system package: com.android.launcher3.
+10-25 11:19:11.875   541   541 I PackageManager: Time to scan packages: 33.716 seconds
+10-25 11:19:12.250   541   541 W AppIdPermissionPolicy: Ignoring permission android.permission.ACCESS_ADSERVICES_TOPICS declared in system package android.ext.services: already declared in another system package com.android.adservices.api
+10-25 11:19:12.252   541   541 W AppIdPermissionPolicy: Ignoring permission android.permission.ACCESS_ADSERVICES_ATTRIBUTION declared in system package android.ext.services: already declared in another system package com.android.adservices.api
+10-25 11:19:12.253   541   541 W AppIdPermissionPolicy: Ignoring permission android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE declared in system package android.ext.services: already declared in another system package com.android.adservices.api
+10-25 11:19:12.254   541   541 W AppIdPermissionPolicy: Ignoring permission android.permission.ACCESS_ADSERVICES_AD_ID declared in system package android.ext.services: already declared in another system package com.android.adservices.api
+10-25 11:19:12.466   380   380 W ServiceManagerCppClient: Waited one second for activity (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:12.492     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'activity' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:12.487   128   660 W libc    : Unable to set property "ctl.interface_start" to "aidl/activity": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:12.504     0     0 E init    : Control message: Could not find 'aidl/activity' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:12.509     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service activity as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:12.866   541   561 I system_server: Background concurrent mark compact GC freed 4299KB AllocSpace bytes, 14(336KB) LOS objects, 49% free, 6262KB/12MB, paused 4.116ms,6.936ms total 909.490ms
+10-25 11:19:13.494   380   380 W ServiceManagerCppClient: Waited one second for activity (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:13.514     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'activity' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:13.518   128   661 W libc    : Unable to set property "ctl.interface_start" to "aidl/activity": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:13.531     0     0 E init    : Control message: Could not find 'aidl/activity' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:13.537     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service activity as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:13.888   541   541 V PackageManager: reconcileAppsData for null u0 0x1 migrateAppData=true
+10-25 11:19:13.966   431   450 I SELinux : SELinux: Loaded file context from:
+10-25 11:19:13.968   431   450 I SELinux : 		/system/etc/selinux/plat_file_contexts
+10-25 11:19:13.968   431   450 I SELinux : 		/system_ext/etc/selinux/system_ext_file_contexts
+10-25 11:19:13.968   431   450 I SELinux : 		/vendor/etc/selinux/vendor_file_contexts
+10-25 11:19:14.506   380   380 W ServiceManagerCppClient: Waited one second for activity (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:14.525     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'activity' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:14.523   128   662 W libc    : Unable to set property "ctl.interface_start" to "aidl/activity": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:14.540     0     0 E init    : Control message: Could not find 'aidl/activity' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:14.545     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service activity as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:14.794   541   541 V PackageManager: reconcileAppsData finished 23 packages
+10-25 11:19:14.797   541   541 D PackageManagerTiming: write settings
+10-25 11:19:14.802   541   580 D SystemServerTimingAsync: InitThreadPoolExec:prepareAppData
+10-25 11:19:14.803   541   580 D SystemServerInitThreadPool: Started executing prepareAppData
+10-25 11:19:14.844   541   580 V SystemServerTimingAsync: AppDataFixup took to complete: 41ms
+10-25 11:19:15.213   541   541 I SELinux : SELinux: Loaded file context from:
+10-25 11:19:15.218   541   541 I SELinux : 		/system/etc/selinux/plat_file_contexts
+10-25 11:19:15.218   541   541 I SELinux : 		/system_ext/etc/selinux/system_ext_file_contexts
+10-25 11:19:15.219   541   541 I SELinux : 		/vendor/etc/selinux/vendor_file_contexts
+10-25 11:19:15.332   541   541 V PackageManagerTiming: write settings took to complete: 533ms
+10-25 11:19:15.346   541   541 W PackageManager: Domain verification agent not found
+10-25 11:19:15.377   541   541 D PackageManager: Ephemeral resolver NOT found; no matching intent filters
+10-25 11:19:15.385   541   541 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+10-25 11:19:15.390   541   541 D PackageManager: Clear ephemeral installer activity
+10-25 11:19:15.450   541   541 I PackageManager: Fix for b/169414761 is applied
+10-25 11:19:15.451   541   541 V PackageManagerTiming: create package manager took to complete: 38133ms
+10-25 11:19:15.454   541   580 W system_server: Long monitor contention with owner main (541) at void com.android.server.pm.PackageManagerService.<init>(com.android.server.pm.PackageManagerServiceInjector, boolean, java.lang.String, boolean, boolean, int, java.lang.String)(PackageManagerService.java:2540) waiters=0 in com.android.server.pm.Computer com.android.server.pm.PackageManagerService.snapshotComputer(boolean) for 603ms
+10-25 11:19:15.458   541   541 V UserSystemPackageInstaller: Checking that all system packages are whitelisted.
+10-25 11:19:15.468   541   580 W PackageManager: Skipping preparing app data for com.android.configinfrastructure
+10-25 11:19:15.471   541   580 W PackageManager: Skipping preparing app data for com.android.appsearch
+10-25 11:19:15.477   541   541 W UserSystemPackageInstaller: checkWhitelistedSystemPackages(mode=d) has 56 warnings:
+10-25 11:19:15.479   541   580 W PackageManager: Skipping preparing app data for com.android.hardware.authsecret
+10-25 11:19:15.481   541   580 W PackageManager: Skipping preparing app data for com.android.adservices
+10-25 11:19:15.484   541   580 W PackageManager: Skipping preparing app data for com.android.scheduling
+10-25 11:19:15.485   541   580 W PackageManager: Skipping preparing app data for com.android.permission
+10-25 11:19:15.489   541   580 W PackageManager: Skipping preparing app data for com.android.profiling
+10-25 11:19:15.491   541   541 W UserSystemPackageInstaller: com.android.theme.color.amethyst is allowlisted but not present.
+10-25 11:19:15.492   541   541 W UserSystemPackageInstaller: com.android.theme.icon.pebble is allowlisted but not present.
+10-25 11:19:15.492   541   541 W UserSystemPackageInstaller: com.android.internal.systemui.navbar.gestural_wide_back is allowlisted but not present.
+10-25 11:19:15.492   541   541 W UserSystemPackageInstaller: com.android.theme.color.sand is allowlisted but not present.
+10-25 11:19:15.492   541   541 W UserSystemPackageInstaller: com.android.wallpapercropper is allowlisted but not present.
+10-25 11:19:15.492   541   541 W UserSystemPackageInstaller: com.android.theme.icon.vessel is allowlisted but not present.
+10-25 11:19:15.493   541   541 W UserSystemPackageInstaller: com.android.theme.color.cinnamon is allowlisted but not present.
+10-25 11:19:15.493   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.victor.settings is allowlisted but not present.
+10-25 11:19:15.493   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.rounded.systemui is allowlisted but not present.
+10-25 11:19:15.493   541   541 W UserSystemPackageInstaller: com.android.theme.icon.taperedrect is allowlisted but not present.
+10-25 11:19:15.496   541   541 W UserSystemPackageInstaller: com.android.documentsui is allowlisted but not present.
+10-25 11:19:15.496   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.rounded.android is allowlisted but not present.
+10-25 11:19:15.496   541   541 W UserSystemPackageInstaller: com.android.internal.systemui.onehanded.gestural is allowlisted but not present.
+10-25 11:19:15.496   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.victor.systemui is allowlisted but not present.
+10-25 11:19:15.496   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.circular.themepicker is allowlisted but not present.
+10-25 11:19:15.496   541   541 W UserSystemPackageInstaller: com.android.theme.color.tangerine is allowlisted but not present.
+10-25 11:19:15.497   541   541 W UserSystemPackageInstaller: com.android.theme.color.aquamarine is allowlisted but not present.
+10-25 11:19:15.497   541   541 W UserSystemPackageInstaller: com.android.theme.color.black is allowlisted but not present.
+10-25 11:19:15.497   541   541 W UserSystemPackageInstaller: com.android.theme.color.green is allowlisted but not present.
+10-25 11:19:15.497   541   541 W UserSystemPackageInstaller: com.android.theme.color.ocean is allowlisted but not present.
+10-25 11:19:15.503   541   541 W UserSystemPackageInstaller: com.android.theme.color.space is allowlisted but not present.
+10-25 11:19:15.503   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.rounded.launcher is allowlisted but not present.
+10-25 11:19:15.504   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.kai.settings is allowlisted but not present.
+10-25 11:19:15.504   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.sam.settings is allowlisted but not present.
+10-25 11:19:15.504   541   541 W UserSystemPackageInstaller: com.android.internal.systemui.navbar.gestural_extra_wide_back is allowlisted but not present.
+10-25 11:19:15.504   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.kai.themepicker is allowlisted but not present.
+10-25 11:19:15.504   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.victor.launcher is allowlisted but not present.
+10-25 11:19:15.504   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.filled.settings is allowlisted but not present.
+10-25 11:19:15.505   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.kai.systemui is allowlisted but not present.
+10-25 11:19:15.505   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.circular.settings is allowlisted but not present.
+10-25 11:19:15.505   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.sam.systemui is allowlisted but not present.
+10-25 11:19:15.505   541   541 W UserSystemPackageInstaller: com.android.theme.icon.teardrop is allowlisted but not present.
+10-25 11:19:15.507   541   580 W PackageManager: Skipping preparing app data for com.android.hardware.rebootescrow
+10-25 11:19:15.508   541   580 W PackageManager: Skipping preparing app data for com.android.art
+10-25 11:19:15.509   541   580 W PackageManager: Skipping preparing app data for com.android.uwb
+10-25 11:19:15.509   541   580 W PackageManager: Skipping preparing app data for com.android.tethering
+10-25 11:19:15.512   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.rounded.themepicker is allowlisted but not present.
+10-25 11:19:15.513   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.filled.systemui is allowlisted but not present.
+10-25 11:19:15.513   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.sam.android is allowlisted but not present.
+10-25 11:19:15.513   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.filled.android is allowlisted but not present.
+10-25 11:19:15.513   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.circular.systemui is allowlisted but not present.
+10-25 11:19:15.514   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.kai.android is allowlisted but not present.
+10-25 11:19:15.515   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.kai.launcher is allowlisted but not present.
+10-25 11:19:15.515   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.sam.launcher is allowlisted but not present.
+10-25 11:19:15.515   541   541 W UserSystemPackageInstaller: com.android.theme.icon.squircle is allowlisted but not present.
+10-25 11:19:15.515   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.victor.android is allowlisted but not present.
+10-25 11:19:15.515   541   541 W UserSystemPackageInstaller: com.android.theme.color.palette is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.settings is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.filled.launcher is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.theme.color.carbon is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.circular.launcher is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.filled.themepicker is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.victor.themepicker is allowlisted but not present.
+10-25 11:19:15.516   541   541 W UserSystemPackageInstaller: com.android.theme.color.orchid is allowlisted but not present.
+10-25 11:19:15.517   541   541 W UserSystemPackageInstaller: com.android.theme.color.purple is allowlisted but not present.
+10-25 11:19:15.517   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.sam.themepicker is allowlisted but not present.
+10-25 11:19:15.517   541   541 W UserSystemPackageInstaller: com.android.theme.icon.roundedrect is allowlisted but not present.
+10-25 11:19:15.517   541   541 W UserSystemPackageInstaller: com.android.internal.systemui.navbar.gestural_narrow_back is allowlisted but not present.
+10-25 11:19:15.520   380   380 W ServiceManagerCppClient: Waited one second for activity (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:15.541     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'activity' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:15.525   541   580 W PackageManager: Skipping preparing app data for com.android.btservices
+10-25 11:19:15.525   541   580 W PackageManager: Skipping preparing app data for com.android.media.swcodec
+10-25 11:19:15.527   541   580 W PackageManager: Skipping preparing app data for com.android.conscrypt
+10-25 11:19:15.537   541   580 W PackageManager: Skipping preparing app data for com.android.adbd
+10-25 11:19:15.541   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.rounded.settings is allowlisted but not present.
+10-25 11:19:15.543   541   541 W UserSystemPackageInstaller: com.android.theme.icon_pack.circular.android is allowlisted but not present.
+10-25 11:19:15.543   541   541 I UserSystemPackageInstaller: Reviewing whitelisted packages due to [firstBoot]
+10-25 11:19:15.567     0     0 E init    : Control message: Could not find 'aidl/activity' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:15.554   128   664 W libc    : Unable to set property "ctl.interface_start" to "aidl/activity": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:15.573     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service activity as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:15.559   541   580 W PackageManager: Skipping preparing app data for com.android.i18n
+10-25 11:19:15.562   541   580 W PackageManager: Skipping preparing app data for com.android.rkpd
+10-25 11:19:15.562   541   580 W PackageManager: Skipping preparing app data for com.android.virt
+10-25 11:19:15.562   541   580 W PackageManager: Skipping preparing app data for com.android.wifi
+10-25 11:19:15.564   541   580 W PackageManager: Skipping preparing app data for com.android.runtime
+10-25 11:19:15.564   541   580 W PackageManager: Skipping preparing app data for com.android.devicelock
+10-25 11:19:15.565   541   580 W PackageManager: Skipping preparing app data for com.android.apex.cts.shim
+10-25 11:19:15.583   541   541 I Watchdog: Resuming HandlerChecker: main thread for reason: packagemanagermain. Pause count: 0
+10-25 11:19:15.586   541   541 V SystemServerTiming: StartPackageManagerService took to complete: 38327ms
+10-25 11:19:15.587   541   541 D SystemServerTiming: DexUseManagerLocal
+10-25 11:19:15.600   541   541 E ArtService: Failed to load dex use data
+10-25 11:19:15.600   541   541 E ArtService: java.io.FileNotFoundException: /data/system/package-dex-usage.pb: open failed: ENOENT (No such file or directory)
+10-25 11:19:15.600   541   541 E ArtService: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-25 11:19:15.600   541   541 E ArtService: 	at java.io.FileInputStream.<init>(FileInputStream.java:179)
+10-25 11:19:15.600   541   541 E ArtService: 	at java.io.FileInputStream.<init>(FileInputStream.java:133)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.art.DexUseManagerLocal.load(DexUseManagerLocal.java:572)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.art.DexUseManagerLocal.<init>(DexUseManagerLocal.java:164)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.art.DexUseManagerLocal.<init>(DexUseManagerLocal.java:156)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.art.DexUseManagerLocal.createInstance(DexUseManagerLocal.java:150)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.SystemServer.startBootstrapServices(SystemServer.java:1263)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.SystemServer.run(SystemServer.java:934)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.server.SystemServer.main(SystemServer.java:657)
+10-25 11:19:15.600   541   541 E ArtService: 	at java.lang.reflect.Method.invoke(Native Method)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+10-25 11:19:15.600   541   541 E ArtService: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:864)
+10-25 11:19:15.600   541   541 E ArtService: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-25 11:19:15.600   541   541 E ArtService: 	at libcore.io.Linux.open(Native Method)
+10-25 11:19:15.600   541   541 E ArtService: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-25 11:19:15.600   541   541 E ArtService: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-25 11:19:15.600   541   541 E ArtService: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-25 11:19:15.600   541   541 E ArtService: 	... 12 more
+10-25 11:19:15.603   541   541 V SystemServerTiming: DexUseManagerLocal took to complete: 12ms
+10-25 11:19:15.604   541   541 D SystemServerTiming: StartOtaDexOptService
+10-25 11:19:15.605   541   541 I Watchdog: Pausing HandlerChecker: main thread for reason: moveab. Pause count: 1
+10-25 11:19:15.612   541   541 D OTADexopt: No upgrade, skipping A/B artifacts check.
+10-25 11:19:15.613   541   541 I Watchdog: Resuming HandlerChecker: main thread for reason: moveab. Pause count: 0
+10-25 11:19:15.613   541   541 V SystemServerTiming: StartOtaDexOptService took to complete: 8ms
+10-25 11:19:15.614   541   541 D SystemServerTiming: StartUserManagerService
+10-25 11:19:15.615   541   541 I SystemServiceManager: Starting com.android.server.pm.UserManagerService$LifeCycle
+10-25 11:19:15.619   541   541 V SystemServerTiming: StartUserManagerService took to complete: 4ms
+10-25 11:19:15.619   541   541 D SystemServerTiming: InitAttributerCache
+10-25 11:19:15.620   541   541 V SystemServerTiming: InitAttributerCache took to complete: 0ms
+10-25 11:19:15.620   541   541 D SystemServerTiming: SetSystemProcess
+10-25 11:19:15.673     0     0 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-25 11:19:15.722   541   580 W PackageManager: Skipping preparing app data for com.android.neuralnetworks
+10-25 11:19:15.723   541   580 W PackageManager: Skipping preparing app data for com.android.healthfitness
+10-25 11:19:15.725   541   580 W PackageManager: Skipping preparing app data for com.android.hardware.cas
+10-25 11:19:15.730   541   580 W PackageManager: Skipping preparing app data for com.android.resolv
+10-25 11:19:15.734   541   580 W PackageManager: Skipping preparing app data for com.android.sdkext
+10-25 11:19:15.744   541   580 W PackageManager: Skipping preparing app data for com.android.tzdata
+10-25 11:19:15.744   541   580 W PackageManager: Skipping preparing app data for com.android.hardware.neuralnetworks
+10-25 11:19:15.745   541   580 W PackageManager: Skipping preparing app data for com.android.os.statsd
+10-25 11:19:15.756   541   580 W PackageManager: Skipping preparing app data for com.android.extservices
+10-25 11:19:15.756   541   580 W PackageManager: Skipping preparing app data for com.android.cellbroadcast
+10-25 11:19:15.772     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'sensor_privacy' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:15.786     0     0 E init    : Control message: Could not find 'aidl/sensor_privacy' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:15.770   128   667 W libc    : Unable to set property "ctl.interface_start" to "aidl/sensor_privacy": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:15.789     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service sensor_privacy as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:15.777   541   580 W PackageManager: Skipping preparing app data for com.android.ipsec
+10-25 11:19:15.786   541   580 W PackageManager: Skipping preparing app data for com.android.media
+10-25 11:19:15.787   541   580 W PackageManager: Skipping preparing app data for com.android.sdksandbox
+10-25 11:19:15.787   541   580 W PackageManager: Skipping preparing app data for com.android.mediaprovider
+10-25 11:19:15.788   541   580 W PackageManager: Skipping preparing app data for com.android.nfcservices
+10-25 11:19:15.788   541   580 W PackageManager: Skipping preparing app data for com.android.ondevicepersonalization
+10-25 11:19:15.863   541   541 D ActivityManager: StatsPullAtomService not ready yet
+10-25 11:19:15.904   541   541 D OomAdjuster: Not killing cached processes
+10-25 11:19:15.924   127   127 I lowmemorykiller: lmkd data connection established
+10-25 11:19:15.951   541   587 I ActivityManager: Connection with lmkd established
+10-25 11:19:16.054   541   541 D ActivityManager: StatsPullAtomService not ready yet
+10-25 11:19:16.077   541   541 V SystemServerTiming: SetSystemProcess took to complete: 456ms
+10-25 11:19:16.143   541   541 D SystemServerTiming: InitWatchdog
+10-25 11:19:16.154   541   541 V SystemServerTiming: InitWatchdog took to complete: 4ms
+10-25 11:19:16.173   541   541 D SystemServerTiming: StartOverlayManagerService
+10-25 11:19:16.246   541   541 I OverlayManager: Updating overlays for starting user 0
+10-25 11:19:16.322     0     0 I init    : service 'idmap2d' requested start, but it is already running (flags: 4)
+10-25 11:19:16.322     0     0 I init    : Control message: Processed ctl.start for 'idmap2d' from pid: 541 (system_server)
+10-25 11:19:16.363   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@DisplayCutoutEmulationCorner@DisplayCutoutEmulationCornerOverlay.apk@idmap'
+10-25 11:19:16.727   429   445 W idmap2d : failed to find resource 'string/display_cutout_emulation_overlay'
+10-25 11:19:16.764   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@DisplayCutoutEmulationDouble@DisplayCutoutEmulationDoubleOverlay.apk@idmap'
+10-25 11:19:16.790   380   380 W ServiceManagerCppClient: Waited one second for sensor_privacy (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:16.810     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'sensor_privacy' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:16.816   429   445 W idmap2d : failed to find resource 'string/display_cutout_emulation_overlay'
+10-25 11:19:16.819   128   669 W libc    : Unable to set property "ctl.interface_start" to "aidl/sensor_privacy": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:16.836     0     0 E init    : Control message: Could not find 'aidl/sensor_privacy' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:16.837     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service sensor_privacy as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:16.834   429   429 W idmap2d : failed to parse idmap header of '/data/resource-cache/vendor@overlay@CarrierConfig__sdk_slim_x86_64__auto_generated_rro_vendor.apk@idmap'
+10-25 11:19:16.902   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@TelephonyProvider__emulator__auto_generated_characteristics_rro.apk@idmap'
+10-25 11:19:16.928   429   670 E idmap2d : failed to retrieve loaded package at index 0 -> failed to generate resource map for '/product/overlay/TelephonyProvider__emulator__auto_generated_characteristics_rro.apk'
+10-25 11:19:16.940   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulatorTetheringConfigOverlay.apk@idmap'
+10-25 11:19:16.999   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel3aXL@EmulationPixel3aXLOverlay.apk@idmap'
+10-25 11:19:17.016   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel6Pro@EmulationPixel6ProOverlay.apk@idmap'
+10-25 11:19:17.050   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel7Pro@EmulationPixel7ProOverlay.apk@idmap'
+10-25 11:19:17.075   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel8Pro@EmulationPixel8ProOverlay.apk@idmap'
+10-25 11:19:17.104   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel3a@EmulationPixel3aOverlay.apk@idmap'
+10-25 11:19:17.125   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel4a@EmulationPixel4aOverlay.apk@idmap'
+10-25 11:19:17.195   429   445 W idmap2d : failed to find resource 'dimen/quick_qs_total_height'
+10-25 11:19:17.199   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel6a@EmulationPixel6aOverlay.apk@idmap'
+10-25 11:19:17.238     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=2 c=900000 fc=3000000 cc=10 chg=a
+10-25 11:19:17.231   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel7a@EmulationPixel7aOverlay.apk@idmap'
+10-25 11:19:17.263   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel8a@EmulationPixel8aOverlay.apk@idmap'
+10-25 11:19:17.296   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@DisplayCutoutEmulationHole@DisplayCutoutEmulationHoleOverlay.apk@idmap'
+10-25 11:19:17.332   429   445 W idmap2d : failed to find resource 'string/display_cutout_emulation_overlay'
+10-25 11:19:17.347   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@DisplayCutoutEmulationTall@DisplayCutoutEmulationTallOverlay.apk@idmap'
+10-25 11:19:17.402   429   670 W idmap2d : failed to find resource 'string/display_cutout_emulation_overlay'
+10-25 11:19:17.406   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@NavigationBarMode3Button@NavigationBarMode3ButtonOverlay.apk@idmap'
+10-25 11:19:17.436   429   445 W idmap2d : failed to find resource 'string/navigation_bar_mode_title'
+10-25 11:19:17.451   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@NavigationBarMode2Button@NavigationBarMode2ButtonOverlay.apk@idmap'
+10-25 11:19:17.490   429   670 W idmap2d : failed to find resource 'string/navigation_bar_mode_title'
+10-25 11:19:17.502   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel3@EmulationPixel3Overlay.apk@idmap'
+10-25 11:19:17.533   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel4@EmulationPixel4Overlay.apk@idmap'
+10-25 11:19:17.552   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel5@EmulationPixel5Overlay.apk@idmap'
+10-25 11:19:17.586   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel6@EmulationPixel6Overlay.apk@idmap'
+10-25 11:19:17.616   429   670 W idmap2d : failed to find resource 'dimen/status_bar_height_height_default'
+10-25 11:19:17.625   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel7@EmulationPixel7Overlay.apk@idmap'
+10-25 11:19:17.652   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel8@EmulationPixel8Overlay.apk@idmap'
+10-25 11:19:17.684   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@DisplayCutoutEmulationEmu01@DisplayCutoutEmulationEmu01Overlay.apk@idmap'
+10-25 11:19:17.724   429   670 W idmap2d : failed to find resource 'dimen/quick_qs_total_height'
+10-25 11:19:17.744   429   670 W idmap2d : failed to find resource 'string/display_cutout_emulation_overlay'
+10-25 11:19:17.756   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@TeleService__emulator__auto_generated_characteristics_rro.apk@idmap'
+10-25 11:19:17.790   429   445 E idmap2d : failed to retrieve loaded package at index 0 -> failed to generate resource map for '/product/overlay/TeleService__emulator__auto_generated_characteristics_rro.apk'
+10-25 11:19:17.806   380   380 W ServiceManagerCppClient: Waited one second for sensor_privacy (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:17.808   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@FontNotoSerifSource@FontNotoSerifSourceOverlay.apk@idmap'
+10-25 11:19:17.828     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'sensor_privacy' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:17.853     0     0 E init    : Control message: Could not find 'aidl/sensor_privacy' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:17.838   128   671 W libc    : Unable to set property "ctl.interface_start" to "aidl/sensor_privacy": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:17.857     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service sensor_privacy as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:17.860   429   445 W idmap2d : failed to find resource 'string/font_notoserif_source_overlay'
+10-25 11:19:17.877   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@DisplayCutoutEmulationWaterfall@DisplayCutoutEmulationWaterfallOverlay.apk@idmap'
+10-25 11:19:17.928   429   445 W idmap2d : failed to find resource 'string/display_cutout_emulation_overlay'
+10-25 11:19:17.952   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@TransparentNavigationBar@TransparentNavigationBarOverlay.apk@idmap'
+10-25 11:19:18.006   429   445 W idmap2d : failed to find resource 'string/transparent_navigation_bar_title'
+10-25 11:19:18.018   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@NotesRoleEnabled@NotesRoleEnabledOverlay.apk@idmap'
+10-25 11:19:18.056   429   445 W idmap2d : failed to find resource 'string/notes_role_enabled_overlay_title'
+10-25 11:19:18.071   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/vendor@overlay@TeleService__sdk_slim_x86_64__auto_generated_rro_vendor.apk@idmap'
+10-25 11:19:18.111   429   445 W idmap2d : failed to find resource 'string/config_satellite_service_package'
+10-25 11:19:18.124   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel2XL@EmulationPixel2XLOverlay.apk@idmap'
+10-25 11:19:18.154   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel3XL@EmulationPixel3XLOverlay.apk@idmap'
+10-25 11:19:18.185   429   445 W idmap2d : failed to find resource 'dimen/quick_qs_total_height'
+10-25 11:19:18.207   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixel4XL@EmulationPixel4XLOverlay.apk@idmap'
+10-25 11:19:18.233   429   670 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@EmulationPixelFold@EmulationPixelFoldOverlay.apk@idmap'
+10-25 11:19:18.263   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/vendor@overlay@goldfish_overlay_connectivity_gsi.apk@idmap'
+10-25 11:19:18.309   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@CompanionDeviceManager__emulator__auto_generated_characteristics_rro.apk@idmap'
+10-25 11:19:18.329   429   445 E idmap2d : failed to retrieve loaded package at index 0 -> failed to generate resource map for '/product/overlay/CompanionDeviceManager__emulator__auto_generated_characteristics_rro.apk'
+10-25 11:19:18.424   429   445 W idmap2d : failed to parse idmap header of '/data/resource-cache/product@overlay@NavigationBarModeGestural@NavigationBarModeGesturalOverlay.apk@idmap'
+10-25 11:19:18.472   429   445 W idmap2d : failed to find resource 'string/navigation_bar_mode_title'
+10-25 11:19:18.702   541   541 V SystemServerTiming: StartOverlayManagerService took to complete: 2517ms
+10-25 11:19:18.704   541   541 D SystemServerTiming: StartResourcesManagerService
+10-25 11:19:18.745   541   541 V SystemServerTiming: StartResourcesManagerService took to complete: 40ms
+10-25 11:19:18.750   541   541 D SystemServerTiming: StartSensorPrivacyService
+10-25 11:19:18.803   541   573 W BroadcastLoopers: Found previously unknown looper Thread[android.fg,5,main]
+10-25 11:19:18.834   380   380 W ServiceManagerCppClient: Waited one second for sensor_privacy (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-25 11:19:18.853     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Since 'sensor_privacy' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-25 11:19:18.866     0     0 E init    : Control message: Could not find 'aidl/sensor_privacy' for ctl.interface_start from pid: 128 (/system/bin/servicemanager)
+10-25 11:19:18.855   128   672 W libc    : Unable to set property "ctl.interface_start" to "aidl/sensor_privacy": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-25 11:19:18.874     0     0 I servicemanager: Caller(pid=380,uid=1041,sid=u:r:audioserver:s0) Tried to start aidl service sensor_privacy as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-25 11:19:18.918   541   573 W Looper  : Slow dispatch took 221ms android.fg h=android.os.Handler c=com.android.server.om.OverlayManagerService$$ExternalSyntheticLambda1@731a4f4 m=0
+10-25 11:19:18.949   541   541 V SystemServerTiming: StartSensorPrivacyService took to complete: 198ms
+10-25 11:19:18.984     0     0 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-25 11:19:18.965   541   541 D SystemServerTiming: StartSensorService
+10-25 11:19:18.971   541   541 I SystemServiceManager: Starting com.android.server.sensors.SensorService
+10-25 11:19:18.973   541   541 V SystemServerTiming: StartSensorService took to complete: 7ms
+10-25 11:19:19.028   541   541 V SystemServerTiming: startBootstrapServices took to complete: 47259ms
+10-25 11:19:19.033   541   541 D SystemServerTiming: startCoreServices
+10-25 11:19:19.063   541   541 D SystemServerTiming: StartSystemConfigService
+10-25 11:19:19.067   541   541 I SystemServiceManager: Starting com.android.server.SystemConfigService
+10-25 11:19:19.114   541   541 V SystemServerTiming: StartSystemConfigService took to complete: 48ms
+10-25 11:19:19.115   541   541 D SystemServerTiming: StartBatteryService
+10-25 11:19:19.116   541   541 I SystemServiceManager: Starting com.android.server.BatteryService
+10-25 11:19:19.139   380   380 D audioserver: main: AudioPolicy created
+10-25 11:19:19.222   380   380 D audioserver: main: Do not init aaudio service, status 0, policy info size 1
+10-25 11:19:19.223   380   380 I audioserver: main: initialization done in 84059.922 ms, joining thread pool
+10-25 11:19:19.278     0     0 I servicemanager: Caller(pid=541,uid=1000,sid=u:r:system_server:s0) Found android.hardware.health.IHealth/default in device VINTF manifest.
+10-25 11:19:19.321   433   488 W AudioAnalytics: onAudioServerStart: (key=audio.policy) AudioPolicy ctor, loadTimeMs:79659.085938
+10-25 11:19:19.395     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=2 c=900000 fc=3000000 cc=10 chg=a
+10-25 11:19:19.470   541   541 I HealthServiceWrapperAidl: health: HealthServiceWrapper listening to AIDL HAL
+10-25 11:19:19.471   541   541 I BatteryService: health: Waited 0ms and received the update.
+10-25 11:19:19.505   541   541 W SystemServiceManager: Service com.android.server.BatteryService took 309 ms in onStart
+10-25 11:19:19.513   541   541 V SystemServerTiming: StartBatteryService took to complete: 397ms
+10-25 11:19:19.514   541   541 D SystemServerTiming: StartUsageService
+10-25 11:19:19.515   541   541 I SystemServiceManager: Starting com.android.server.usage.UsageStatsService
+10-25 11:19:19.667   541   541 W SystemServiceManager: Service com.android.server.usage.UsageStatsService took 143 ms in onStart
+10-25 11:19:19.687   541   541 V SystemServerTiming: StartUsageService took to complete: 172ms
+10-25 11:19:19.688   541   541 D SystemServerTiming: StartWebViewUpdateService
+10-25 11:19:19.692   541   541 I SystemServiceManager: Starting com.android.server.webkit.WebViewUpdateService
+10-25 11:19:19.730   541   541 V SystemServerTiming: StartWebViewUpdateService took to complete: 39ms
+10-25 11:19:19.730   541   541 D SystemServerTiming: StartCachedDeviceStateService
+10-25 11:19:19.731   541   541 I SystemServiceManager: Starting com.android.server.CachedDeviceStateService
+10-25 11:19:19.731   541   541 V SystemServerTiming: StartCachedDeviceStateService took to complete: 1ms
+10-25 11:19:19.732   541   541 D SystemServerTiming: StartBinderCallsStatsService
+10-25 11:19:19.732   541   541 I SystemServiceManager: Starting com.android.server.BinderCallsStatsService$LifeCycle
+10-25 11:19:19.750   541   541 V SystemServerTiming: StartBinderCallsStatsService took to complete: 19ms
+10-25 11:19:19.756   541   541 D SystemServerTiming: StartLooperStatsService
+10-25 11:19:19.759   541   541 I SystemServiceManager: Starting com.android.server.LooperStatsService$Lifecycle
+10-25 11:19:19.791   541   541 V SystemServerTiming: StartLooperStatsService took to complete: 34ms
+10-25 11:19:19.791   541   541 D SystemServerTiming: StartRollbackManagerService
+10-25 11:19:19.792   541   541 I SystemServiceManager: Starting com.android.server.rollback.RollbackManagerService
+10-25 11:19:19.833   431   431 D installd: Found quota mount /dev/block/dm-43 at /data
+10-25 11:19:19.852   431   431 D installd: Found quota mount /dev/block/dm-43 at /data/user/0
+10-25 11:19:19.882   541   541 I PackageWatchdog: Syncing state, reason: added new observer
+10-25 11:19:19.884   541   541 I PackageWatchdog: Not pruning observers, elapsed time: 0ms
+10-25 11:19:19.885   541   541 I PackageWatchdog: Cancelling state sync, nothing to sync
+10-25 11:19:19.906   541   584 I PackageWatchdog: Saving observer state to file
+10-25 11:19:20.018   541   541 W SystemServiceManager: Service com.android.server.rollback.RollbackManagerService took 226 ms in onStart
+10-25 11:19:20.019   541   541 V SystemServerTiming: StartRollbackManagerService took to complete: 227ms
+10-25 11:19:20.019   541   541 D SystemServerTiming: StartNativeTombstoneManagerService
+10-25 11:19:20.019   541   541 I SystemServiceManager: Starting com.android.server.os.NativeTombstoneManagerService
+10-25 11:19:20.039   541   541 V SystemServerTiming: StartNativeTombstoneManagerService took to complete: 19ms
+10-25 11:19:20.041   541   541 D SystemServerTiming: StartBugreportManagerService
+10-25 11:19:20.045   541   541 I SystemServiceManager: Starting com.android.server.os.BugreportManagerService
+10-25 11:19:20.059   541   541 V SystemServerTiming: StartBugreportManagerService took to complete: 14ms
+10-25 11:19:20.062   541   541 D SystemServerTiming: GpuService
+10-25 11:19:20.063   541   541 I SystemServiceManager: Starting com.android.server.gpu.GpuService
+10-25 11:19:20.065   541   541 V SystemServerTiming: GpuService took to complete: 1ms
+10-25 11:19:20.074   541   541 D SystemServerTiming: StartRemoteProvisioningService
+10-25 11:19:20.075   541   541 I SystemServiceManager: Starting com.android.server.security.rkp.RemoteProvisioningService
+10-25 11:19:20.090   541   541 V SystemServerTiming: StartRemoteProvisioningService took to complete: 16ms
+10-25 11:19:20.091   541   541 D SystemServerTiming: CpuMonitorService
+10-25 11:19:20.091   541   541 I SystemServiceManager: Starting com.android.server.cpu.CpuMonitorService
+10-25 11:19:20.267   541   541 V SLog    : static_init took to complete: 0ms
+10-25 11:19:20.269   541   541 I CpuMonitorService: Starting debug monitoring
+10-25 11:19:20.271   541   541 W SystemServiceManager: Service com.android.server.cpu.CpuMonitorService took 160 ms in onStart
+10-25 11:19:20.275   541   541 V SystemServerTiming: CpuMonitorService took to complete: 184ms
+10-25 11:19:20.276   541   541 V SystemServerTiming: startCoreServices took to complete: 1213ms
+10-25 11:19:20.276   541   541 D SystemServerTiming: startOtherServices
+10-25 11:19:20.292   541   541 D SystemServerTiming: StartKeyAttestationApplicationIdProviderService
+10-25 11:19:20.314   541   541 V SystemServerTiming: StartKeyAttestationApplicationIdProviderService took to complete: 21ms
+10-25 11:19:20.314   541   541 D SystemServerTiming: StartKeyChainSystemService
+10-25 11:19:20.315   541   541 I SystemServiceManager: Starting com.android.server.security.KeyChainSystemService
+10-25 11:19:20.316   541   541 V SystemServerTiming: StartKeyChainSystemService took to complete: 2ms
+10-25 11:19:20.316   541   541 D SystemServerTiming: StartBinaryTransparencyService
+10-25 11:19:20.324   541   541 I SystemServiceManager: Starting com.android.server.BinaryTransparencyService
+10-25 11:19:20.342   541   541 I TransparencyService: Started BinaryTransparencyService
+10-25 11:19:20.348   541   541 V SystemServerTiming: StartBinaryTransparencyService took to complete: 31ms
+10-25 11:19:20.348   541   541 D SystemServerTiming: StartSchedulingPolicyService
+10-25 11:19:20.379   541   541 V SystemServerTiming: StartSchedulingPolicyService took to complete: 31ms
+10-25 11:19:20.381   541   541 D SystemServerTiming: StartTelecomLoaderService
+10-25 11:19:20.391   541   541 I SystemServiceManager: Starting com.android.server.telecom.TelecomLoaderService
+10-25 11:19:20.411   541   541 V SystemServerTiming: StartTelecomLoaderService took to complete: 20ms
+10-25 11:19:20.418   541   541 D SystemServerTiming: StartTelephonyRegistry
+10-25 11:19:20.438   541   541 V SystemServerTiming: StartTelephonyRegistry took to complete: 19ms
+10-25 11:19:20.439   541   541 D SystemServerTiming: StartEntropyMixer
+10-25 11:19:20.531   541   541 I EntropyMixer: Created seed file
+10-25 11:19:20.539   541   541 V SystemServerTiming: StartEntropyMixer took to complete: 99ms
+10-25 11:19:20.540   541   541 D SystemServerTiming: StartAccountManagerService
+10-25 11:19:20.546   541   541 I SystemServiceManager: Starting com.android.server.accounts.AccountManagerService$Lifecycle
+10-25 11:19:20.731   541   683 W CpuMonitorService: Skipping reading from device and returning the last read CpuInfos. Last read was 127 ms ago, min read interval is 500 ms
+10-25 11:19:20.739   541   541 W SystemServiceManager: Service com.android.server.accounts.AccountManagerService$Lifecycle took 191 ms in onStart
+10-25 11:19:20.739   541   541 V SystemServerTiming: StartAccountManagerService took to complete: 193ms
+10-25 11:19:20.739   541   541 D SystemServerTiming: StartContentService
+10-25 11:19:20.746   541   541 I SystemServiceManager: Starting com.android.server.content.ContentService$Lifecycle
+10-25 11:19:20.792   541   541 V SystemServerTiming: StartContentService took to complete: 51ms
+10-25 11:19:20.796   541   541 D SystemServerTiming: InstallSystemProviders
+10-25 11:19:21.034   541   541 D nativeloader: Configuring clns-shared-16 for other apk /system/priv-app/SettingsProvider/SettingsProvider.apk. target_sdk_version=35, uses_libraries=, library_path=/system/priv-app/SettingsProvider/lib/x86_64:/system/priv-app/SettingsProvider/SettingsProvider.apk!/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user_de/0/com.android.providers.settings:/system/priv-app/SettingsProvider:/system/lib64:/system_ext/lib64
+10-25 11:19:22.969   541   541 W SettingsProvider: Unable to add bookmark for shortcut b: missing package/class or category attributes
+10-25 11:19:23.038   541   541 W SettingsProvider: Unable to add bookmark for shortcut s: missing package/class or category attributes
+10-25 11:19:23.379   541   541 W SettingsState: No settings state /data/system/users/0/settings_system.xml
+10-25 11:19:23.599   541   541 W SettingsState: No settings state /data/system/users/0/settings_secure.xml
+10-25 11:19:23.734   541   541 D SettingsProvider: Generated and saved new ANDROID_ID [b9971246302139cc] for user 0
+10-25 11:19:23.736   541   541 W SettingsState: No settings state /data/system/users/0/settings_global.xml
+10-25 11:19:24.109   541   541 D SettingsProvider: Setting [] as Autofill Service for user 0
+10-25 11:19:25.008   541   541 W SettingsProvider: Unable to add bookmark for shortcut b: missing package/class or category attributes
+10-25 11:19:25.017   541   541 W SettingsProvider: Unable to add bookmark for shortcut s: missing package/class or category attributes

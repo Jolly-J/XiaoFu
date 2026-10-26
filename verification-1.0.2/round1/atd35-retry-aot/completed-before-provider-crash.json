@@ -1,0 +1,22 @@
+{
+  "note": "17 methods completed before test-provider runtime crash. Suite did not complete; no full-suite pass claimed.",
+  "completed": [
+    "encryptReplaceAndDelete(dev.local.audio.ApiKeyStoreDeviceTest)",
+    "cancellationRemovesPartialOutput(dev.local.audio.AudioEngineDeviceTest)",
+    "noAudioFailsClearly(dev.local.audio.AudioEngineDeviceTest)",
+    "aacRemuxPreservesEveryPacket(dev.local.audio.AudioEngineDeviceTest)",
+    "vorbisDecodesToWav(dev.local.audio.AudioEngineDeviceTest)",
+    "aacDecodesToValidWav(dev.local.audio.AudioEngineDeviceTest)",
+    "vorbisTranscodesToAac(dev.local.audio.AudioEngineDeviceTest)",
+    "hevcVideoContainerExtractsAudio(dev.local.audio.AudioEngineDeviceTest)",
+    "publicSintelAudioRemuxesWithoutPacketLoss(dev.local.audio.AudioEngineDeviceTest)",
+    "tenMinuteAudioResumesWithoutReuploadingCompletedSegment(dev.local.audio.TranscriptionDeviceTest)",
+    "authAndRateLimitErrorsAreActionable(dev.local.audio.TranscriptionDeviceTest)",
+    "multipartAndTimestampMerge(dev.local.audio.TranscriptionDeviceTest)",
+    "m4aAudioDecodesBeforeMockUpload(dev.local.audio.TranscriptionDeviceTest)",
+    "failedSegmentCanRetry(dev.local.audio.TranscriptionDeviceTest)",
+    "cancellationDisconnectsWaitingRequest(dev.local.audio.TranscriptionDeviceTest)",
+    "aacLcH264(dev.local.audio.CompatibilityMatrixTest)",
+    "nonnegativeControl(dev.local.audio.CompatibilityMatrixTest)"
+  ]
+}

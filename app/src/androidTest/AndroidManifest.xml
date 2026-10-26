@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Test APK only: fixed generated media, no arbitrary file access. -->
+        <provider android:name="dev.local.audio.CompatibilityProvider"
+            android:authorities="dev.local.audio.test.compat"
+            android:exported="true" android:grantUriPermissions="true" />
+    </application>
+</manifest>

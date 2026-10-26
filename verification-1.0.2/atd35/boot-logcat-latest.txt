@@ -1,0 +1,508 @@
+--------- beginning of system
+10-25 11:23:34.000   541   541 V StorageManagerService: Package com.android.dreams.basic does not have legacy storage
+10-25 11:23:34.000   541   541 V StorageManagerService: Package com.android.webview does not have legacy storage
+10-25 11:23:34.000   541   541 V StorageManagerService: Package com.android.se does not have legacy storage
+10-25 11:23:34.001   541   541 V StorageManagerService: Package com.android.inputdevices has legacy storage
+--------- beginning of main
+10-25 11:23:34.025   541   891 D WifiCountryCode: Set telephony country code to: 
+10-25 11:23:34.046   541   898 I SatelliteAccessController: satellite_fallback_uid: {}
+10-25 11:23:34.055   541   541 V StorageManagerService: Package com.android.rkpdapp does not have legacy storage
+10-25 11:23:34.056   541   541 V StorageManagerService: Package com.android.bips does not have legacy storage
+10-25 11:23:34.056   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_3 does not have legacy storage
+10-25 11:23:34.070   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_4 does not have legacy storage
+10-25 11:23:34.070   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_5 does not have legacy storage
+10-25 11:23:34.070   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_6 does not have legacy storage
+10-25 11:23:34.071   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_7 does not have legacy storage
+10-25 11:23:34.071   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_8 does not have legacy storage
+10-25 11:23:34.072   541   541 V StorageManagerService: Package android.auto_generated_characteristics_rro does not have legacy storage
+10-25 11:23:34.072   541   541 V StorageManagerService: Package com.android.sdksetup does not have legacy storage
+10-25 11:23:34.072   541   541 V StorageManagerService: Package com.android.musicfx does not have legacy storage
+10-25 11:23:34.073   541   541 V StorageManagerService: Package com.android.internal.display.cutout.emulation.emu01 does not have legacy storage
+10-25 11:23:34.098   541   605 W system_server: Long monitor contention with owner android.bg (584) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:695) waiters=0 in android.os.Message android.os.MessageQueue.next() for 210ms
+10-25 11:23:34.112   541   579 I system_server: libdebuggerd_client: done dumping process 128
+10-25 11:23:34.117   189   189 W tombstoned: skipping tombstone file creation due to intercept
+10-25 11:23:34.118   541   714 W system_server: Long monitor contention with owner SettingsProvider (687) at void com.android.server.content.ContentService.notifyChange(android.net.Uri[], android.database.IContentObserver, boolean, int, int, int, java.lang.String)(ContentService.java:478) waiters=0 in void com.android.server.content.ContentService.registerContentObserver(android.net.Uri, boolean, android.database.IContentObserver, int, int) for 439ms
+--------- beginning of kernel
+10-25 11:23:34.153     0     0 I init    : Untracked pid 1094 exited with status 0
+10-25 11:23:34.153     0     0 I init    : Untracked pid 1094 did not have an associated service entry and will not be reaped
+10-25 11:23:34.143   541   541 V StorageManagerService: Package com.android.cellbroadcastreceiver does not have legacy storage
+10-25 11:23:34.143   541   541 V StorageManagerService: Package android.ext.shared does not have legacy storage
+10-25 11:23:34.144   541   541 V StorageManagerService: Package com.android.server.telecom has legacy storage
+10-25 11:23:34.144   541   541 V StorageManagerService: Package com.android.cellbroadcastservice does not have legacy storage
+10-25 11:23:34.145   541   541 V StorageManagerService: Package com.android.keychain has legacy storage
+10-25 11:23:34.165     0     0 I init    : Untracked pid 1096 exited with status 0
+10-25 11:23:34.165     0     0 I init    : Untracked pid 1096 did not have an associated service entry and will not be reaped
+10-25 11:23:34.167   541   541 V StorageManagerService: Package com.android.phone.auto_generated_characteristics_rro does not have legacy storage
+10-25 11:23:34.168   541   541 V StorageManagerService: Package com.android.printservice.recommendation does not have legacy storage
+10-25 11:23:34.175   541   541 V StorageManagerService: Package com.android.gallery3d has legacy storage
+10-25 11:23:34.176   541   541 V StorageManagerService: Package android.ext.services does not have legacy storage
+10-25 11:23:34.183   541   541 V StorageManagerService: Package com.android.wifi.resources does not have legacy storage
+10-25 11:23:34.185   541   579 I ActivityManager: Collecting stacks for native pid 391
+10-25 11:23:34.189   541   541 V StorageManagerService: Package com.android.calllogbackup does not have legacy storage
+10-25 11:23:34.198   541   541 V StorageManagerService: Package com.android.cameraextensions does not have legacy storage
+10-25 11:23:34.199   541   541 V StorageManagerService: Package com.android.localtransport has legacy storage
+10-25 11:23:34.202   541   541 V StorageManagerService: Package com.android.packageinstaller does not have legacy storage
+10-25 11:23:34.203   541   541 V StorageManagerService: Package com.android.carrierdefaultapp does not have legacy storage
+10-25 11:23:34.211   541   541 V StorageManagerService: Package com.android.credentialmanager does not have legacy storage
+10-25 11:23:34.220   541   541 V StorageManagerService: Package com.android.theme.font.notoserifsource does not have legacy storage
+10-25 11:23:34.220   541   541 V StorageManagerService: Package com.android.DeviceAsWebcam has legacy storage
+10-25 11:23:34.224   541   541 V StorageManagerService: Package com.android.proxyhandler does not have legacy storage
+10-25 11:23:34.226   541   541 V StorageManagerService: Package com.android.internal.display.cutout.emulation.waterfall does not have legacy storage
+10-25 11:23:34.236   541   541 V StorageManagerService: Package com.android.intentresolver does not have legacy storage
+10-25 11:23:34.237   541   541 V StorageManagerService: Package com.android.inputmethod.latin does not have legacy storage
+10-25 11:23:34.243   541   541 V StorageManagerService: Package com.android.internal.systemui.navbar.transparent does not have legacy storage
+10-25 11:23:34.260   541   541 V StorageManagerService: Package com.android.providers.contactkeys does not have legacy storage
+10-25 11:23:34.262   541   541 V StorageManagerService: Package org.chromium.webview_shell does not have legacy storage
+10-25 11:23:34.271   541   541 V StorageManagerService: Package com.android.managedprovisioning does not have legacy storage
+10-25 11:23:34.279   541   541 V StorageManagerService: Package com.android.networkstack.tethering does not have legacy storage
+10-25 11:23:34.287   541   541 V StorageManagerService: Package com.android.soundpicker does not have legacy storage
+10-25 11:23:34.292   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_3a_xl does not have legacy storage
+10-25 11:23:34.299   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_6_pro does not have legacy storage
+10-25 11:23:34.306  1047  1062 V WifiManager: SoftApCallbackProxy on mode 2, send InfoChanged, newInfo: SoftApInfo{bandwidth= 0, frequency= 0, wifiStandard= 0, mApInstanceIdentifier= null, mIdleShutdownTimeoutMillis= 0, mVendorData= []}
+10-25 11:23:34.301   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_7_pro does not have legacy storage
+10-25 11:23:34.310   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_8_pro does not have legacy storage
+10-25 11:23:34.310   541   541 V StorageManagerService: Package com.android.emulator.multidisplay has legacy storage
+10-25 11:23:34.311   541   541 V StorageManagerService: Package com.android.devicediagnostics does not have legacy storage
+10-25 11:23:34.311   541   541 V StorageManagerService: Package com.android.providers.partnerbookmarks does not have legacy storage
+10-25 11:23:34.312   541   541 V StorageManagerService: Package com.android.role.notes.enabled does not have legacy storage
+10-25 11:23:34.312   541   541 V StorageManagerService: Package com.android.wallpaper.livepicker does not have legacy storage
+10-25 11:23:34.313   541   541 V StorageManagerService: Package com.android.cellbroadcastreceiver.module does not have legacy storage
+10-25 11:23:34.318  1047  1062 V WifiManager: SoftApCallbackProxy on mode 2, send InfoChanged, changedInfoList: []
+10-25 11:23:34.319  1047  1062 V WifiManager: SoftApCallbackProxy on mode 2, send onConnectedClientsChanged(clients): []
+10-25 11:23:34.336   541   579 I system_server: libdebuggerd_client: started dumping process 391
+10-25 11:23:34.353   189   189 I tombstoned: registered intercept for pid 391 and type kDebuggerdNativeBacktrace
+10-25 11:23:34.340   541   541 V StorageManagerService: Package com.android.phone.auto_generated_rro_vendor__ does not have legacy storage
+10-25 11:23:34.356   541   541 V StorageManagerService: Package com.android.apps.tag does not have legacy storage
+10-25 11:23:34.359   541   541 V StorageManagerService: Package com.android.appsearch.apk does not have legacy storage
+10-25 11:23:34.360   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_2_xl does not have legacy storage
+10-25 11:23:34.363   541   714 I BluetoothSystemServer: AirplaneModeListener: Init completed. isOn=false, isOnOverrode=false
+10-25 11:23:34.366   541   891 D ApConfigUtil: Update Softap capability, add client control feature support
+10-25 11:23:34.367   541   891 D ApConfigUtil: Update Softap capability, add MAC customization support
+10-25 11:23:34.368   541   891 D ApConfigUtil: Update Softap capability, add 2.4G support
+10-25 11:23:34.368   541   891 D ApConfigUtil: Update Softap capability, max client = 16
+10-25 11:23:34.368   541   891 D WifiCountryCode: Reading country code from telephony
+10-25 11:23:34.380   391   391 I libc    : Requested dump for pid 391 (surfaceflinger)
+10-25 11:23:34.577  1099  1099 E crash_dump64: failed to get the guest state header for thread 391: Bad address
+10-25 11:23:34.591  1099  1099 E crash_dump64: failed to get the guest state header for thread 462: Bad address
+10-25 11:23:34.593  1099  1099 E crash_dump64: failed to get the guest state header for thread 463: Bad address
+10-25 11:23:34.606   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_3_xl does not have legacy storage
+10-25 11:23:34.608  1099  1099 E crash_dump64: failed to get the guest state header for thread 464: Bad address
+10-25 11:23:34.606   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_4_xl does not have legacy storage
+10-25 11:23:34.610   541   541 V StorageManagerService: Package com.android.internal.emulation.pixel_fold does not have legacy storage
+10-25 11:23:34.610   541   541 V StorageManagerService: Package com.android.bookmarkprovider does not have legacy storage
+10-25 11:23:34.611   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_3a does not have legacy storage
+10-25 11:23:34.611   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_4a does not have legacy storage
+10-25 11:23:34.612   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_6a does not have legacy storage
+10-25 11:23:34.612   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_7a does not have legacy storage
+10-25 11:23:34.613   541   541 V StorageManagerService: Package com.android.systemui.emulation.pixel_8a does not have legacy storage
+10-25 11:23:34.627  1099  1099 E crash_dump64: failed to get the guest state header for thread 469: Bad address
+10-25 11:23:34.629  1099  1099 E crash_dump64: failed to get the guest state header for thread 470: Bad address
+10-25 11:23:34.631  1099  1099 E crash_dump64: failed to get the guest state header for thread 473: Bad address
+10-25 11:23:34.632  1099  1099 E crash_dump64: failed to get the guest state header for thread 474: Bad address
+10-25 11:23:34.634  1099  1099 E crash_dump64: failed to get the guest state header for thread 475: Bad address
+10-25 11:23:34.636  1099  1099 E crash_dump64: failed to get the guest state header for thread 476: Bad address
+10-25 11:23:34.642  1099  1099 E crash_dump64: failed to get the guest state header for thread 477: Bad address
+10-25 11:23:34.647   541   891 D WifiCountryCode: Set telephony country code to: 
+10-25 11:23:34.656  1099  1099 E crash_dump64: failed to get the guest state header for thread 478: Bad address
+10-25 11:23:34.670   541   541 V StorageManagerService: Package com.android.cts.ctsshim does not have legacy storage
+10-25 11:23:34.670   541   541 V StorageManagerService: Package com.android.fakesystemapp does not have legacy storage
+10-25 11:23:34.670   541   541 V StorageManagerService: Package com.android.vpndialogs does not have legacy storage
+10-25 11:23:34.671   541   541 V StorageManagerService: Package com.android.connectivity.resources.goldfish.overlay does not have legacy storage
+10-25 11:23:34.672   541   541 V StorageManagerService: Package com.android.music does not have legacy storage
+10-25 11:23:34.672   541   541 V StorageManagerService: Package com.android.phone does not have legacy storage
+10-25 11:23:34.673   541   541 V StorageManagerService: Package com.android.shell does not have legacy storage
+10-25 11:23:34.683  1099  1099 E crash_dump64: failed to get the guest state header for thread 479: Bad address
+10-25 11:23:34.686   541   714 D BluetoothSystemServer: BluetoothRadioModeListener: Not sensitive to satellite_mode_radios change. Forced to false
+10-25 11:23:34.687   541   714 I BluetoothSystemServer: SatelliteModeListener: Initialized successfully with state: false
+10-25 11:23:34.694   541   592 W system_server: Long monitor contention with owner android.bg (584) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:695) waiters=0 in android.os.Message android.os.MessageQueue.next() for 592ms
+10-25 11:23:34.708  1099  1099 E crash_dump64: failed to get the guest state header for thread 480: Bad address
+10-25 11:23:34.710  1099  1099 E crash_dump64: failed to get the guest state header for thread 483: Bad address
+10-25 11:23:34.711  1099  1099 E crash_dump64: failed to get the guest state header for thread 484: Bad address
+10-25 11:23:34.713  1099  1099 E crash_dump64: failed to get the guest state header for thread 485: Bad address
+10-25 11:23:34.716  1099  1099 E crash_dump64: failed to get the guest state header for thread 486: Bad address
+10-25 11:23:34.732  1099  1099 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdNativeBacktrace
+10-25 11:23:34.747   189   189 I tombstoned: received crash request for pid 391
+10-25 11:23:34.747   189   189 I tombstoned: found intercept fd 512 for pid 391 and type kDebuggerdNativeBacktrace
+10-25 11:23:34.750   541   541 V StorageManagerService: Package com.android.sdksandbox does not have legacy storage
+10-25 11:23:34.750   541   541 V StorageManagerService: Package com.android.wallpaperbackup does not have legacy storage
+10-25 11:23:34.751   541   541 V StorageManagerService: Package com.android.providers.blockednumber does not have legacy storage
+10-25 11:23:34.751   541   541 V StorageManagerService: Package com.android.providers.userdictionary does not have legacy storage
+10-25 11:23:34.752   541   541 V StorageManagerService: Package com.android.providers.media.module does not have legacy storage
+10-25 11:23:34.753   541   541 V StorageManagerService: Package com.android.emergency does not have legacy storage
+10-25 11:23:34.755  1099  1099 I crash_dump64: performing dump of process 391 (target tid = 391)
+10-25 11:23:34.938   189   189 W tombstoned: skipping tombstone file creation due to intercept
+10-25 11:23:34.961     0     0 I init    : Untracked pid 1101 exited with status 0
+10-25 11:23:34.961     0     0 I init    : Untracked pid 1101 did not have an associated service entry and will not be reaped
+10-25 11:23:34.962     0     0 I init    : Untracked pid 1099 exited with status 0
+10-25 11:23:34.962     0     0 I init    : Untracked pid 1099 did not have an associated service entry and will not be reaped
+10-25 11:23:34.967   541   541 V StorageManagerService: Package com.android.hotspot2.osulogin does not have legacy storage
+10-25 11:23:34.968   541   541 V StorageManagerService: Package com.android.companiondevicemanager.auto_generated_characteristics_rro does not have legacy storage
+10-25 11:23:34.980   541   579 I system_server: libdebuggerd_client: done dumping process 391
+10-25 11:23:34.994   541   541 V StorageManagerService: Package com.android.internal.systemui.navbar.gestural does not have legacy storage
+10-25 11:23:34.995   541   541 V StorageManagerService: Package com.android.location.fused has legacy storage
+10-25 11:23:34.996   541   714 D BluetoothSystemServer: BluetoothManagerService: isBluetoothPersistedStateOnBluetooth: 1
+10-25 11:23:34.996   541   714 I BluetoothSystemServer: BluetoothManagerService: internalHandleOnBootPhase: Auto-enabling Bluetooth.
+10-25 11:23:35.002   541   541 V StorageManagerService: Package com.android.deskclock does not have legacy storage
+10-25 11:23:35.003   541   541 V StorageManagerService: Package com.android.bluetoothmidiservice does not have legacy storage
+10-25 11:23:35.012   541   541 V StorageManagerService: Package com.android.permissioncontroller does not have legacy storage
+10-25 11:23:35.018   541   541 V StorageManagerService: Package com.android.traceur does not have legacy storage
+10-25 11:23:35.019   541   541 V StorageManagerService: Package com.android.ondevicepersonalization.services does not have legacy storage
+10-25 11:23:35.029   541   541 V StorageManagerService: Package com.android.bluetooth does not have legacy storage
+10-25 11:23:35.030   541   541 V StorageManagerService: Package com.android.providers.contacts does not have legacy storage
+10-25 11:23:35.037   541   541 V StorageManagerService: Package com.android.captiveportallogin does not have legacy storage
+10-25 11:23:35.038   541   541 V StorageManagerService: Package com.android.devicelockcontroller does not have legacy storage
+10-25 11:23:35.038   541   541 V StorageManagerService: Package android.auto_generated_rro_vendor__ does not have legacy storage
+10-25 11:23:35.047   541   714 D BluetoothSystemServer: BluetoothManagerService: 10-25 11:23:35.000 	Package [android] requested to [Enable]. 	Reason is SYSTEM_BOOT
+10-25 11:23:35.048   541   579 I ActivityManager: Collecting stacks for native pid 328
+10-25 11:23:35.051   541   579 E android.os.Debug: Failed to get binder state info for pid: 328 status: -2: Success
+10-25 11:23:35.080   541   541 W SystemServiceManager: Service com.android.server.StorageManagerService$Lifecycle took 1695 ms in onStartUser-0
+10-25 11:23:35.080   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.StorageManagerService$Lifecycle took to complete: 1696ms
+10-25 11:23:35.081   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.usage.StorageStatsService$Lifecycle
+10-25 11:23:35.081   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.usage.StorageStatsService$Lifecycle took to complete: 0ms
+10-25 11:23:35.091   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.UiModeManagerService
+10-25 11:23:35.092   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.UiModeManagerService took to complete: 0ms
+10-25 11:23:35.093   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.locales.LocaleManagerService
+10-25 11:23:35.101   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.locales.LocaleManagerService took to complete: 0ms
+10-25 11:23:35.102   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.grammaticalinflection.GrammaticalInflectionService
+10-25 11:23:35.102   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.grammaticalinflection.GrammaticalInflectionService took to complete: 0ms
+10-25 11:23:35.102   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.apphibernation.AppHibernationService
+10-25 11:23:35.102   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.apphibernation.AppHibernationService took to complete: 0ms
+10-25 11:23:35.102   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.locksettings.LockSettingsService$Lifecycle
+10-25 11:23:35.103   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.locksettings.LockSettingsService$Lifecycle took to complete: 0ms
+10-25 11:23:35.103   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.testharness.TestHarnessModeService
+10-25 11:23:35.103   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.testharness.TestHarnessModeService took to complete: 0ms
+10-25 11:23:35.104   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.DeviceIdleController
+10-25 11:23:35.104   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.DeviceIdleController took to complete: 0ms
+10-25 11:23:35.104   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.devicepolicy.DevicePolicyManagerService$Lifecycle
+10-25 11:23:35.109   541   579 I system_server: libdebuggerd_client: started dumping process 328
+10-25 11:23:35.114   189   189 I tombstoned: registered intercept for pid 328 and type kDebuggerdNativeBacktrace
+10-25 11:23:35.122   328   328 I libc    : Requested dump for pid 328 (binder:328_2)
+10-25 11:23:35.157   541   541 W SystemServiceManager: Service com.android.server.devicepolicy.DevicePolicyManagerService$Lifecycle took 52 ms in onStartUser-0
+10-25 11:23:35.158   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.devicepolicy.DevicePolicyManagerService$Lifecycle took to complete: 53ms
+10-25 11:23:35.158   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.texttospeech.TextToSpeechManagerService
+10-25 11:23:35.158   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.texttospeech.TextToSpeechManagerService took to complete: 1ms
+10-25 11:23:35.158   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wearable.WearableSensingManagerService
+10-25 11:23:35.159   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wearable.WearableSensingManagerService took to complete: 0ms
+10-25 11:23:35.159   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.ondeviceintelligence.OnDeviceIntelligenceManagerService
+10-25 11:23:35.159   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.ondeviceintelligence.OnDeviceIntelligenceManagerService took to complete: 0ms
+10-25 11:23:35.159   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.speech.SpeechRecognitionManagerService
+10-25 11:23:35.160   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.speech.SpeechRecognitionManagerService took to complete: 0ms
+10-25 11:23:35.160   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.graphics.fonts.FontManagerService$Lifecycle
+10-25 11:23:35.160   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.graphics.fonts.FontManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.160   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.textservices.TextServicesManagerService$Lifecycle
+10-25 11:23:35.160   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.textservices.TextServicesManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.160   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.textclassifier.TextClassificationManagerService$Lifecycle
+10-25 11:23:35.194   541   714 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_ENABLE(quietEnable=0, isBle=0): mAdapter=null
+10-25 11:23:35.194   541   605 W system_server: Long monitor contention with owner android.bg (584) at void com.android.server.power.PowerManagerService.acquireWakeLockInternal(android.os.IBinder, int, int, java.lang.String, java.lang.String, android.os.WorkSource, java.lang.String, int, int, android.os.IWakeLockCallback)(PowerManagerService.java:1681) waiters=0 in void com.android.server.power.PowerManagerService.handleSandman(int) for 1.075s
+10-25 11:23:35.208   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.textclassifier.TextClassificationManagerService$Lifecycle took to complete: 2ms
+10-25 11:23:35.208   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.NetworkScoreService$Lifecycle
+10-25 11:23:35.208   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.NetworkScoreService$Lifecycle took to complete: 0ms
+10-25 11:23:35.209   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.NetworkStatsServiceInitializer
+10-25 11:23:35.209   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.NetworkStatsServiceInitializer took to complete: 0ms
+10-25 11:23:35.209   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wifi.WifiService
+10-25 11:23:35.213   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wifi.WifiService took to complete: 0ms
+10-25 11:23:35.214   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wifi.scanner.WifiScanningService
+10-25 11:23:35.214   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wifi.scanner.WifiScanningService took to complete: 0ms
+10-25 11:23:35.214   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wifi.p2p.WifiP2pService
+10-25 11:23:35.214   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.wifi.p2p.WifiP2pService took to complete: 0ms
+10-25 11:23:35.215   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.ConnectivityServiceInitializer
+10-25 11:23:35.215   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.ConnectivityServiceInitializer took to complete: 0ms
+10-25 11:23:35.215   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.notification.NotificationManagerService
+10-25 11:23:35.215   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.notification.NotificationManagerService took to complete: 0ms
+10-25 11:23:35.216   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.storage.DeviceStorageMonitorService
+10-25 11:23:35.216   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.storage.DeviceStorageMonitorService took to complete: 0ms
+10-25 11:23:35.216   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.timedetector.TimeDetectorService$Lifecycle
+10-25 11:23:35.216   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.timedetector.TimeDetectorService$Lifecycle took to complete: 0ms
+10-25 11:23:35.216   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.location.LocationManagerService$Lifecycle
+10-25 11:23:35.270   541   714 I BluetoothSystemServer: BluetoothServerProxy: setBluetoothPersistedState(1)
+10-25 11:23:35.282   541   541 W SystemServiceManager: Service com.android.server.location.LocationManagerService$Lifecycle took 60 ms in onStartUser-0
+10-25 11:23:35.283   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.location.LocationManagerService$Lifecycle took to complete: 66ms
+10-25 11:23:35.283   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.timezonedetector.TimeZoneDetectorService$Lifecycle
+10-25 11:23:35.283   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.timezonedetector.TimeZoneDetectorService$Lifecycle took to complete: 0ms
+10-25 11:23:35.283   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.location.altitude.AltitudeService$Lifecycle
+10-25 11:23:35.284   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.location.altitude.AltitudeService$Lifecycle took to complete: 0ms
+10-25 11:23:35.284   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.timezonedetector.location.LocationTimeZoneManagerService$Lifecycle
+10-25 11:23:35.284   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.timezonedetector.location.LocationTimeZoneManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.284   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.search.SearchManagerService$Lifecycle
+10-25 11:23:35.284   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.search.SearchManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.284   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.audio.AudioService$Lifecycle
+10-25 11:23:35.284   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.audio.AudioService$Lifecycle took to complete: 0ms
+10-25 11:23:35.285   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.soundtrigger_middleware.SoundTriggerMiddlewareService$Lifecycle
+10-25 11:23:35.285   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.soundtrigger_middleware.SoundTriggerMiddlewareService$Lifecycle took to complete: 0ms
+10-25 11:23:35.304   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.DockObserver
+10-25 11:23:35.305   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.DockObserver took to complete: 0ms
+10-25 11:23:35.305   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.midi.MidiService$Lifecycle
+10-25 11:23:35.322   541   541 D MidiService: onStartOrUnlockUser 0 matchDirectBootUnaware: false
+10-25 11:23:35.323   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.midi.MidiService$Lifecycle took to complete: 17ms
+10-25 11:23:35.323   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.adb.AdbService$Lifecycle
+10-25 11:23:35.326   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.adb.AdbService$Lifecycle took to complete: 0ms
+10-25 11:23:35.326   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.usb.UsbService$Lifecycle
+10-25 11:23:35.326   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.usb.UsbService$Lifecycle took to complete: 0ms
+10-25 11:23:35.326   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.SerialService$Lifecycle
+10-25 11:23:35.327   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.SerialService$Lifecycle took to complete: 0ms
+10-25 11:23:35.327   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.twilight.TwilightService
+10-25 11:23:35.327   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.twilight.TwilightService took to complete: 0ms
+10-25 11:23:35.328   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.display.color.ColorDisplayService
+10-25 11:23:35.333   541   714 D BluetoothSystemServer: BluetoothManagerService: binding Bluetooth service
+10-25 11:23:35.357   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.display.color.ColorDisplayService took to complete: 29ms
+10-25 11:23:35.357   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.job.JobSchedulerService
+10-25 11:23:35.374   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.job.JobSchedulerService took to complete: 0ms
+10-25 11:23:35.374   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.soundtrigger.SoundTriggerService
+10-25 11:23:35.374   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.soundtrigger.SoundTriggerService took to complete: 0ms
+10-25 11:23:35.374   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.trust.TrustManagerService
+10-25 11:23:35.375   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.trust.TrustManagerService took to complete: 0ms
+10-25 11:23:35.375   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.backup.BackupManagerService$Lifecycle
+10-25 11:23:35.375   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.backup.BackupManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.375   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.appwidget.AppWidgetService
+10-25 11:23:35.375   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.appwidget.AppWidgetService took to complete: 0ms
+10-25 11:23:35.376   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.voiceinteraction.VoiceInteractionManagerService
+10-25 11:23:35.411   541   541 W VoiceInteractionManager: no available voice recognition services found for user 0
+10-25 11:23:35.412   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.voiceinteraction.VoiceInteractionManagerService took to complete: 36ms
+10-25 11:23:35.412   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.GestureLauncherService
+10-25 11:23:35.412   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.GestureLauncherService took to complete: 0ms
+10-25 11:23:35.412   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.SensorNotificationService
+10-25 11:23:35.413   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.SensorNotificationService took to complete: 0ms
+10-25 11:23:35.413   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.emergency.EmergencyAffordanceService
+10-25 11:23:35.413   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.emergency.EmergencyAffordanceService took to complete: 0ms
+10-25 11:23:35.413   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.blob.BlobStoreManagerService
+10-25 11:23:35.430   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.blob.BlobStoreManagerService took to complete: 0ms
+10-25 11:23:35.431   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.dreams.DreamManagerService
+10-25 11:23:35.431   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.dreams.DreamManagerService took to complete: 0ms
+10-25 11:23:35.431   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.print.PrintManagerService
+10-25 11:23:35.431   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.print.PrintManagerService took to complete: 1ms
+10-25 11:23:35.431   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.security.AttestationVerificationManagerService
+10-25 11:23:35.431   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.security.AttestationVerificationManagerService took to complete: 0ms
+10-25 11:23:35.431   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.companion.CompanionDeviceManagerService
+10-25 11:23:35.432   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.companion.CompanionDeviceManagerService took to complete: 0ms
+10-25 11:23:35.432   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.companion.virtual.VirtualDeviceManagerService
+10-25 11:23:35.432   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.companion.virtual.VirtualDeviceManagerService took to complete: 0ms
+10-25 11:23:35.432   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.restrictions.RestrictionsManagerService
+10-25 11:23:35.432   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.restrictions.RestrictionsManagerService took to complete: 0ms
+10-25 11:23:35.466   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.MediaSessionService
+10-25 11:23:35.470   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.MediaSessionService took to complete: 1ms
+10-25 11:23:35.470   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.sensors.face.FaceService
+10-25 11:23:35.470   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.sensors.face.FaceService took to complete: 0ms
+10-25 11:23:35.471   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.sensors.fingerprint.FingerprintService
+10-25 11:23:35.471   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.sensors.fingerprint.FingerprintService took to complete: 0ms
+10-25 11:23:35.471   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.BiometricService
+10-25 11:23:35.471   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.BiometricService took to complete: 0ms
+10-25 11:23:35.471   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.AuthService
+10-25 11:23:35.471   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.biometrics.AuthService took to complete: 0ms
+10-25 11:23:35.472   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.adaptiveauth.AdaptiveAuthService
+10-25 11:23:35.472   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.adaptiveauth.AdaptiveAuthService took to complete: 0ms
+10-25 11:23:35.472   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.ShortcutService$Lifecycle
+10-25 11:23:35.472   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.ShortcutService$Lifecycle took to complete: 0ms
+10-25 11:23:35.472   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.LauncherAppsService
+10-25 11:23:35.472   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.LauncherAppsService took to complete: 0ms
+10-25 11:23:35.473   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.CrossProfileAppsService
+10-25 11:23:35.473   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.CrossProfileAppsService took to complete: 0ms
+10-25 11:23:35.473   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.people.PeopleService
+10-25 11:23:35.496   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.people.PeopleService took to complete: 0ms
+10-25 11:23:35.496   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.metrics.MediaMetricsManagerService
+10-25 11:23:35.496   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.metrics.MediaMetricsManagerService took to complete: 0ms
+10-25 11:23:35.497   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.BackgroundInstallControlService
+10-25 11:23:35.497   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.BackgroundInstallControlService took to complete: 0ms
+10-25 11:23:35.497   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.projection.MediaProjectionManagerService
+10-25 11:23:35.508   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.projection.MediaProjectionManagerService took to complete: 0ms
+10-25 11:23:35.508   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.slice.SliceManagerService$Lifecycle
+10-25 11:23:35.508   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.slice.SliceManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.508   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.stats.StatsCompanion$Lifecycle
+10-25 11:23:35.509   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.stats.StatsCompanion$Lifecycle took to complete: 0ms
+10-25 11:23:35.509   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.scheduling.RebootReadinessManagerService$Lifecycle
+10-25 11:23:35.535   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.scheduling.RebootReadinessManagerService$Lifecycle took to complete: 1ms
+10-25 11:23:35.536   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.stats.pull.StatsPullAtomService
+10-25 11:23:35.536   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.stats.pull.StatsPullAtomService took to complete: 0ms
+10-25 11:23:35.536   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.stats.bootstrap.StatsBootstrapAtomService$Lifecycle
+10-25 11:23:35.536   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.stats.bootstrap.StatsBootstrapAtomService$Lifecycle took to complete: 0ms
+10-25 11:23:35.536   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.incident.IncidentCompanionService
+10-25 11:23:35.537   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.incident.IncidentCompanionService took to complete: 0ms
+10-25 11:23:35.537   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.sdksandbox.SdkSandboxManagerService$Lifecycle
+10-25 11:23:35.537   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.sdksandbox.SdkSandboxManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.539   541   714 D CompatChangeReporter: Compat change id reported: 151861875; UID 1002; state: ENABLED
+10-25 11:23:35.554   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.adservices.AdServicesManagerService$Lifecycle
+10-25 11:23:35.554   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.adservices.AdServicesManagerService$Lifecycle took to complete: 0ms
+10-25 11:23:35.554   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.ondevicepersonalization.OnDevicePersonalizationSystemService$Lifecycle
+10-25 11:23:35.554   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.ondevicepersonalization.OnDevicePersonalizationSystemService$Lifecycle took to complete: 0ms
+10-25 11:23:35.554   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_android.os.profiling.ProfilingService$Lifecycle
+10-25 11:23:35.555   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_android.os.profiling.ProfilingService$Lifecycle took to complete: 0ms
+10-25 11:23:35.555   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.MmsServiceBroker
+10-25 11:23:35.555   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.MmsServiceBroker took to complete: 0ms
+10-25 11:23:35.555   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.autofill.AutofillManagerService
+10-25 11:23:35.555   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.autofill.AutofillManagerService took to complete: 0ms
+10-25 11:23:35.555   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.credentials.CredentialManagerService
+10-25 11:23:35.556   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.credentials.CredentialManagerService took to complete: 0ms
+10-25 11:23:35.556   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.clipboard.ClipboardService
+10-25 11:23:35.556   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.clipboard.ClipboardService took to complete: 0ms
+10-25 11:23:35.556   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.appbinding.AppBindingService$Lifecycle
+10-25 11:23:35.562   541   584 W BestClock: java.time.DateTimeException: Missing network time fix
+10-25 11:23:35.568   541   714 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 1002, packageName = null, attributionTag = null, token = android.os.Binder@3a6e8bd, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-25 11:23:35.594   541   714 W ActivityManager: Slow operation: 105ms so far, now at startProcess: done creating new process record
+10-25 11:23:35.602   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-25 11:23:35.611   541   714 W ActivityManager: Slow operation: 123ms so far, now at startProcess: stepping in to startProcess
+10-25 11:23:35.645   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.appbinding.AppBindingService$Lifecycle took to complete: 43ms
+10-25 11:23:35.646   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.tracing.TracingServiceProxy
+10-25 11:23:35.646   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.tracing.TracingServiceProxy took to complete: 0ms
+10-25 11:23:35.646   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.policy.PermissionPolicyService
+10-25 11:23:35.646   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.policy.PermissionPolicyService took to complete: 0ms
+10-25 11:23:35.647   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.StagingManager$Lifecycle
+10-25 11:23:35.647   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.pm.StagingManager$Lifecycle took to complete: 0ms
+10-25 11:23:35.647   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.app.GameManagerService$Lifecycle
+10-25 11:23:35.647   541   541 D GameManagerService: Starting user 0
+10-25 11:23:35.689   541   714 W ActivityManager: Slow operation: 201ms so far, now at startProcess: done starting proc!
+10-25 11:23:35.696  1104  1104 E crash_dump64: failed to get the guest state header for thread 328: Bad address
+10-25 11:23:35.710  1104  1104 E crash_dump64: failed to get the guest state header for thread 333: Bad address
+10-25 11:23:35.711   541   586 W ActivityManager: Slow operation: 99ms so far, now at startProcess: asking zygote to start proc
+10-25 11:23:35.712   541   586 W ActivityManager: com.android.bluetooth inode == 0 (b/152760674)
+10-25 11:23:35.715  1104  1104 E crash_dump64: failed to get the guest state header for thread 334: Bad address
+10-25 11:23:35.722  1104  1104 E crash_dump64: failed to get the guest state header for thread 335: Bad address
+10-25 11:23:35.727  1104  1104 E crash_dump64: failed to get the guest state header for thread 337: Bad address
+10-25 11:23:35.734  1104  1104 E crash_dump64: failed to get the guest state header for thread 339: Bad address
+10-25 11:23:35.742  1104  1104 E crash_dump64: failed to get the guest state header for thread 1040: Bad address
+10-25 11:23:35.754  1104  1104 E crash_dump64: failed to get the guest state header for thread 1041: Bad address
+10-25 11:23:35.806  1104  1104 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdNativeBacktrace
+10-25 11:23:35.828   330   330 D Zygote  : Forked child process 1107
+10-25 11:23:35.835   189   189 I tombstoned: received crash request for pid 328
+10-25 11:23:35.842   189   189 I tombstoned: found intercept fd 512 for pid 328 and type kDebuggerdNativeBacktrace
+10-25 11:23:35.847  1104  1104 I crash_dump64: performing dump of process 328 (target tid = 328)
+10-25 11:23:35.840   541   541 V GameManagerService_GameManagerSettings: Settings file doesn't exist, skip reading
+10-25 11:23:35.875   541   541 W SystemServiceManager: Service com.android.server.app.GameManagerService$Lifecycle took 227 ms in onStartUser-0
+10-25 11:23:35.875   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.app.GameManagerService$Lifecycle took to complete: 227ms
+10-25 11:23:35.875   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.safetycenter.SafetyCenterService
+10-25 11:23:35.875   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.safetycenter.SafetyCenterService took to complete: 0ms
+10-25 11:23:35.875   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.appsearch.AppSearchModule$Lifecycle
+10-25 11:23:35.875   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.appsearch.AppSearchModule$Lifecycle took to complete: 0ms
+10-25 11:23:35.876   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.MediaCommunicationService
+10-25 11:23:35.876   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.media.MediaCommunicationService took to complete: 1ms
+10-25 11:23:35.876   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.compat.overrides.AppCompatOverridesService$Lifecycle
+10-25 11:23:35.876   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.compat.overrides.AppCompatOverridesService$Lifecycle took to complete: 0ms
+10-25 11:23:35.877   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.healthconnect.HealthConnectManagerService
+10-25 11:23:35.913   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.healthconnect.HealthConnectManagerService took to complete: 1ms
+10-25 11:23:35.914   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.devicelock.DeviceLockService
+10-25 11:23:35.914   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.devicelock.DeviceLockService took to complete: 0ms
+10-25 11:23:35.915   541   541 D SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.SensitiveContentProtectionManagerService
+10-25 11:23:35.915   541   541 V SystemServerTimingAsync: ssm.onStartUser-0_com.android.server.SensitiveContentProtectionManagerService took to complete: 0ms
+10-25 11:23:35.915   541   541 V SystemServerTimingAsync: ssm.StartUser-0 took to complete: 11752ms
+10-25 11:23:35.917   541   541 D SystemServerTiming: startPersistentApps
+10-25 11:23:35.966   541  1081 D BufferPoolAccessor2.0: bufferpool2 0x71738a7760f8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/18 (fetch/transfer)
+10-25 11:23:35.966   541  1081 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 11:23:35.994   541   586 W ActivityManager: Slow operation: 383ms so far, now at startProcess: returned from zygote!
+10-25 11:23:36.007   541   541 D CompatChangeReporter: Compat change id reported: 151861875; UID 1068; state: ENABLED
+10-25 11:23:36.008   541   541 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 1068, packageName = null, attributionTag = null, token = android.os.Binder@3a6e8bd, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-25 11:23:36.123   541   541 D CompatChangeReporter: Compat change id reported: 151861875; UID 1001; state: ENABLED
+10-25 11:23:36.209   541   541 V SystemServerTiming: startPersistentApps took to complete: 292ms
+10-25 11:23:36.218   541   541 D SystemServerTiming: startHomeOnAllDisplays
+10-25 11:23:36.221   189   189 W tombstoned: skipping tombstone file creation due to intercept
+10-25 11:23:36.263   541   541 W ActivityTaskManager: callingPackage for (uid=-1, pid=0) has no WPC
+10-25 11:23:36.334     0     0 I init    : Untracked pid 1104 exited with status 0
+10-25 11:23:36.334     0     0 I init    : Untracked pid 1104 did not have an associated service entry and will not be reaped
+10-25 11:23:36.340     0     0 I init    : Untracked pid 1106 exited with status 0
+10-25 11:23:36.340     0     0 I init    : Untracked pid 1106 did not have an associated service entry and will not be reaped
+10-25 11:23:36.384  1107  1107 I droid.bluetooth: Using CollectorTypeCMC GC.
+10-25 11:23:36.413  1107  1107 W droid.bluetooth: Unexpected CPU variant for x86: x86_64.
+10-25 11:23:36.413  1107  1107 W droid.bluetooth: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+10-25 11:23:36.460  1107  1107 E droid.bluetooth: Not starting debugger since process cannot load the jdwp agent.
+10-25 11:23:36.510   541   579 I system_server: libdebuggerd_client: done dumping process 328
+10-25 11:23:36.529   541   541 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+10-25 11:23:36.604   446   981 D BufferPoolAccessor2.0: bufferpool2 0x761a2e9d8378 : 0(0 size) total buffers - 0(0 size) used buffers - 5/7 (recycle/alloc) - 2/6 (fetch/transfer)
+10-25 11:23:36.605   446   981 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-25 11:23:36.626   541   579 I ActivityManager: Collecting stacks for native pid 329
+10-25 11:23:36.678   541   541 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+10-25 11:23:36.686  1107  1107 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-25 11:23:36.693   541   579 I system_server: libdebuggerd_client: started dumping process 329
+10-25 11:23:36.713   189   189 I tombstoned: registered intercept for pid 329 and type kDebuggerdNativeBacktrace
+10-25 11:23:36.715   541   541 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+10-25 11:23:36.726   329   329 I libc    : Requested dump for pid 329 (binder:329_4)
+10-25 11:23:36.754   541   541 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10114, packageName = null, attributionTag = null, token = android.os.Binder@3a6e8bd, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-25 11:23:37.100   329   381 I netd    : tetherGetStats() -> {[]} <99.79ms>
+10-25 11:23:37.273   359   359 I android.hardware.power-service.example: Power isModeSupported: 5
+10-25 11:23:37.388   541   541 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.fakesystemapp/.launcher.FallbackHome (has extras)} with LAUNCH_MULTIPLE from uid 0 (BAL_ALLOW_ALLOWLISTED_UID) result code=0
+10-25 11:23:37.402   541   577 W system_server: Long monitor contention with owner main (541) at void com.android.server.wm.ActivityTaskManagerService.resumeAppSwitches()(ActivityTaskManagerService.java:4097) waiters=0 in void com.android.server.wm.WindowAnimator.lambda$new$1(long) for 634ms
+10-25 11:23:37.405   541   541 V SystemServerTiming: startHomeOnAllDisplays took to complete: 1187ms
+10-25 11:23:37.409   541   541 D SystemServerTiming: sendUserStartBroadcast
+10-25 11:23:37.410   541   541 D SystemServerTiming: broadcastIntent-0-android.intent.action.USER_STARTED
+10-25 11:23:37.471   541   541 V SystemServerTiming: broadcastIntent-0-android.intent.action.USER_STARTED took to complete: 60ms
+10-25 11:23:37.502   541   541 D SystemServerTiming: broadcastIntent--1-android.intent.action.USER_STARTING
+10-25 11:23:37.504   541   541 V SystemServerTiming: broadcastIntent--1-android.intent.action.USER_STARTING took to complete: 2ms
+10-25 11:23:37.504   541   541 V SystemServerTiming: sendUserStartBroadcast took to complete: 95ms
+10-25 11:23:37.504   541   541 D SystemServerTiming: resumeTopActivities
+10-25 11:23:37.522   541   541 V SystemServerTiming: resumeTopActivities took to complete: 17ms
+10-25 11:23:37.522   541   541 D SystemServerTiming: sendUserSwitchBroadcasts
+10-25 11:23:37.523   541   541 D SystemServerTiming: broadcastIntent-0-android.intent.action.USER_FOREGROUND
+10-25 11:23:37.530   541   541 V SystemServerTiming: broadcastIntent-0-android.intent.action.USER_FOREGROUND took to complete: 7ms
+10-25 11:23:37.534   541   541 D SystemServerTiming: broadcastIntent--1-android.intent.action.USER_SWITCHED
+10-25 11:23:37.537   541   541 V SystemServerTiming: broadcastIntent--1-android.intent.action.USER_SWITCHED took to complete: 2ms
+10-25 11:23:37.537   541   541 V SystemServerTiming: sendUserSwitchBroadcasts took to complete: 14ms
+10-25 11:23:37.537   541   541 D SystemServerTiming: setBinderProxies
+10-25 11:23:37.550   541   541 V SystemServerTiming: setBinderProxies took to complete: 1ms
+10-25 11:23:37.561  1121  1121 E crash_dump64: failed to get the guest state header for thread 329: Bad address
+10-25 11:23:37.564   541   541 V SystemServerTiming: ActivityManagerStartApps took to complete: 13478ms
+10-25 11:23:37.564   541   541 D SystemServerTiming: componentAlias
+10-25 11:23:37.570   541   541 D ComponentAliasResolver: Compat listener set.
+10-25 11:23:37.574   541   541 V SystemServerTiming: componentAlias took to complete: 10ms
+10-25 11:23:37.575   541   541 V SystemServerTiming: PhaseActivityManagerReady took to complete: 26391ms
+10-25 11:23:37.575   541   541 D SystemServerTiming: LockSettingsThirdPartyAppsStarted
+10-25 11:23:37.578  1121  1121 E crash_dump64: failed to get the guest state header for thread 352: Bad address
+10-25 11:23:37.582  1121  1121 E crash_dump64: failed to get the guest state header for thread 372: Bad address
+10-25 11:23:37.590  1121  1121 E crash_dump64: failed to get the guest state header for thread 373: Bad address
+10-25 11:23:37.600   541   586 W system_server: Long monitor contention with owner main (541) at int com.android.server.am.UserController$Injector.broadcastIntent(android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], int, android.os.Bundle, boolean, int, int, int, int, int)(UserController.java:3799) waiters=0 in void com.android.server.am.ProcessList.lambda$handleProcessStart$1(com.android.server.am.ProcessRecord, java.lang.String, int[], int, int, int, java.lang.String, java.lang.String, java.lang.String, long) for 1.603s
+10-25 11:23:37.601  1121  1121 E crash_dump64: failed to get the guest state header for thread 374: Bad address
+10-25 11:23:37.608  1121  1121 E crash_dump64: failed to get the guest state header for thread 375: Bad address
+10-25 11:23:37.614  1121  1121 E crash_dump64: failed to get the guest state header for thread 376: Bad address
+10-25 11:23:37.622  1121  1121 E crash_dump64: failed to get the guest state header for thread 378: Bad address
+10-25 11:23:37.627  1121  1121 E crash_dump64: failed to get the guest state header for thread 379: Bad address
+10-25 11:23:37.630  1121  1121 E crash_dump64: failed to get the guest state header for thread 381: Bad address
+10-25 11:23:37.636   541   541 I LockSettingsService: Migrating unsecured user 0 to SP-based credential
+10-25 11:23:37.637  1121  1121 E crash_dump64: failed to get the guest state header for thread 382: Bad address
+10-25 11:23:37.639  1121  1121 E crash_dump64: failed to get the guest state header for thread 383: Bad address
+10-25 11:23:37.649  1121  1121 E crash_dump64: failed to get the guest state header for thread 384: Bad address
+10-25 11:23:37.653  1121  1121 E crash_dump64: failed to get the guest state header for thread 387: Bad address
+10-25 11:23:37.663   541   541 I LockSettingsService: Initializing synthetic password for user 0
+10-25 11:23:37.675   541   586 W ActivityManager: Slow operation: 2040ms so far, now at startProcess: done updating battery stats
+10-25 11:23:37.676   541   586 W ActivityManager: Slow operation: 2065ms so far, now at startProcess: building log message
+10-25 11:23:37.677   541   586 I ActivityManager: Start proc 1107:com.android.bluetooth/1002 for service {com.android.bluetooth/com.android.bluetooth.btservice.AdapterService}
+10-25 11:23:37.704   541   586 W ActivityManager: Slow operation: 2092ms so far, now at startProcess: starting to update pids map
+10-25 11:23:37.706   541   586 W ActivityManager: Slow operation: 2094ms so far, now at startProcess: done updating pids map
+10-25 11:23:37.714  1121  1121 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdNativeBacktrace
+10-25 11:23:37.723   541   586 W ActivityManager: Slow operation: 1666ms so far, now at startProcess: asking zygote to start proc
+10-25 11:23:37.729   541   585 W system_server: Long monitor contention with owner main (541) at int com.android.server.am.UserController$Injector.broadcastIntent(android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], int, android.os.Bundle, boolean, int, int, int, int, int)(UserController.java:3799) waiters=1 in boolean com.android.server.am.BroadcastQueueModernImpl.lambda$new$0(android.os.Message) for 1.652s
+10-25 11:23:37.730   189   189 I tombstoned: received crash request for pid 329
+10-25 11:23:37.730   189   189 I tombstoned: found intercept fd 512 for pid 329 and type kDebuggerdNativeBacktrace
+10-25 11:23:37.735  1121  1121 I crash_dump64: performing dump of process 329 (target tid = 329)
+10-25 11:23:37.739   541   586 W ActivityManager: com.android.se inode == 0 (b/152760674)
+10-25 11:23:37.767   541   566 W system_server: Long monitor contention with owner main (541) at int com.android.server.am.UserController$Injector.broadcastIntent(android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], int, android.os.Bundle, boolean, int, int, int, int, int)(UserController.java:3799) waiters=2 in void com.android.server.am.ActivityManagerService.unregisterReceiverTraced(android.content.IIntentReceiver) for 616ms
+10-25 11:23:37.778   541   576 W system_server: Long monitor contention with owner main (541) at int com.android.server.am.UserController$Injector.broadcastIntent(android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], int, android.os.Bundle, boolean, int, int, int, int, int)(UserController.java:3799) waiters=3 in void com.android.server.am.ActivityManagerService$LocalService.startProcess(java.lang.String, android.content.pm.ApplicationInfo, boolean, boolean, java.lang.String, android.content.ComponentName) for 400ms
+10-25 11:23:37.781   541   576 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10114, packageName = null, attributionTag = null, token = android.os.Binder@3a6e8bd, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-25 11:23:37.925   541   978 W system_server: Long monitor contention with owner android.bg (584) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:695) waiters=0 in android.os.Message android.os.MessageQueue.next() for 248ms
+10-25 11:23:37.927   330   330 D Zygote  : Forked child process 1124
+10-25 11:23:37.975   541   586 W ActivityManager: Slow operation: 1917ms so far, now at startProcess: returned from zygote!
+10-25 11:23:38.185   541   576 D CompatChangeReporter: Compat change id reported: 135754954; UID 10114; state: ENABLED
+10-25 11:23:38.187   541   576 W ActivityManager: Slow operation: 408ms so far, now at startProcess: done starting proc!
+10-25 11:23:38.324   189   189 W tombstoned: skipping tombstone file creation due to intercept
+10-25 11:23:38.358  1124  1124 I com.android.se: Using CollectorTypeCMC GC.
+10-25 11:23:38.374   541   579 I system_server: libdebuggerd_client: done dumping process 329
+10-25 11:23:38.388  1124  1124 W com.android.se: Unexpected CPU variant for x86: x86_64.
+10-25 11:23:38.388  1124  1124 W com.android.se: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+10-25 11:23:38.408     0     0 I init    : Untracked pid 1121 exited with status 0
+10-25 11:23:38.408     0     0 I init    : Untracked pid 1121 did not have an associated service entry and will not be reaped
+10-25 11:23:38.418     0     0 I init    : Untracked pid 1123 exited with status 0
+10-25 11:23:38.418     0     0 I init    : Untracked pid 1123 did not have an associated service entry and will not be reaped
+10-25 11:23:38.460   541   585 I system_server: getFrameworkHalManifest: Reading VINTF information.
+10-25 11:23:38.466   541   541 I SyntheticPasswordManager: Creating LSKF-based protector 8666938f25496daa for user 0
+10-25 11:23:38.494   541  1042 W ActivityManager: Slow operation: 285ms so far, now at attachApplicationLocked: before bindApplication
+10-25 11:23:38.518     0     0 I servicemanager: Caller(pid=541,uid=1000,sid=u:r:system_server:s0) Could not find android.hardware.weaver.IWeaver/default in the VINTF manifest. No alternative instances declared in VINTF.
+10-25 11:23:38.530   541   579 I ActivityManager: Collecting stacks for native pid 138
+10-25 11:23:38.548   541  1042 W ActivityManager: Slow operation: 340ms so far, now at attachApplicationLocked: immediately before bindApplication
+10-25 11:23:38.583   129   129 I hwservicemanager: getTransport: Cannot find entry android.hardware.weaver@1.0::IWeaver/default in either framework or device VINTF manifest.
+10-25 11:23:38.621   541   541 W SyntheticPasswordManager: Device does not support weaver
+10-25 11:23:38.628   541   579 I system_server: libdebuggerd_client: started dumping process 138
+10-25 11:23:38.718   189   189 I tombstoned: registered intercept for pid 138 and type kDebuggerdNativeBacktrace
+10-25 11:23:38.719   541  1042 W ActivityManager: Slow operation: 431ms so far, now at attachApplicationLocked: immediately after bindApplication
+10-25 11:23:38.719   541  1042 W ActivityManager: Slow operation: 511ms so far, now at attachApplicationLocked: after updateLruProcessLocked
+10-25 11:23:38.721   541  1042 D OomAdjuster: Not killing cached processes
+10-25 11:23:38.749   138   138 I libc    : Requested dump for pid 138 (binder:138_2)
+10-25 11:23:38.867   541   584 W BestClock: java.time.DateTimeException: Missing network time fix
+10-25 11:23:38.958  1124  1124 E com.android.se: Not starting debugger since process cannot load the jdwp agent.
+10-25 11:23:39.134   147   307 E keystore2: system/security/keystore2/src/error.rs:171 - system/security/keystore2/src/security_level.rs:684: Trying to call importKey
+10-25 11:23:39.134   147   307 E keystore2: 
+10-25 11:23:39.134   147   307 E keystore2: Caused by:
+10-25 11:23:39.134   147   307 E keystore2:     Error::Km(r#ROLLBACK_RESISTANCE_UNAVAILABLE)

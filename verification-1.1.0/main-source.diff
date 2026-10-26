@@ -1,0 +1,1093 @@
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/AndroidManifest.xml app/src/main/AndroidManifest.xml
+--- /tmp/shengyu-before-1.1.0/app/src/main/AndroidManifest.xml	2026-10-25 12:14:48
++++ app/src/main/AndroidManifest.xml	2026-10-26 08:30:31
+@@ -1,7 +1,13 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+     <uses-permission android:name="android.permission.INTERNET"/>
++    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
++    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
++    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
++    <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS"/>
++    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+     <application android:name=".ShengyuApplication" android:label="声屿" android:icon="@drawable/ic_launcher" android:theme="@style/AppTheme" android:allowBackup="false" android:fullBackupContent="@xml/backup_rules" android:dataExtractionRules="@xml/data_extraction_rules" android:supportsRtl="true" android:enableOnBackInvokedCallback="true">
+-        <activity android:name=".MainActivity" android:exported="true">
++        <service android:name=".TranscriptionService" android:foregroundServiceType="dataSync" android:exported="false"/>
++        <activity android:name=".MainActivity" android:exported="true" android:enableOnBackInvokedCallback="true">
+             <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+         </activity>
+         <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.files" android:exported="false" android:grantUriPermissions="true">
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/ApiKeySettingsDialog.kt app/src/main/java/dev/local/audio/ApiKeySettingsDialog.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/ApiKeySettingsDialog.kt	2026-10-25 10:26:48
++++ app/src/main/java/dev/local/audio/ApiKeySettingsDialog.kt	2026-10-26 08:33:24
+@@ -51,10 +51,10 @@
+     AlertDialog(
+         properties = DialogProperties(securePolicy = SecureFlagPolicy.SecureOn),
+         onDismissRequest = ::dismiss,
+-        title = { Text("MiniMax API Key 设置") },
++        title = { Text("MiniMax API Key") },
+         text = {
+             Column(Modifier.verticalScroll(rememberScrollState())) {
+-                Text("用于音频转文字。只在你确认上传音频后调用 MiniMax；设置 Key 不会上传任何文件。", style = MaterialTheme.typography.bodyMedium)
++                Text("用于语音转文字。", style = MaterialTheme.typography.bodyMedium)
+                 Text(if (loading) "正在读取设置…" else if (hasKey) "已配置 · Key 不会明文显示" else "尚未配置", color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 14.dp))
+                 OutlinedTextField(
+                     value = input,
+@@ -66,7 +66,7 @@
+                     enabled = !busy && !loading,
+                     modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                 )
+-                Text("使用 Android Keystore 在此设备加密保存，不进入备份、日志或导出文件。", style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 12.dp))
++                Text("仅在此设备加密保存。", style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 12.dp))
+                 problem?.let { Text(it, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 12.dp)) }
+                 if (hasKey) TextButton(enabled = !busy && !loading, onClick = {
+                     busy = true
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/AudioViewModel.kt app/src/main/java/dev/local/audio/AudioViewModel.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/AudioViewModel.kt	2026-10-25 11:05:02
++++ app/src/main/java/dev/local/audio/AudioViewModel.kt	2026-10-26 08:30:31
+@@ -71,7 +71,9 @@
+         viewModelScope.launch {
+             try {
+                 withContext(Dispatchers.IO) {
++                    check(!TranscriptionTasks.isBusy(file)) { "请先取消转写再删除" }
+                     TranscriptionEngine(getApplication()).deleteLocalTranscript(file)
++                    TranscriptionTasks.forget(getApplication(), file)
+                     check(!file.exists() || file.delete()) { "无法删除音频，请重试。" }
+                 }
+                 mutable.update { it.copy(result = if (it.result == file) null else it.result) }
+Only in app/src/main/java/dev/local/audio: InterfaceSurfaces.kt
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/MainActivity.kt app/src/main/java/dev/local/audio/MainActivity.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/MainActivity.kt	2026-10-25 11:05:02
++++ app/src/main/java/dev/local/audio/MainActivity.kt	2026-10-26 08:50:28
+@@ -7,74 +7,72 @@
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ import androidx.activity.compose.rememberLauncherForActivityResult
+-import androidx.activity.compose.PredictiveBackHandler
+-import androidx.activity.enableEdgeToEdge
+ import androidx.activity.result.contract.ActivityResultContracts
+-import androidx.compose.foundation.BorderStroke
+-import androidx.compose.foundation.Canvas
+-import androidx.compose.foundation.background
+-import androidx.compose.foundation.isSystemInDarkTheme
++import androidx.activity.enableEdgeToEdge
++import androidx.compose.animation.AnimatedVisibility
++import androidx.compose.animation.fadeIn
++import androidx.compose.animation.fadeOut
++import androidx.compose.animation.slideInHorizontally
++import androidx.compose.animation.slideOutHorizontally
++import androidx.compose.foundation.*
+ import androidx.compose.foundation.layout.*
+-import androidx.compose.foundation.rememberScrollState
++import androidx.compose.foundation.lazy.LazyColumn
++import androidx.compose.foundation.lazy.items
++import androidx.compose.foundation.shape.CircleShape
+ import androidx.compose.foundation.shape.RoundedCornerShape
+-import androidx.compose.foundation.verticalScroll
+ import androidx.compose.material.icons.Icons
+ import androidx.compose.material.icons.automirrored.outlined.ArrowBack
++import androidx.compose.material.icons.automirrored.outlined.ArrowForward
+ import androidx.compose.material.icons.outlined.*
+ import androidx.compose.material3.*
+ import androidx.compose.runtime.*
+ import androidx.compose.runtime.saveable.rememberSaveable
+ import androidx.compose.ui.Alignment
+ import androidx.compose.ui.Modifier
+-import androidx.compose.ui.draw.clip
+ import androidx.compose.ui.graphics.Color
+-import androidx.compose.ui.graphics.StrokeCap
+-import androidx.compose.ui.graphics.graphicsLayer
+-import androidx.compose.ui.geometry.Offset
+ import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.text.style.TextOverflow
++import androidx.compose.ui.semantics.clearAndSetSemantics
+ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.unit.sp
+ import androidx.core.content.FileProvider
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
+-import kotlinx.coroutines.CancellationException
++import kotlinx.coroutines.launch
+ import java.io.File
+ import java.util.Locale
+ 
+ class MainActivity : ComponentActivity() {
++    private var requestedFile by mutableStateOf<String?>(null)
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
++        requestedFile = intent.getStringExtra(TranscriptionService.FILE)
+         enableEdgeToEdge()
+-        setContent { AudioApp() }
++        setContent { AudioApp(requestedFile = requestedFile, onIntentHandled = { requestedFile = null }) }
+     }
++    override fun onNewIntent(intent: Intent) {
++        super.onNewIntent(intent); setIntent(intent)
++        requestedFile = intent.getStringExtra(TranscriptionService.FILE)
++    }
+ }
+-private val Light = lightColorScheme(primary=Color(0xFF245D49), onPrimary=Color.White, background=Color(0xFFF6F7F4), surface=Color.White, onSurface=Color(0xFF202622), surfaceVariant=Color(0xFFE9EEE8), onSurfaceVariant=Color(0xFF646E67), outlineVariant=Color(0xFFE1E6E0))
+-private val Dark = darkColorScheme(primary=Color(0xFFB7DCC6), onPrimary=Color(0xFF183B2E), background=Color(0xFF181B19), surface=Color(0xFF242925), onSurface=Color(0xFFE8ECE6), surfaceVariant=Color(0xFF303831), onSurfaceVariant=Color(0xFFABB6AD), outlineVariant=Color(0xFF414A42))
++private val Light = lightColorScheme(primary = Color(0xFF202020), onPrimary = Color.White, background = Color(0xFFFAFAFA),
++    surface = Color.White, onSurface = Color(0xFF202020), surfaceVariant = Color(0xFFF0F0F0), onSurfaceVariant = Color(0xFF757575), outlineVariant = Color(0xFFE3E3E3))
++private val Dark = darkColorScheme(primary = Color(0xFFF1F1F1), onPrimary = Color(0xFF212121), background = Color(0xFF212121),
++    surface = Color(0xFF292929), onSurface = Color(0xFFF1F1F1), surfaceVariant = Color(0xFF393939), onSurfaceVariant = Color(0xFFAAAAAA), outlineVariant = Color(0xFF464646))
+ 
+-@OptIn(ExperimentalMaterial3Api::class)
+ @Composable
+-fun AudioApp(vm: AudioViewModel = viewModel()) {
++fun AudioApp(vm: AudioViewModel = viewModel(), requestedFile: String? = null, onIntentHandled: () -> Unit = {}) {
+     val state by vm.state.collectAsStateWithLifecycle()
++    val tasks by TranscriptionTasks.states.collectAsStateWithLifecycle()
+     var transcriptionFile by rememberSaveable { mutableStateOf<String?>(null) }
+-    var selectedTab by rememberSaveable { mutableIntStateOf(0) }
+-    val page = selectedTab == 1
++    var settings by rememberSaveable { mutableStateOf(false) }
+     val context = LocalContext.current
+-    val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
+-    val preferences = remember(context) { context.getSharedPreferences("appearance", android.content.Context.MODE_PRIVATE) }
++    val preferences = remember { context.getSharedPreferences("appearance", android.content.Context.MODE_PRIVATE) }
+     var themeMode by remember { mutableIntStateOf(preferences.getInt("theme_mode", 0)) }
+-    val dark = when(themeMode) { 1 -> false; 2 -> true; else -> isSystemInDarkTheme() }
+-    val tabScrollStates = List(3) { rememberScrollState() }
+-    SideEffect {
+-        (context as? android.app.Activity)?.window?.let { window ->
+-            androidx.core.view.WindowCompat.getInsetsController(window, window.decorView).apply {
+-                isAppearanceLightStatusBars = !dark
+-                isAppearanceLightNavigationBars = !dark
+-            }
+-        }
+-    }
+-    var backProgress by remember { mutableFloatStateOf(0f) }
++    val dark = when (themeMode) { 1 -> false; 2 -> true; else -> isSystemInDarkTheme() }
++    val drawer = rememberDrawerState(DrawerValue.Closed)
++    val scope = rememberCoroutineScope()
+     val snackbar = remember { SnackbarHostState() }
+     var saveFile by rememberSaveable { mutableStateOf<String?>(null) }
+     var deleteFile by remember { mutableStateOf<File?>(null) }
+@@ -85,168 +83,221 @@
+     val lifecycle = androidx.lifecycle.compose.LocalLifecycleOwner.current.lifecycle
+     DisposableEffect(lifecycle) {
+         val observer = androidx.lifecycle.LifecycleEventObserver { _, event -> if (event == androidx.lifecycle.Lifecycle.Event.ON_STOP) stop() }
+-        lifecycle.addObserver(observer)
+-        onDispose { lifecycle.removeObserver(observer) }
++        lifecycle.addObserver(observer); onDispose { lifecycle.removeObserver(observer) }
+     }
++    SideEffect {
++        (context as? android.app.Activity)?.window?.let {
++            androidx.core.view.WindowCompat.getInsetsController(it, it.decorView).apply {
++                isAppearanceLightStatusBars = !dark; isAppearanceLightNavigationBars = !dark
++            }
++        }
++    }
+     val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+         if (uri != null) {
+             runCatching { context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+             stop(); vm.select(uri)
+         }
+     }
+-    val saver = rememberLauncherForActivityResult(object : ActivityResultContracts.CreateDocument("audio/mp4") { override fun createIntent(context: android.content.Context, input: String): Intent = super.createIntent(context, input).setType(if(input.endsWith(".wav")) "audio/wav" else "audio/mp4") }) { uri ->
+-        val file = saveFile?.let(::File)
+-        if (uri != null && file != null) vm.save(file, uri)
+-        saveFile = null
+-    }
++    fun choose() { picker.launch(arrayOf("video/*")) }
++    val saver = rememberLauncherForActivityResult(object : ActivityResultContracts.CreateDocument("audio/mp4") {
++        override fun createIntent(context: android.content.Context, input: String) = super.createIntent(context, input).setType(if (input.endsWith(".wav")) "audio/wav" else "audio/mp4")
++    }) { uri -> saveFile?.let { if (uri != null) vm.save(File(it), uri) }; saveFile = null }
+     fun save(file: File) { saveFile = file.absolutePath; saver.launch(file.name) }
+     fun share(file: File) {
+         runCatching {
+             val uri = FileProvider.getUriForFile(context, "${context.packageName}.files", file)
+             context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
+-                type = if(file.extension=="wav") "audio/wav" else "audio/mp4"; putExtra(Intent.EXTRA_STREAM, uri)
++                type = if (file.extension == "wav") "audio/wav" else "audio/mp4"; putExtra(Intent.EXTRA_STREAM, uri)
+                 clipData = ClipData.newRawUri("音频", uri); addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+             }, "分享音频"))
+-        }.onFailure { vm.message("当前没有可用的分享应用。") }
++        }.onFailure { vm.message("没有可用的分享应用") }
+     }
+     fun play(file: File) {
+         if (playing == file) { stop(); return }
+         stop()
+         runCatching {
+             player = MediaPlayer().apply {
+-                setDataSource(file.absolutePath)
+-                setOnPreparedListener { it.start(); playing = file }
+-                setOnCompletionListener { stop() }
+-                setOnErrorListener { _, _, _ -> stop(); vm.message("无法播放此音频。"); true }
+-                prepareAsync()
++                setDataSource(file.absolutePath); setOnPreparedListener { it.start(); playing = file }
++                setOnCompletionListener { stop() }; setOnErrorListener { _, _, _ -> stop(); vm.message("无法播放此音频"); true }; prepareAsync()
+             }
+-        }.onFailure { stop(); vm.message("无法播放此音频。") }
++        }.onFailure { stop(); vm.message("无法播放此音频") }
+     }
+-    LaunchedEffect(state.message) { state.message?.let { snackbar.showSnackbar(it); vm.clearMessage() } }
+-    PredictiveBackHandler(enabled = selectedTab != 0 && transcriptionFile == null) { events ->
+-        try { events.collect { backProgress = it.progress }; selectedTab = 0 }
+-        catch (_: CancellationException) { /* A cancelled gesture must leave navigation unchanged. */ }
+-        finally { backProgress = 0f }
++    fun open(file: File) { stop(); transcriptionFile = file.absolutePath; scope.launch { drawer.close() } }
++    LaunchedEffect(requestedFile) {
++        requestedFile?.let { name -> TranscriptionService.safeAudio(context, name)?.let { open(it) }; onIntentHandled() }
+     }
++    LaunchedEffect(state.message) { state.message?.let { snackbar.showSnackbar(it); vm.clearMessage() } }
+     MaterialTheme(colorScheme = if (dark) Dark else Light) {
+-        if (transcriptionFile != null) {
+-            TranscriptionScreen(File(transcriptionFile!!), onBack = { transcriptionFile = null })
+-            return@MaterialTheme
+-        }
+-        Scaffold(containerColor = MaterialTheme.colorScheme.background, snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
+-            NavigationBar {
+-                NavigationBarItem(selected=selectedTab==0,onClick={selectedTab=0},icon={Icon(Icons.Outlined.AudioFile,null)},label={Text("转音频")})
+-                NavigationBarItem(selected=selectedTab==1,onClick={selectedTab=1},icon={Icon(Icons.Outlined.History,null)},label={Text("历史")})
+-                NavigationBarItem(selected=selectedTab==2,onClick={selectedTab=2},icon={Icon(Icons.Outlined.Settings,null)},label={Text("设置")})
+-            }
+-        }) { padding ->
+-            Column(Modifier.fillMaxSize().padding(padding).graphicsLayer {
+-                translationX = backProgress * 90.dp.toPx(); scaleX = 1 - backProgress * .04f; scaleY = scaleX
+-            }.verticalScroll(tabScrollStates[selectedTab]).padding(horizontal = 24.dp).widthIn(max=680.dp)) {
+-                Row(Modifier.fillMaxWidth().padding(top=12.dp,bottom=28.dp), verticalAlignment=Alignment.CenterVertically) {
+-                    Text(when(selectedTab) { 1 -> "历史记录"; 2 -> "设置"; else -> "声屿" }, fontSize=22.sp,fontWeight=FontWeight.SemiBold,modifier=Modifier.weight(1f))
++        ModalNavigationDrawer(drawerState = drawer, gesturesEnabled = transcriptionFile == null && !settings, drawerContent = {
++            ModalDrawerSheet(drawerContainerColor = MaterialTheme.colorScheme.surface, modifier = Modifier.widthIn(max = 320.dp)) {
++                Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
++                    Text("声屿", fontWeight = FontWeight.SemiBold, fontSize = 21.sp, modifier = Modifier.weight(1f))
++                    IconButton(enabled = !state.busy && !state.inspecting, onClick = { scope.launch { drawer.close() }; choose() }) { Icon(Icons.Outlined.Add, "选择视频") }
+                 }
+-                if (selectedTab == 2) {
+-                    SettingsContent(themeMode=themeMode,onThemeChange={ mode ->
+-                        themeMode=mode
+-                        preferences.edit().putInt("theme_mode",mode).apply()
+-                    })
+-                } else if (page) {
+-                    Text("留住每一段声音",style=MaterialTheme.typography.headlineMedium,fontWeight=FontWeight.SemiBold)
+-                    Text("${state.history.size} 个音频 · 仅存于此设备",color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=8.dp,bottom=24.dp))
+-                    if(state.history.isEmpty()) Panel { Text("还没有音频",fontWeight=FontWeight.SemiBold); Text("选择视频，提取完成后会出现在这里。",modifier=Modifier.padding(top=8.dp),color=MaterialTheme.colorScheme.onSurfaceVariant) }
+-                    state.history.forEach { file ->
+-                        AudioFileCard(file, playing==file, { play(file) }, { save(file) }, { share(file) }, { deleteFile=file }, { stop(); transcriptionFile=file.absolutePath })
+-                        Spacer(Modifier.height(16.dp))
++                Text("音频", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(24.dp, 20.dp, 24.dp, 8.dp))
++                LazyColumn(Modifier.weight(1f), contentPadding = PaddingValues(horizontal = 12.dp)) {
++                    if (state.history.isEmpty()) item { Text("暂无音频", color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(12.dp)) }
++                    items(state.history, key = { it.absolutePath }) { file ->
++                        Row(Modifier.fillMaxWidth().clickable { open(file) }.padding(horizontal = 12.dp, vertical = 16.dp), verticalAlignment = Alignment.CenterVertically) {
++                            Icon(if (tasks[file.canonicalPath]?.busy == true) Icons.Outlined.Sync else Icons.Outlined.AudioFile, null, modifier = Modifier.size(20.dp))
++                            Text(file.nameWithoutExtension, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f).padding(start = 12.dp), style = MaterialTheme.typography.bodyMedium)
++                        }
+                     }
+-                } else {
+-                    Text("让声音，\n自由留下。", fontSize=36.sp,lineHeight=46.sp,fontWeight=FontWeight.SemiBold)
+-                    Text("从视频中提取音频，简单而安静。",color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=12.dp,bottom=28.dp))
+-                    Panel {
+-                        Row(verticalAlignment=Alignment.CenterVertically) {
+-                            Icon(Icons.Outlined.GraphicEq,null,tint=MaterialTheme.colorScheme.primary,modifier=Modifier.size(30.dp))
+-                            Text("视频 → 音频",fontWeight=FontWeight.SemiBold,modifier=Modifier.padding(start=12.dp))
++                }
++                TextButton(onClick = { scope.launch { drawer.close() }; settings = true }, modifier = Modifier.fillMaxWidth().padding(12.dp)) {
++                    Icon(Icons.Outlined.Settings, null); Text("设置", modifier = Modifier.weight(1f).padding(start = 16.dp))
++                }
++            }
++        }) {
++            Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
++                Scaffold(modifier = if (settings || transcriptionFile != null) Modifier.clearAndSetSemantics { } else Modifier, containerColor = MaterialTheme.colorScheme.background, topBar = {
++                    Row(Modifier.fillMaxWidth().statusBarsPadding().padding(horizontal = 8.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
++                        RoundIconButton(Icons.Outlined.Menu, "打开历史与设置") { scope.launch { drawer.open() } }
++                        Text("声屿", fontWeight = FontWeight.SemiBold, fontSize = 20.sp, modifier = Modifier.weight(1f).padding(start = 8.dp))
++                        RoundIconButton(Icons.Outlined.Add, "选择视频", enabled = !state.busy && !state.inspecting, onClick = ::choose)
++                    }
++                }, bottomBar = {
++                    Column(Modifier.navigationBarsPadding().imePadding().padding(horizontal = 16.dp, vertical = 12.dp).widthIn(max = 680.dp)) {
++                        tasks.entries.firstOrNull { it.value.busy }?.let { (path, task) ->
++                            Row(Modifier.fillMaxWidth().clickable { open(File(path)) }.padding(horizontal = 12.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
++                                CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
++                                Text(task.status, style = MaterialTheme.typography.labelMedium, modifier = Modifier.weight(1f).padding(start = 12.dp))
++                                if (task.total > 0) Text("${task.completed}/${task.total}", style = MaterialTheme.typography.labelMedium)
++                            }
+                         }
+-                        Waveform(Modifier.fillMaxWidth().height(76.dp).padding(vertical=18.dp))
+-                        Text(state.source?.name ?: "选择一个视频开始", maxLines=2,overflow=TextOverflow.Ellipsis,fontWeight=FontWeight.Medium)
+-                        Text(state.source?.let { "${duration(it.durationUs)} · ${it.sampleRate} Hz · ${it.channelCount} 声道" } ?: "使用系统文件选择器，不读取整个相册",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=8.dp,bottom=20.dp))
+-                        OutlinedButton(onClick={ picker.launch(arrayOf("video/*")) },enabled=!state.busy && !state.inspecting,modifier=Modifier.fillMaxWidth().heightIn(min=52.dp),shape=RoundedCornerShape(18.dp)) {
+-                            Icon(Icons.Outlined.Add,null); Spacer(Modifier.width(8.dp)); Text(if(state.inspecting) "正在读取…" else if(state.source==null) "选择视频" else "更换视频")
++                        if (state.source != null || state.inspecting) {
++                            Button(
++                                onClick = { if (state.busy || state.inspecting) vm.cancel() else { stop(); vm.extract() } },
++                                modifier = Modifier.fillMaxWidth().heightIn(min = 54.dp),
++                                shape = RoundedCornerShape(18.dp),
++                            ) {
++                                Icon(if (state.busy || state.inspecting) Icons.Outlined.Stop else Icons.Outlined.GraphicEq, null, modifier = Modifier.size(20.dp))
++                                Text(if (state.busy || state.inspecting) "取消" else if (state.result != null) "重新提取" else "提取音频", modifier = Modifier.padding(start = 10.dp))
++                            }
+                         }
+                     }
+-                    if (state.inspecting) TextButton(onClick=vm::cancel,modifier=Modifier.fillMaxWidth()) { Text("取消读取") }
+-                    state.failureMessage?.let { failure ->
+-                        Spacer(Modifier.height(18.dp))
+-                        Panel {
+-                            Text("处理未完成",color=MaterialTheme.colorScheme.error,fontWeight=FontWeight.SemiBold)
+-                            Text(failure,modifier=Modifier.padding(top=8.dp),style=MaterialTheme.typography.bodyMedium)
+-                            Text("可复制技术诊断协助定位。诊断不含文件名、路径、Key或媒体内容。",modifier=Modifier.padding(top=8.dp),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+-                            Row {
+-                                TextButton(onClick={
+-                                    runCatching { clipboard.setText(androidx.compose.ui.text.AnnotatedString(Diagnostics.copySummary())) }
+-                                        .onSuccess { vm.message("技术诊断已复制。") }.onFailure { vm.message("无法复制，请重试。") }
+-                                }) { Text("复制诊断信息") }
+-                                TextButton(onClick=vm::dismissFailure) { Text("关闭提示") }
++                }) { padding ->
++                    Box(Modifier.fillMaxSize().padding(padding)) {
++                        if (state.source == null && !state.inspecting && state.failureMessage == null) {
++                            Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp)) {
++                                Spacer(Modifier.height(36.dp))
++                                SoftSurface(Modifier.fillMaxWidth()) {
++                                    Column(Modifier.padding(horizontal = 24.dp, vertical = 36.dp), horizontalAlignment = Alignment.CenterHorizontally) {
++                                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(22.dp)) {
++                                            Icon(Icons.Outlined.VideoFile, null, modifier = Modifier.size(38.dp))
++                                            Icon(Icons.AutoMirrored.Outlined.ArrowForward, null, tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(22.dp))
++                                            Icon(Icons.Outlined.GraphicEq, null, modifier = Modifier.size(38.dp))
++                                        }
++                                        Text("视频转音频", fontSize = 22.sp, fontWeight = FontWeight.Medium, modifier = Modifier.padding(top = 24.dp, bottom = 28.dp))
++                                        Button(onClick = ::choose, shape = RoundedCornerShape(16.dp), modifier = Modifier.heightIn(min = 50.dp).fillMaxWidth()) {
++                                            Icon(Icons.Outlined.Add, null, modifier = Modifier.size(20.dp)); Text("选择视频", modifier = Modifier.padding(start = 8.dp))
++                                        }
++                                    }
++                                }
++                                if (state.history.isNotEmpty()) {
++                                    Text("最近音频", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 36.dp, bottom = 16.dp))
++                                    state.history.take(3).forEach { file ->
++                                        AudioResult(file, playing == file, { play(file) }, { save(file) }, { share(file) }, { deleteFile = file }, { open(file) })
++                                        Spacer(Modifier.height(20.dp))
++                                    }
++                                }
+                             }
++                        } else Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp), verticalArrangement = Arrangement.spacedBy(22.dp)) {
++                            if (state.inspecting) CircularProgressIndicator(Modifier.size(26.dp), strokeWidth = 2.dp)
++                            state.source?.let { source ->
++                                SoftSurface(Modifier.fillMaxWidth()) {
++                                Row(Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
++                                    Icon(Icons.Outlined.VideoFile, null, modifier = Modifier.size(28.dp))
++                                    Column(Modifier.padding(start = 14.dp)) {
++                                        Text(source.name, maxLines = 2, overflow = TextOverflow.Ellipsis, fontWeight = FontWeight.Medium)
++                                        Text("${duration(source.durationUs)} · ${source.channelCount} 声道", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 4.dp))
++                                    }
++                                }
++                                }
++                            }
++                            if (state.source != null && !state.busy) {
++                                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
++                                    OutputFormat.entries.forEach { format ->
++                                        FilterChip(selected = state.format == format, onClick = { vm.format(format) }, label = { Text(format.name) }, shape = RoundedCornerShape(16.dp),
++                                            colors = FilterChipDefaults.filterChipColors(containerColor = MaterialTheme.colorScheme.surface, labelColor = MaterialTheme.colorScheme.onSurface,
++                                                selectedContainerColor = MaterialTheme.colorScheme.primary, selectedLabelColor = MaterialTheme.colorScheme.onPrimary))
++                                    }
++                                }
++                            }
++                            if (state.busy) {
++                                LinearProgressIndicator(progress = { state.progress }, modifier = Modifier.fillMaxWidth())
++                                Text("提取中 ${(state.progress * 100).toInt()}%", style = MaterialTheme.typography.bodySmall)
++                            }
++                            state.failureMessage?.let { failure ->
++                                Row(verticalAlignment = Alignment.CenterVertically) { Icon(Icons.Outlined.ErrorOutline, null, tint = MaterialTheme.colorScheme.error); Text(failure, color = MaterialTheme.colorScheme.error, modifier = Modifier.weight(1f).padding(start = 12.dp)); IconButton(onClick = vm::dismissFailure) { Icon(Icons.Outlined.Close, "关闭错误提示") } }
++                            }
++                            state.result?.let { file ->
++                                AudioResult(file, playing == file, { play(file) }, { save(file) }, { share(file) }, { deleteFile = file }, { open(file) })
++                            }
+                         }
+                     }
+-                    Spacer(Modifier.height(18.dp))
+-                    if(state.source != null) Panel {
+-                        Row(verticalAlignment=Alignment.CenterVertically) {
+-                            Column(Modifier.weight(1f)) {
+-                                Text(if(state.format==OutputFormat.M4A) "M4A 音频" else "WAV 音频",fontWeight=FontWeight.SemiBold)
+-                                Text(if(state.format==OutputFormat.WAV) "无压缩 PCM · 文件较大" else if(state.source!!.mime=="audio/mp4a-latm") "原始音轨 · 无损提取" else "系统编码 · AAC 高兼容",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=5.dp))
++                }
++                AnimatedVisibility(visible = settings, enter = slideInHorizontally { it / 4 } + fadeIn(), exit = slideOutHorizontally { it / 4 } + fadeOut()) {
++                    PredictivePage(onBack = { settings = false }) {
++                        Scaffold(containerColor = MaterialTheme.colorScheme.background) { insets ->
++                            Column(Modifier.fillMaxSize().padding(insets)) {
++                                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(8.dp)) {
++                                    RoundIconButton(Icons.AutoMirrored.Outlined.ArrowBack, "返回") { settings = false }; Spacer(Modifier.width(16.dp)); Text("设置", fontWeight = FontWeight.SemiBold, fontSize = 20.sp)
++                                }
++                                Column(Modifier.verticalScroll(rememberScrollState()).padding(horizontal = 24.dp)) {
++                                    SettingsContent(themeMode) { themeMode = it; preferences.edit().putInt("theme_mode", it).apply() }
++                                }
+                             }
+-                            Icon(Icons.Outlined.CheckCircle,null,tint=MaterialTheme.colorScheme.primary)
+                         }
+-                        Row(horizontalArrangement=Arrangement.spacedBy(10.dp),modifier=Modifier.padding(top=16.dp)) {
+-                            OutputFormat.entries.forEach { format -> FilterChip(selected=state.format==format,onClick={vm.format(format)},enabled=!state.busy,label={Text(format.name)}) }
+-                        }
+-                        if(state.busy) {
+-                            Spacer(Modifier.height(24.dp))
+-                            if(state.source!!.durationUs>0) LinearProgressIndicator(progress={ state.progress },modifier=Modifier.fillMaxWidth()) else LinearProgressIndicator(modifier=Modifier.fillMaxWidth())
+-                            Text(if(state.source!!.durationUs>0) "正在提取 ${(state.progress*100).toInt()}%" else "正在提取…",modifier=Modifier.padding(top=12.dp),style=MaterialTheme.typography.bodySmall)
+-                            Text("请保持应用打开；锁屏或退出可能中断处理。",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=6.dp))
+-                            TextButton(onClick=vm::cancel,modifier=Modifier.align(Alignment.End)) { Text("取消提取") }
+-                        } else {
+-                            Button(onClick={ stop(); vm.extract() },modifier=Modifier.fillMaxWidth().padding(top=22.dp).heightIn(min=54.dp),shape=RoundedCornerShape(18.dp)) { Text(if(state.result != null) "重新提取" else "开始提取") }
+-                        }
+                     }
+-                    state.result?.let { file ->
+-                        Spacer(Modifier.height(22.dp)); Text("提取完成",fontWeight=FontWeight.SemiBold,modifier=Modifier.padding(bottom=12.dp))
+-                        AudioFileCard(file, playing==file, { play(file) }, { save(file) }, { share(file) }, { deleteFile=file }, null)
+-                        TextButton(onClick={selectedTab=1},modifier=Modifier.fillMaxWidth()) { Text("查看历史记录") }
++                }
++                transcriptionFile?.let { path ->
++                    PredictivePage(onBack = { transcriptionFile = null }) {
++                        TranscriptionScreen(File(path), onBack = { transcriptionFile = null }, audioActions = {
++                            AudioResult(File(path), playing == File(path), { play(File(path)) }, { save(File(path)) }, { share(File(path)) }, { deleteFile = File(path) }, null)
++                        })
+                     }
+-                    Row(Modifier.padding(top=26.dp,bottom=32.dp),verticalAlignment=Alignment.CenterVertically) {
+-                        Icon(Icons.Outlined.Lock,null,modifier=Modifier.size(16.dp),tint=MaterialTheme.colorScheme.onSurfaceVariant)
+-                        Text("本地提取 · 转写需联网并上传音频",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(start=8.dp))
+-                    }
+-                    Text("音频保存在应用内。重要文件请另存；卸载应用会删除音频库。",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(bottom=26.dp))
+                 }
++                SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding().padding(bottom = if (transcriptionFile != null || state.source != null) 90.dp else 12.dp))
+             }
+         }
+-        deleteFile?.let { file -> AlertDialog(onDismissRequest={deleteFile=null},title={Text("删除这个音频？")},text={Text("删除应用内音频及其转写文字、分段缓存；不影响已另存的文件。")},confirmButton={TextButton(onClick={if(playing==file)stop();vm.delete(file);deleteFile=null}){Text("删除")}},dismissButton={TextButton(onClick={deleteFile=null}){Text("取消")}}) }
++        deleteFile?.let { file ->
++            AlertDialog(onDismissRequest = { deleteFile = null }, title = { Text("删除音频？") }, text = { Text("同时删除本地转写，已另存的文件不受影响。") }, confirmButton = {
++                TextButton(onClick = {
++                    if (TranscriptionTasks.isBusy(file)) vm.message("请先取消转写") else {
++                        if (playing == file) stop(); vm.delete(file)
++                        if (transcriptionFile == file.absolutePath) transcriptionFile = null
++                    }; deleteFile = null
++                }) { Text("删除") }
++            }, dismissButton = { TextButton(onClick = { deleteFile = null }) { Text("取消") } })
++        }
+     }
+ }
+-@Composable private fun Panel(content: @Composable ColumnScope.() -> Unit) {
+-    Surface(shape=RoundedCornerShape(26.dp),shadowElevation=2.dp,border=BorderStroke(.5.dp,MaterialTheme.colorScheme.outlineVariant),modifier=Modifier.fillMaxWidth()) { Column(Modifier.padding(22.dp),content=content) }
+-}
+-@Composable private fun AudioFileCard(file: File,playing:Boolean,play:()->Unit,save:()->Unit,share:()->Unit,delete:()->Unit,transcribe:(()->Unit)?) {
+-    Panel {
+-        Row(verticalAlignment=Alignment.CenterVertically) {
+-            FilledTonalIconButton(onClick=play) { Icon(if(playing) Icons.Outlined.Stop else Icons.Outlined.PlayArrow,if(playing) "停止播放" else "播放音频") }
+-            Column(Modifier.weight(1f).padding(start=10.dp)) { Text(file.name,maxLines=2,overflow=TextOverflow.Ellipsis,fontWeight=FontWeight.Medium); Text(String.format(Locale.ROOT,"%s · %.2f MB",file.extension.uppercase(Locale.ROOT),file.length()/1048576.0),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant) }
++
++@Composable
++internal fun AudioResult(file: File, playing: Boolean, play: () -> Unit, save: () -> Unit, share: () -> Unit, delete: () -> Unit, transcribe: (() -> Unit)?) {
++    SoftSurface(Modifier.fillMaxWidth()) {
++    Column(Modifier.fillMaxWidth().padding(16.dp)) {
++        Row(verticalAlignment = Alignment.CenterVertically) {
++            FilledIconButton(onClick = play, shape = CircleShape) { Icon(if (playing) Icons.Outlined.Stop else Icons.Outlined.PlayArrow, if (playing) "停止播放" else "播放音频") }
++            Column(Modifier.weight(1f).padding(start = 12.dp)) {
++                Text(file.name, maxLines = 2, overflow = TextOverflow.Ellipsis, fontWeight = FontWeight.Medium)
++                Text(String.format(Locale.ROOT, "%s · %.2f MB", file.extension.uppercase(Locale.ROOT), file.length() / 1048576.0), color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodySmall)
++            }
++            var more by remember { mutableStateOf(false) }
++            Box {
++                IconButton(onClick = { more = true }) { Icon(Icons.Outlined.MoreHoriz, "更多音频操作") }
++                DropdownMenu(expanded = more, onDismissRequest = { more = false }) {
++                    DropdownMenuItem(text = { Text("删除") }, leadingIcon = { Icon(Icons.Outlined.DeleteOutline, null) }, onClick = { more = false; delete() })
++                }
++            }
+         }
+-        if (transcribe != null) FilledTonalButton(onClick=transcribe,modifier=Modifier.fillMaxWidth().padding(top=16.dp)) { Icon(Icons.Outlined.Notes,null,modifier=Modifier.size(18.dp)); Text(" 转为文字 · MiniMax") }
+-        Row(Modifier.fillMaxWidth().padding(top=12.dp),horizontalArrangement=Arrangement.SpaceBetween) {
+-            TextButton(onClick=save){Icon(Icons.Outlined.SaveAlt,null,modifier=Modifier.size(18.dp));Text(" 另存")}
+-            TextButton(onClick=share){Icon(Icons.Outlined.Share,null,modifier=Modifier.size(18.dp));Text(" 分享")}
+-            IconButton(onClick=delete){Icon(Icons.Outlined.DeleteOutline,"删除音频",tint=MaterialTheme.colorScheme.onSurfaceVariant)}
++        Row(Modifier.padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
++            IconButton(onClick = save) { Icon(Icons.Outlined.SaveAlt, "另存音频", modifier = Modifier.size(20.dp)) }
++            IconButton(onClick = share) { Icon(Icons.Outlined.Share, "分享音频", modifier = Modifier.size(20.dp)) }
++            if (transcribe != null) TextButton(onClick = transcribe) { Icon(Icons.Outlined.Notes, null, modifier = Modifier.size(18.dp)); Text("转文字", modifier = Modifier.padding(start = 8.dp)) }
+         }
+     }
++    }
+ }
+-@Composable private fun Waveform(modifier:Modifier) {
+-    val color=MaterialTheme.colorScheme.primary
+-    Canvas(modifier) { val bars=42; for(i in 0 until bars) { val h=(.15f + .85f*kotlin.math.abs(kotlin.math.sin(i*.74f))*kotlin.math.sin((i+1f)/(bars+1)*Math.PI).toFloat())*size.height; val x=size.width*i/(bars-1); drawLine(color.copy(alpha=.35f+.55f*h/size.height),Offset(x,(size.height-h)/2),Offset(x,(size.height+h)/2),3.dp.toPx(),StrokeCap.Round) } }
+-}
+-private fun duration(us:Long):String { val sec=us/1_000_000; return "%d:%02d".format(sec/60,sec%60) }
++private fun duration(us: Long): String { val sec = us / 1_000_000; return "%d:%02d".format(sec / 60, sec % 60) }
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/SettingsContent.kt app/src/main/java/dev/local/audio/SettingsContent.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/SettingsContent.kt	2026-10-25 10:57:04
++++ app/src/main/java/dev/local/audio/SettingsContent.kt	2026-10-26 08:46:46
+@@ -1,102 +1,98 @@
+ package dev.local.audio
+ 
+-import androidx.compose.foundation.BorderStroke
++import android.content.Intent
++import android.provider.Settings
+ import androidx.compose.foundation.clickable
+ import androidx.compose.foundation.layout.*
+ import androidx.compose.foundation.selection.selectable
+ import androidx.compose.foundation.selection.selectableGroup
+-import androidx.compose.foundation.shape.RoundedCornerShape
+ import androidx.compose.material.icons.Icons
+ import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
+-import androidx.compose.material.icons.outlined.Key
++import androidx.compose.material.icons.outlined.*
+ import androidx.compose.material3.*
+ import androidx.compose.runtime.*
+ import androidx.compose.ui.Alignment
+ import androidx.compose.ui.Modifier
+-import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.platform.LocalClipboardManager
+-import androidx.compose.ui.text.AnnotatedString
+-import androidx.compose.ui.semantics.LiveRegionMode
+-import androidx.compose.ui.semantics.liveRegion
+-import androidx.compose.ui.semantics.semantics
++import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.semantics.Role
++import androidx.compose.ui.text.AnnotatedString
+ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.unit.dp
+ import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.withContext
+ 
+-/** Content only: host owns scrolling, insets, navigation and durable theme preference. 0 system, 1 light, 2 dark. */
+ @Composable
+ fun SettingsContent(themeMode: Int, onThemeChange: (Int) -> Unit) {
+     val context = LocalContext.current
+     val clipboard = LocalClipboardManager.current
+-    var diagnosticStatus by remember { mutableStateOf<String?>(null) }
+     var showKey by remember { mutableStateOf(false) }
+-    var keyStatus by remember { mutableStateOf("正在读取配置…") }
+-    LaunchedEffect(Unit) {
+-        keyStatus = withContext(Dispatchers.IO) {
+-            runCatching { if (ApiKeyStore(context).read().isNullOrBlank()) "尚未配置" else "已加密保存在此设备" }
+-                .getOrDefault("读取失败，可重新配置")
+-        }
+-    }
++    var info by remember { mutableStateOf(false) }
++    var diagnostic by remember { mutableStateOf(false) }
++    var message by remember { mutableStateOf<String?>(null) }
++    var hasKey by remember { mutableStateOf(false) }
++    LaunchedEffect(Unit) { hasKey = withContext(Dispatchers.IO) { runCatching { !ApiKeyStore(context).read().isNullOrBlank() }.getOrDefault(false) } }
+     Column(Modifier.fillMaxWidth()) {
+-        Text("按你的习惯使用声屿。", color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp, bottom = 28.dp))
+-        Text("外观", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(bottom = 12.dp))
+-        SettingsPanel {
++        GroupLabel("外观")
++        SoftSurface {
+             Column(Modifier.selectableGroup()) {
+-                listOf(0 to "跟随系统", 1 to "浅色", 2 to "深色").forEach { (mode, title) ->
+-                    Row(
+-                        Modifier.fillMaxWidth().heightIn(min = 54.dp).selectable(selected = themeMode == mode, role = Role.RadioButton, onClick = { onThemeChange(mode) }).padding(horizontal = 18.dp),
+-                        verticalAlignment = Alignment.CenterVertically,
+-                    ) {
+-                        Text(title, modifier = Modifier.weight(1f))
+-                        RadioButton(selected = themeMode == mode, onClick = null)
++                listOf(0 to "跟随系统", 1 to "浅色", 2 to "深色").forEachIndexed { index, (mode, label) ->
++                    if (index > 0) GroupDivider()
++                    Row(Modifier.fillMaxWidth().heightIn(min = 64.dp).selectable(themeMode == mode, role = Role.RadioButton, onClick = { onThemeChange(mode) }).padding(horizontal = 20.dp), verticalAlignment = Alignment.CenterVertically) {
++                        Icon(when (mode) { 1 -> Icons.Outlined.LightMode; 2 -> Icons.Outlined.DarkMode; else -> Icons.Outlined.BrightnessAuto }, null, modifier = Modifier.size(24.dp))
++                        Text(label, modifier = Modifier.weight(1f).padding(start = 16.dp))
++                        if (themeMode == mode) Icon(Icons.Outlined.Check, null, modifier = Modifier.size(20.dp))
+                     }
+                 }
+             }
+         }
+-        Text("语音转文字", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(top = 28.dp, bottom = 12.dp))
+-        SettingsPanel {
+-            Row(Modifier.fillMaxWidth().clickable(onClick = { showKey = true }).padding(20.dp), verticalAlignment = Alignment.CenterVertically) {
+-                Icon(Icons.Outlined.Key, null, tint = MaterialTheme.colorScheme.primary)
+-                Column(Modifier.weight(1f).padding(horizontal = 14.dp)) {
+-                    Text("MiniMax API Key", fontWeight = FontWeight.Medium)
+-                    Text(keyStatus, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 5.dp))
++        GroupLabel("转写与后台")
++        SoftSurface {
++            Column {
++                SettingsRow("MiniMax", if (hasKey) "已配置" else "配置 Key", Icons.Outlined.Key) { showKey = true }
++                GroupDivider()
++                SettingsRow("通知与实时活动", null, Icons.Outlined.NotificationsNone) {
++                    runCatching { context.startActivity(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)) }
++                        .onFailure { message = "无法打开系统通知设置" }
+                 }
+-                Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, "打开 API Key 设置")
++                GroupDivider()
++                SettingsRow("后台运行", null, Icons.Outlined.BatteryChargingFull) {
++                    runCatching { context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, android.net.Uri.parse("package:${context.packageName}"))) }
++                        .onFailure { message = "无法打开应用设置" }
++                }
+             }
+         }
+-        Text("Key 只在此设备加密保存，可随时替换或删除。无需配置 Key，也能在主页离线提取音频。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 12.dp))
+-        Text("提取完成的文件位于历史记录。需要文字时，再打开该条目的“转文字”，确认后才会上传音频到 MiniMax。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 20.dp, bottom = 24.dp))
+-        Text("本地诊断", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(bottom = 12.dp))
+-        SettingsPanel {
+-            Column(Modifier.padding(20.dp)) {
+-                Text("仅包含应用/系统版本、格式类型、处理阶段与采样数值。不含 API Key、文件名、URI、音视频内容或转写文字。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+-                Text("诊断只保存在当前进程内存，不写入文件、不自动上传。点击复制后会进入系统剪贴板；由你决定是否分享。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 10.dp))
+-                OutlinedButton(onClick = {
+-                    diagnosticStatus = runCatching {
+-                        clipboard.setText(AnnotatedString(Diagnostics.copySummary()))
+-                        "诊断信息已复制，未发送或上传。"
+-                    }.getOrDefault("无法复制，请重试。")
+-                }, modifier = Modifier.fillMaxWidth().padding(top = 16.dp).heightIn(min = 48.dp)) {
+-                    Text("复制诊断信息")
+-                }
+-                TextButton(onClick = {
+-                    Diagnostics.clear()
+-                    diagnosticStatus = "已清除内存中的诊断。此前复制到剪贴板的内容不会被清除。"
+-                }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+-                    Text("清除诊断")
+-                }
+-                diagnosticStatus?.let {
+-                    Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(top = 8.dp).semantics { liveRegion = LiveRegionMode.Polite })
+-                }
++        GroupLabel("其他")
++        SoftSurface {
++            Column {
++                SettingsRow("诊断", null, Icons.Outlined.Tune) { diagnostic = true }
++                GroupDivider()
++                SettingsRow("关于", "1.1.0", Icons.Outlined.Info) { info = true }
+             }
+         }
+-        Spacer(Modifier.height(24.dp))
++        Spacer(Modifier.height(28.dp))
+     }
+-    if (showKey) ApiKeySettingsDialog(onDismiss = { showKey = false }, onKeyChanged = { configured -> keyStatus = if (configured) "已加密保存在此设备" else "尚未配置" })
++    if (showKey) ApiKeySettingsDialog(onDismiss = { showKey = false }, onKeyChanged = { hasKey = it })
++    if (diagnostic) AlertDialog(onDismissRequest = { diagnostic = false }, title = { Text("本地诊断") }, text = { Text("仅含设备、格式与处理阶段信息，不含文件内容和 Key。") }, confirmButton = {
++        TextButton(onClick = { clipboard.setText(AnnotatedString(Diagnostics.copySummary())); diagnostic = false; message = "已复制诊断" }) { Text("复制") }
++    }, dismissButton = { TextButton(onClick = { Diagnostics.clear(); diagnostic = false; message = "已清除诊断" }) { Text("清除") } })
++    if (info) AlertDialog(onDismissRequest = { info = false }, title = { Text("声屿") }, text = { Text("视频转音频，本地完成。转文字使用 MiniMax。\n\n音频和文字保存在此设备，卸载应用会删除，请另存重要文件。\n\n实时活动的展示由系统决定。识别结果请核对。") }, confirmButton = { TextButton(onClick = { info = false }) { Text("知道了") } })
++    message?.let { value -> AlertDialog(onDismissRequest = { message = null }, text = { Text(value) }, confirmButton = { TextButton(onClick = { message = null }) { Text("好") } }) }
+ }
+ @Composable
+-private fun SettingsPanel(content: @Composable () -> Unit) {
+-    Surface(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(24.dp), border = BorderStroke(.5.dp, MaterialTheme.colorScheme.outlineVariant), shadowElevation = 2.dp, content = content)
++private fun SettingsRow(title: String, value: String?, icon: androidx.compose.ui.graphics.vector.ImageVector, action: () -> Unit) {
++    Row(Modifier.fillMaxWidth().heightIn(min = 64.dp).clickable(onClick = action).padding(horizontal = 20.dp, vertical = 14.dp), verticalAlignment = Alignment.CenterVertically) {
++        Icon(icon, null, modifier = Modifier.size(24.dp))
++        Text(title, modifier = Modifier.weight(1f).padding(start = 16.dp))
++        value?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
++        Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, null, tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(20.dp).padding(start = 4.dp))
++    }
+ }
++
++@Composable
++private fun GroupLabel(text: String) {
++    Text(text, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
++        modifier = Modifier.padding(start = 20.dp, top = 28.dp, bottom = 10.dp))
++}
++@Composable
++private fun GroupDivider() { HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 1.dp) }
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/TranscriptionEngine.kt app/src/main/java/dev/local/audio/TranscriptionEngine.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/TranscriptionEngine.kt	2026-10-25 10:07:32
++++ app/src/main/java/dev/local/audio/TranscriptionEngine.kt	2026-10-26 08:34:23
+@@ -3,6 +3,9 @@
+ import android.content.Context
+ import android.net.Uri
+ import kotlinx.coroutines.*
++import kotlinx.coroutines.sync.Semaphore
++import kotlinx.coroutines.sync.withPermit
++import java.util.concurrent.atomic.AtomicInteger
+ import org.json.JSONArray
+ import org.json.JSONObject
+ import java.io.*
+@@ -80,27 +83,47 @@
+             var missingTimestamps=false
+             val output=outputFile(audio)
+             File(output.path+".complete").delete()
++            onProgress(TranscriptionProgress("正在转写", 0, plan.size, 0f))
++            val completed = AtomicInteger(0)
++            // Each slice has an independent task. Bound disk/network pressure without serial waits.
++            val responses = supervisorScope {
++                val permits = Semaphore(3)
++                plan.mapIndexed { index, chunk ->
++                    async {
++                        try {
++                            permits.withPermit {
++                                currentCoroutineContext().ensureActive()
++                                val responseFile = File(cache, "segment-$index.json")
++                                val response = if (responseFile.exists()) JSONObject(responseFile.readText()) else {
++                                    val part = File(context.cacheDir, "asr-${UUID.randomUUID()}.wav")
++                                    try {
++                                        createChunk(wav, info, chunk, part)
++                                        val raw = request(part, key) { _, _ -> }
++                                        val parsed = JSONObject(raw)
++                                        validateResponse(parsed)
++                                        atomicWrite(responseFile, raw)
++                                        parsed
++                                    } finally { part.delete() }
++                                }
++                                validateResponse(response)
++                                synchronized(completed) {
++                                    val count = completed.incrementAndGet()
++                                    onProgress(TranscriptionProgress("正在转写", count, plan.size, count.toFloat() / plan.size))
++                                }
++                                Result.success(response)
++                            }
++                        } catch (e: CancellationException) { throw e }
++                        catch (e: Exception) { Result.failure<JSONObject>(e) }
++                    }
++                }.awaitAll()
++            }
++            // Fail only after all siblings settle; successful slices remain cached for retry.
++            val failures = responses.count { it.isFailure }
++            if (failures > 0) error("$failures 段未完成。" + responses.first { it.isFailure }.exceptionOrNull()?.localizedMessage.orEmpty())
++            onProgress(TranscriptionProgress("正在整理全文", plan.size, plan.size, 1f))
+             plan.forEachIndexed { index, chunk ->
+                 currentCoroutineContext().ensureActive()
+-                val responseFile=File(cache,"segment-$index.json")
+-                val response = if(responseFile.exists()) JSONObject(responseFile.readText()) else {
+-                    val part=File(context.cacheDir,"asr-${UUID.randomUUID()}.wav")
+-                    try {
+-                        createChunk(wav,info,chunk,part)
+-                        val raw = request(part,key) { stage,p -> onProgress(TranscriptionProgress("第 ${index+1}/${plan.size} 段 · $stage",index,plan.size,p)) }
+-                        val parsed=JSONObject(raw)
+-                        check(parsed.has("text")) { "服务未返回文本，请稍后重试" }
+-                        parsed.optJSONArray("segments")?.let { array ->
+-                            for (i in 0 until array.length()) {
+-                                val item=array.getJSONObject(i)
+-                                val start=item.optDouble("start",Double.NaN);val end=item.optDouble("end",Double.NaN)
+-                                check(start.isFinite() && end.isFinite() && start>=0 && end>=start && item.has("text")) { "服务时间戳格式异常，请重试本段" }
+-                            }
+-                        }
+-                        val atomic=File(cache,"segment-$index.tmp"); atomic.writeText(raw); check(atomic.renameTo(responseFile))
+-                        parsed
+-                    } finally { part.delete() }
+-                }
++                val response = responses[index].getOrThrow()
+                 val items=response.optJSONArray("segments")
+                 val selected = mutableListOf<TranscriptSegment>()
+                 if(items!=null && items.length()>0) {
+@@ -116,8 +139,6 @@
+                     all += selected
+                     pieces += joinTranscriptTokens(selected.map { it.text })
+                 } else { pieces += response.getString("text"); missingTimestamps = true }
+-                atomicWrite(output,pieces.joinToString("\n"))
+-                onProgress(TranscriptionProgress("已完成 ${index+1}/${plan.size} 段",index+1,plan.size))
+             }
+             val text = pieces.joinToString("\n") + if(missingTimestamps && plan.size>1) "\n\n[部分段落未返回时间戳，接缝可能有重复，请校对。]" else ""
+             atomicWrite(output,text)
+@@ -125,6 +146,20 @@
+             atomicWrite(File(output.path+".complete"),"complete")
+             TranscriptResult(text,output,all)
+         } finally { temporary?.delete() }
++    }
++
++    private fun validateResponse(parsed: JSONObject) {
++        check(parsed.has("text") && parsed.get("text") is String) { "服务未返回文本，请重试本段" }
++        parsed.optJSONArray("segments")?.let { array ->
++            for (i in 0 until array.length()) {
++                val item = array.getJSONObject(i)
++                val start = item.optDouble("start", Double.NaN)
++                val end = item.optDouble("end", Double.NaN)
++                check(start.isFinite() && end.isFinite() && start >= 0 && end >= start && item.has("text")) {
++                    "服务时间戳格式异常，请重试本段"
++                }
++            }
++        }
+     }
+ 
+     private suspend fun request(file:File,key:String,onProgress:(String,Float?)->Unit):String = coroutineScope {
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/TranscriptionScreen.kt app/src/main/java/dev/local/audio/TranscriptionScreen.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/TranscriptionScreen.kt	2026-10-25 10:26:48
++++ app/src/main/java/dev/local/audio/TranscriptionScreen.kt	2026-10-26 08:46:46
+@@ -1,13 +1,14 @@
+ package dev.local.audio
+ 
++import android.Manifest
+ import android.content.Intent
+-import androidx.activity.compose.PredictiveBackHandler
++import android.content.pm.PackageManager
++import android.os.Build
+ import androidx.activity.compose.rememberLauncherForActivityResult
+ import androidx.activity.result.contract.ActivityResultContracts
+-import androidx.compose.foundation.BorderStroke
+ import androidx.compose.foundation.layout.*
+ import androidx.compose.foundation.rememberScrollState
+-import androidx.compose.foundation.shape.RoundedCornerShape
++import androidx.compose.foundation.shape.CircleShape
+ import androidx.compose.foundation.text.selection.SelectionContainer
+ import androidx.compose.foundation.verticalScroll
+ import androidx.compose.material.icons.Icons
+@@ -17,97 +18,79 @@
+ import androidx.compose.runtime.*
+ import androidx.compose.ui.Alignment
+ import androidx.compose.ui.Modifier
+-import androidx.compose.ui.graphics.graphicsLayer
+ import androidx.compose.ui.platform.LocalClipboardManager
+ import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.text.AnnotatedString
+ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.unit.dp
++import androidx.core.content.ContextCompat
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
+-import kotlinx.coroutines.CancellationException
+-import kotlinx.coroutines.Dispatchers
+-import kotlinx.coroutines.withContext
+ import java.io.File
+ 
+ @Composable
+-fun TranscriptionScreen(file: File, onBack: () -> Unit) {
++fun TranscriptionScreen(file: File, onBack: () -> Unit, audioActions: @Composable () -> Unit = {}) {
+     val vm: TranscriptionViewModel = viewModel(key = "transcription:${file.absolutePath}")
+     val state by vm.state.collectAsStateWithLifecycle()
+     var keyDialog by remember { mutableStateOf(false) }
+     var configuredKey by remember { mutableStateOf<Boolean?>(null) }
+     val hasKey = configuredKey ?: state.hasKey
+     var consent by remember { mutableStateOf(false) }
+-    var leaveConfirm by remember { mutableStateOf(false) }
+-    val currentBusy by rememberUpdatedState(state.busy)
+-    val lifecycle = androidx.lifecycle.compose.LocalLifecycleOwner.current.lifecycle
+-    DisposableEffect(lifecycle) {
+-        val observer = androidx.lifecycle.LifecycleEventObserver { _, event -> if (event == androidx.lifecycle.Lifecycle.Event.ON_STOP && currentBusy) vm.cancel() }
+-        lifecycle.addObserver(observer)
+-        onDispose { lifecycle.removeObserver(observer) }
+-    }
+-    fun requestBack() { if(state.busy) leaveConfirm=true else onBack() }
+-    var backProgress by remember { mutableFloatStateOf(0f) }
+     val context = LocalContext.current
+     val clipboard = LocalClipboardManager.current
+     val snackbar = remember { SnackbarHostState() }
+-    val save = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/plain")) { uri -> if(uri != null) vm.saveText(uri) }
+-    LaunchedEffect(file.absolutePath) {
+-        vm.load(file)
+-        configuredKey = withContext(Dispatchers.IO) { runCatching { !ApiKeyStore(context).read().isNullOrBlank() }.getOrDefault(false) }
++    val save = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/plain")) { uri -> if (uri != null) vm.saveText(uri) }
++    val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { allowed ->
++        vm.start(file)
++        if (!allowed) vm.message("通知未开启，可在应用内查看进度")
+     }
++    LaunchedEffect(file.absolutePath) { vm.load(file) }
+     LaunchedEffect(state.message) { state.message?.let { snackbar.showSnackbar(it); vm.clearMessage() } }
+-    PredictiveBackHandler { events ->
+-        try { events.collect { backProgress=it.progress }; requestBack() }
+-        catch (_:CancellationException) { }
+-        finally { backProgress=0f }
+-    }
+-    Scaffold(snackbarHost={SnackbarHost(snackbar)},containerColor=MaterialTheme.colorScheme.background) { insets ->
+-        Column(Modifier.fillMaxSize().padding(insets).graphicsLayer { translationX=backProgress*90.dp.toPx();scaleX=1-backProgress*.04f;scaleY=scaleX }.verticalScroll(rememberScrollState()).padding(horizontal=24.dp)) {
+-            Row(Modifier.fillMaxWidth().padding(vertical=12.dp),verticalAlignment=Alignment.CenterVertically) {
+-                IconButton(onClick=::requestBack){Icon(Icons.AutoMirrored.Outlined.ArrowBack,"返回")}
+-                Text("音频转文字",style=MaterialTheme.typography.titleLarge,fontWeight=FontWeight.SemiBold,modifier=Modifier.weight(1f))
+-                IconButton(enabled=!state.busy,onClick={keyDialog=true}){Icon(Icons.Outlined.Key,"API Key 设置")}
+-            }
+-            Text("把声音，\n变成文字。",style=MaterialTheme.typography.headlineLarge,fontWeight=FontWeight.SemiBold,modifier=Modifier.padding(top=16.dp,bottom=12.dp))
+-            Text(file.name,style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(bottom=24.dp))
+-            TranscriptPanel {
+-                Row(verticalAlignment=Alignment.CenterVertically) {
+-                    Icon(Icons.Outlined.CloudUpload,null,tint=MaterialTheme.colorScheme.primary)
+-                    Text("MiniMax 语音识别",fontWeight=FontWeight.SemiBold,modifier=Modifier.padding(start=10.dp))
++    Scaffold(snackbarHost = { SnackbarHost(snackbar) }, containerColor = MaterialTheme.colorScheme.background, topBar = {
++        Row(Modifier.fillMaxWidth().statusBarsPadding().padding(8.dp), verticalAlignment = Alignment.CenterVertically) {
++            RoundIconButton(Icons.AutoMirrored.Outlined.ArrowBack, "返回", onClick = onBack)
++            Text("转文字", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Medium, modifier = Modifier.weight(1f).padding(start = 8.dp))
++            IconButton(enabled = !state.busy, onClick = { keyDialog = true }) { Icon(Icons.Outlined.Key, "API Key 设置") }
++        }
++    }, bottomBar = {
++        if (!state.complete) SoftSurface(Modifier.navigationBarsPadding().padding(16.dp).fillMaxWidth()) {
++            Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
++                Column(Modifier.weight(1f).padding(start = 8.dp)) {
++                    Text(if (state.busy) state.status else if (!hasKey) "连接 MiniMax" else if (state.status.isNotBlank()) state.status else "音频转文字", fontWeight = FontWeight.Medium)
++                    if (state.total > 0 && !state.complete) Text("${state.completed}/${state.total} 段", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodySmall)
+                 }
+-                Text("转写会将音频发送至 MiniMax，可能产生 API 费用。视频不会上传。长音频会自动分段并按顺序拼接。",style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=14.dp))
+-                Text(if(hasKey) "API Key 已加密保存在此设备" else "请先配置你的 MiniMax API Key",style=MaterialTheme.typography.bodySmall,modifier=Modifier.padding(top=14.dp))
+-                if(state.busy) {
+-                    Spacer(Modifier.height(22.dp))
+-                    if(state.progress != null) LinearProgressIndicator(progress={state.progress ?: 0f},modifier=Modifier.fillMaxWidth()) else LinearProgressIndicator(modifier=Modifier.fillMaxWidth())
+-                    Text(state.status,modifier=Modifier.padding(top=12.dp),style=MaterialTheme.typography.bodyMedium)
+-                    Text("请保持应用打开；切到后台会取消。成功分段会保留，重试无需全部重传。",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(top=8.dp))
+-                    TextButton(onClick=vm::cancel,modifier=Modifier.align(Alignment.End)){Text("取消")}
+-                } else {
+-                    if(state.status.isNotBlank()) Text(state.status,modifier=Modifier.padding(top=16.dp),style=MaterialTheme.typography.bodySmall)
+-                    Button(onClick={if(!hasKey){keyDialog=true}else consent=true},modifier=Modifier.fillMaxWidth().padding(top=20.dp).heightIn(min=52.dp),shape=RoundedCornerShape(18.dp)) {
+-                        Text(if(!hasKey) "配置 API Key" else if(state.hasPartial) "继续 / 重试未完成分段" else if(state.text.isNotBlank()) "重新检查转写结果" else "开始转写")
+-                    }
++                if (state.busy) IconButton(onClick = vm::cancel) { Icon(Icons.Outlined.StopCircle, "取消转写") }
++                else FilledIconButton(onClick = { if (!hasKey) keyDialog = true else consent = true }, shape = CircleShape) {
++                    Icon(if (!hasKey) Icons.Outlined.Key else if (state.hasPartial || state.status.isNotBlank()) Icons.Outlined.Refresh else Icons.Outlined.PlayArrow,
++                        if (!hasKey) "配置 API Key" else if (state.hasPartial || state.status.isNotBlank()) "继续转写" else "开始转写")
+                 }
+             }
+-            if(state.text.isNotBlank()) {
+-                Spacer(Modifier.height(26.dp))
+-                Text(if(state.complete) "转写全文" else "已完成部分",style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.SemiBold)
+-                Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
+-                    TextButton(onClick={clipboard.setText(AnnotatedString(state.text));vm.message("已复制文字。")}) { Icon(Icons.Outlined.ContentCopy,null,modifier=Modifier.size(18.dp));Text(" 复制") }
+-                    TextButton(onClick={save.launch(file.nameWithoutExtension+".txt")}) { Icon(Icons.Outlined.SaveAlt,null,modifier=Modifier.size(18.dp));Text(" 另存") }
+-                    TextButton(onClick={runCatching { context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {type="text/plain";putExtra(Intent.EXTRA_TEXT,state.text)},"分享转写文字")) }.onFailure {vm.message("没有可用的分享应用。")}}) { Icon(Icons.Outlined.Share,null,modifier=Modifier.size(18.dp));Text(" 分享") }
++        }
++    }) { insets ->
++        Column(Modifier.fillMaxSize().padding(insets).verticalScroll(rememberScrollState()).padding(24.dp), verticalArrangement = Arrangement.spacedBy(28.dp)) {
++            audioActions()
++            if (state.busy) {
++                if (state.progress != null) LinearProgressIndicator(progress = { state.progress ?: 0f }, modifier = Modifier.fillMaxWidth())
++                else LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
++            }
++            if (state.complete) {
++                SelectionContainer { Text(state.text.ifBlank { "未识别到语音" }, style = MaterialTheme.typography.bodyLarge) }
++                Row {
++                    IconButton(onClick = { clipboard.setText(AnnotatedString(state.text)); vm.message("已复制") }) { Icon(Icons.Outlined.ContentCopy, "复制全文", modifier = Modifier.size(20.dp)) }
++                    IconButton(onClick = { save.launch(file.nameWithoutExtension + ".txt") }) { Icon(Icons.Outlined.SaveAlt, "另存全文", modifier = Modifier.size(20.dp)) }
++                    IconButton(onClick = {
++                        runCatching { context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply { type = "text/plain"; putExtra(Intent.EXTRA_TEXT, state.text) }, "分享文字")) }.onFailure { vm.message("没有可用的分享应用") }
++                    }) { Icon(Icons.Outlined.Share, "分享全文", modifier = Modifier.size(20.dp)) }
+                 }
+-                TranscriptPanel { SelectionContainer { Text(state.text,style=MaterialTheme.typography.bodyLarge) } }
+             }
+-            Text("识别结果可能有误，请核对重要内容。删除 API Key 不会删除已生成的文字。",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.padding(vertical=28.dp))
+         }
+     }
+-    if(leaveConfirm) AlertDialog(onDismissRequest={leaveConfirm=false},title={Text("取消转写并返回？")},text={Text("当前处理将取消，已成功的分段会保留。已上传内容可能仍在 MiniMax 处理并计费；下次可继续未完成分段。")},confirmButton={TextButton(onClick={leaveConfirm=false;vm.cancel();onBack()}){Text("取消并返回")}},dismissButton={TextButton(onClick={leaveConfirm=false}){Text("继续转写")}})
+-    if(consent) AlertDialog(onDismissRequest={consent=false},title={Text("上传音频到 MiniMax？")},text={Text("将上传“${file.name}”的音频内容到 api.minimaxi.com 进行识别。请确认有权处理该音频；敏感内容请谨慎上传。可能产生 API 费用。取消无法撤回已上传的内容或保证免除费用。")},confirmButton={TextButton(onClick={consent=false;vm.start(file)}){Text("同意并开始")}},dismissButton={TextButton(onClick={consent=false}){Text("取消")}})
+-    if(keyDialog) ApiKeySettingsDialog(onDismiss={keyDialog=false},onKeyChanged={configuredKey=it})
+-}
+-@Composable private fun TranscriptPanel(content:@Composable ColumnScope.()->Unit) {
+-    Surface(shape=RoundedCornerShape(26.dp),border=BorderStroke(.5.dp,MaterialTheme.colorScheme.outlineVariant),shadowElevation=2.dp,modifier=Modifier.fillMaxWidth()) { Column(Modifier.padding(22.dp),content=content) }
++    if (consent) AlertDialog(onDismissRequest = { consent = false }, title = { Text("开始转写？") }, text = { Text("音频将上传至 MiniMax，可能产生 API 费用。可在后台继续，完成后交付全文。取消无法撤回已上传内容。") }, confirmButton = {
++        TextButton(onClick = {
++            consent = false
++            if (Build.VERSION.SDK_INT >= 33 && ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) permission.launch(Manifest.permission.POST_NOTIFICATIONS)
++            else vm.start(file)
++        }) { Text("开始") }
++    }, dismissButton = { TextButton(onClick = { consent = false }) { Text("取消") } })
++    if (keyDialog) ApiKeySettingsDialog(onDismiss = { keyDialog = false }, onKeyChanged = { configuredKey = it })
+ }
+Only in app/src/main/java/dev/local/audio: TranscriptionService.kt
+Only in app/src/main/java/dev/local/audio: TranscriptionTasks.kt
+diff -ru /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/TranscriptionViewModel.kt app/src/main/java/dev/local/audio/TranscriptionViewModel.kt
+--- /tmp/shengyu-before-1.1.0/app/src/main/java/dev/local/audio/TranscriptionViewModel.kt	2026-10-25 10:14:52
++++ app/src/main/java/dev/local/audio/TranscriptionViewModel.kt	2026-10-26 08:38:32
+@@ -4,92 +4,63 @@
+ import android.net.Uri
+ import androidx.lifecycle.AndroidViewModel
+ import androidx.lifecycle.viewModelScope
+-import kotlinx.coroutines.CancellationException
+-import kotlinx.coroutines.Dispatchers
+-import kotlinx.coroutines.Job
+-import kotlinx.coroutines.NonCancellable
+-import kotlinx.coroutines.launch
+-import kotlinx.coroutines.withContext
+-import kotlinx.coroutines.flow.MutableStateFlow
+-import kotlinx.coroutines.flow.asStateFlow
+-import kotlinx.coroutines.flow.update
++import kotlinx.coroutines.*
++import kotlinx.coroutines.flow.*
+ import java.io.File
+ 
+ data class TranscriptionUiState(
+-    val hasKey:Boolean=false,
+-    val busy:Boolean=false,
+-    val progress:Float?=null,
+-    val status:String="",
+-    val text:String="",
+-    val complete:Boolean=false,
+-    val hasPartial:Boolean=false,
+-    val message:String?=null,
++    val hasKey: Boolean = false,
++    val busy: Boolean = false,
++    val progress: Float? = null,
++    val status: String = "",
++    val text: String = "",
++    val complete: Boolean = false,
++    val hasPartial: Boolean = false,
++    val completed: Int = 0,
++    val total: Int = 0,
++    val message: String? = null,
+ )
+-class TranscriptionViewModel(app:Application):AndroidViewModel(app) {
+-    private val engine=TranscriptionEngine(app)
+-    private val keys=ApiKeyStore(app)
+-    private val mutable=MutableStateFlow(TranscriptionUiState())
+-    val state=mutable.asStateFlow()
+-    private var work:Job?=null
+-    fun load(file:File) {
+-        viewModelScope.launch {
++class TranscriptionViewModel(app: Application) : AndroidViewModel(app) {
++    private val mutable = MutableStateFlow(TranscriptionUiState())
++    val state = mutable.asStateFlow()
++    private var observation: Job? = null
++    fun load(file: File) {
++        observation?.cancel()
++        observation = viewModelScope.launch {
+             try {
+-                val hasKey=withContext(Dispatchers.IO){!keys.read().isNullOrBlank()}
+-                mutable.update{it.copy(hasKey=hasKey)}
+-                refresh(file)
+-            } catch(_:Exception) { message("无法读取本地转写设置，请重新配置 API Key。") }
++                val cached = withContext(Dispatchers.IO) {
++                    TranscriptionTasks.load(getApplication(), file)
++                    TranscriptionEngine(getApplication()).cached(file)
++                }
++                val key = withContext(Dispatchers.IO) { !ApiKeyStore(getApplication()).read().isNullOrBlank() }
++                TranscriptionTasks.states.collect { tasks ->
++                    val task = tasks[file.canonicalPath] ?: TranscriptionUiState()
++                    val result = cached?.takeIf { it.complete && !task.busy }
++                    mutable.value = task.copy(hasKey = key, complete = task.complete || result != null,
++                        text = if (task.complete) task.text else result?.text.orEmpty(),
++                        hasPartial = task.hasPartial || cached?.complete == false)
++                }
++            } catch (e: CancellationException) { throw e }
++            catch (_: Exception) { message("无法读取转写，请重新打开") }
+         }
+     }
+-    private suspend fun refresh(file:File) {
+-        val result=withContext(Dispatchers.IO){engine.cached(file)} ?: return
+-        mutable.update{it.copy(text=result.text,complete=result.complete,hasPartial=result.text.isNotBlank() && !result.complete)}
++    fun start(file: File) {
++        runCatching { TranscriptionService.start(getApplication(), file) }.onFailure { message(it.localizedMessage ?: "无法启动转写") }
+     }
+-    fun setKey(value:String) {
+-        if(mutable.value.busy)return
++    fun cancel() { runCatching { TranscriptionService.cancel(getApplication()) }.onFailure { message("无法取消，请重试") } }
++    fun clearMessage() { mutable.update { it.copy(message = null) } }
++    fun message(text: String) { mutable.update { it.copy(message = text) } }
++    fun saveText(uri: Uri) {
++        if (!mutable.value.complete) return
++        val text = mutable.value.text
+         viewModelScope.launch {
+-            try { withContext(Dispatchers.IO){keys.save(value)};mutable.update{it.copy(hasKey=true,message="API Key 已加密保存。")}}
+-            catch(_:Exception){message("无法安全保存 API Key，请检查设备锁屏和存储状态。")}
+-        }
+-    }
+-    fun deleteKey() {
+-        if(mutable.value.busy)return
+-        viewModelScope.launch {
+-            try{withContext(Dispatchers.IO){keys.clear()};mutable.update{it.copy(hasKey=false,message="已删除 API Key。")}}
+-            catch(_:Exception){message("无法删除 API Key，请重试。")}
+-        }
+-    }
+-    fun start(file:File) {
+-        if(mutable.value.busy)return
+-        mutable.update{it.copy(busy=true,status="准备音频…",progress=null,message=null)}
+-        work=viewModelScope.launch {
+             try {
+-                val key=withContext(Dispatchers.IO){keys.read()} ?: error("请先配置 API Key。")
+-                val result=withContext(Dispatchers.IO){engine.transcribe(file,key){ progress ->
+-                    mutable.update{it.copy(status=progress.stage + if(progress.total>0) " · ${progress.completed}/${progress.total} 段完成" else "",progress=progress.uploadProgress)}
+-                }}
+-                mutable.update{it.copy(text=result.text,complete=result.complete,hasPartial=!result.complete,status=if(result.complete) "转写完成" else "有分段尚未完成",progress=1f)}
+-            } catch(_:CancellationException) {
+-                mutable.update{it.copy(status="已取消。成功分段已保留，可继续。")}
+-            } catch(e:Exception) {
+-                mutable.update{it.copy(status="转写未完成，可重试未完成分段。",message=e.localizedMessage ?: "转写失败，请检查网络和 API Key。")}
+-            } finally {
+-                withContext(NonCancellable) { runCatching{refresh(file)} }
+-                mutable.update{it.copy(busy=false,progress=null)}
+-            }
+-        }
+-    }
+-    fun cancel(){work?.cancel()}
+-    fun clearMessage(){mutable.update{it.copy(message=null)}}
+-    fun message(text:String){mutable.update{it.copy(message=text)}}
+-    fun saveText(uri:Uri) {
+-        val text=mutable.value.text
+-        viewModelScope.launch {
+-            try {
+                 withContext(Dispatchers.IO) {
+-                    getApplication<Application>().contentResolver.openOutputStream(uri,"wt")?.bufferedWriter(Charsets.UTF_8)?.use{it.write(text)} ?: error("无法打开保存位置")
++                    getApplication<Application>().contentResolver.openOutputStream(uri, "wt")?.bufferedWriter(Charsets.UTF_8)?.use { it.write(text) } ?: error("无法打开保存位置")
+                 }
+-                message("文字已保存。")
+-            }catch(_:Exception){message("保存失败，请重新选择位置。")}
++                message("已保存")
++            } catch (e: CancellationException) { throw e }
++            catch (_: Exception) { message("保存失败，请重试") }
+         }
+     }
+ }
+Only in app/src/main/res/drawable: ic_transcription.xml

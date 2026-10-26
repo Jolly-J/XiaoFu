@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.local.audio.AudioEngineTest" tests="29" skipped="0" failures="0" errors="0" timestamp="2026-10-25T18:09:57" hostname="f679ed8d1ab4" time="0.08">
+  <properties/>
+  <testcase name="clampsProgress" classname="dev.local.audio.AudioEngineTest" time="0.004"/>
+  <testcase name="removesOnlyLastExtension" classname="dev.local.audio.AudioEngineTest" time="0.016"/>
+  <testcase name="minusOnePtsDoesNotBypassInvalidFlags" classname="dev.local.audio.AudioEngineTest" time="0.001"/>
+  <testcase name="missingGaplessMetadataIsNotAltered" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="preservesChinese" classname="dev.local.audio.AudioEngineTest" time="0.001"/>
+  <testcase name="minusOneOriginIsARealTimestamp" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="validEncryptedSamplesRemainRejected" classname="dev.local.audio.AudioEngineTest" time="0.001"/>
+  <testcase name="eosTrackIsCheckedBeforeFlags" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="validGaplessDelayIsPreserved" classname="dev.local.audio.AudioEngineTest" time="0.046"/>
+  <testcase name="modernAndroidMetadataIsNotAltered" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="invalidFlagsOnValidSampleAreNotSilentlyAccepted" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="eosSentinelFlagsAreNotEncryption" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="emptyNameHasFallback" classname="dev.local.audio.AudioEngineTest" time="0.001"/>
+  <testcase name="positiveTimelineKeepsRelativeSpacing" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="readFailureSignalsEosBeforeFlags" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="wavRejectsOverFourGigabytes" classname="dev.local.audio.AudioEngineTest" time="0.002"/>
+  <testcase name="negativePtsWithValidSampleIsNotEos" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="boundsNameLength" classname="dev.local.audio.AudioEngineTest" time="0.001"/>
+  <testcase name="negativeOriginIsAnchoredExactlyOnce" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="otherCodecsMetadataIsNotAltered" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="timestampOverflowIsRejectedInsteadOfWrapping" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="encryptedPartialSamplesRemainRejected" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="wavRejectsPartialFrame" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="legacyAacExcessiveDelayIsIgnored" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="sanitizesUnsafeCharacters" classname="dev.local.audio.AudioEngineTest" time="0.001"/>
+  <testcase name="legacyAacNegativeDelayIsIgnored" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="wavHeaderIsLittleEndianPcm" classname="dev.local.audio.AudioEngineTest" time="0.002"/>
+  <testcase name="validUnencryptedSamplesAreQueuedNormally" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <testcase name="negativePtsDoesNotBypassDrm" classname="dev.local.audio.AudioEngineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

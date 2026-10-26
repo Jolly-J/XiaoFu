@@ -1,0 +1,4 @@
+dev.local.audio.AudioEngineTest: tests=29, failures=0, errors=0
+dev.local.audio.PredictiveMotionTest: tests=7, failures=0, errors=0
+dev.local.audio.TranscriptionEngineTest: tests=4, failures=0, errors=0
+dev.local.audio.DiagnosticsTest: tests=10, failures=0, errors=0

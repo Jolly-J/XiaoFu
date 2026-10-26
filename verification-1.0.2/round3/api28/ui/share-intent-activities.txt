@@ -1,0 +1,173 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+
+  Stack #1: type=standard mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+    Task id #3
+    mBounds=Rect(0, 0 - 0, 0)
+    mMinWidth=-1
+    mMinHeight=-1
+    mLastNonFullscreenBounds=null
+    * TaskRecord{866899f #3 A=dev.local.audio U=0 StackId=1 sz=2}
+      userId=0 effectiveUid=u0a67 mCallingUid=2000 mUserSetupComplete=true mCallingPackage=null
+      affinity=dev.local.audio
+      intent={flg=0x10000000 cmp=dev.local.audio/.MainActivity}
+      realActivity=dev.local.audio/.MainActivity
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 activityType=1
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{f325cc3 u0 dev.local.audio/.MainActivity t3}, ActivityRecord{b32535a u0 android/com.android.internal.app.ChooserActivity t3}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{1913aec 2703:dev.local.audio/u0a67}
+      stackId=1
+      hasBeenVisible=true mResizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION mSupportsPictureInPicture=false isResizeable=true lastActiveTime=1058917 (inactive for 4s)
+      * Hist #1: ActivityRecord{b32535a u0 android/com.android.internal.app.ChooserActivity t3}
+          packageName=android processName=android:ui
+          launchedFromUid=10067 launchedFromPackage=dev.local.audio userId=0
+          app=ProcessRecord{d6bb85f 3580:android:ui/1000}
+          Intent { act=android.intent.action.CHOOSER flg=0x800001 cmp=android/com.android.internal.app.ChooserActivity clip={text/uri-list "音频" {U:content://dev.local.audio.files/exports/final-102-aac-negative_279688423527444331.wav}} (has extras) }
+          frontOfTask=false task=TaskRecord{866899f #3 A=dev.local.audio U=0 StackId=1 sz=2}
+          taskAffinity=android
+          realActivity=android/com.android.internal.app.ChooserActivity
+          baseDir=/system/framework/framework-res.apk
+          dataDir=/data/system
+          stateNotNeeded=false componentSpecified=false mActivityType=standard
+          compat={160dpi always-compat} labelRes=0x1040071 icon=0x1080384 theme=0x10303c6
+          mLastReportedConfigurations:
+           mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=undefined} s.9}
+           mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 480, 800) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=standard} s.9}
+          CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 480, 800) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=standard} s.9}
+          taskDescription: label="null" icon=null iconResource=0 iconFilename=null primaryColor=fff5f5f5
+           backgroundColor=fffafafa
+           statusBarColor=0
+           navigationBarColor=ff000000
+          readUriPermissions={UriPermission{1e02705 content://dev.local.audio.files/exports/final-102-aac-negative_279688423527444331.wav [user 0]}}
+          launchFailed=false launchCount=1 lastLaunchTime=-3s946ms
+          haveState=false icicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_NOT_SHOWN
+          fullscreen=false noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=standard
+          waitingVisible=false nowVisible=true lastVisibleTime=-2s96ms
+          connections=[ConnectionRecord{c11db75 u0 CR android.ext.services/.resolver.LRResolverRankerService:@184a2ac}]
+          resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+      * Hist #0: ActivityRecord{f325cc3 u0 dev.local.audio/.MainActivity t3}
+          packageName=dev.local.audio processName=dev.local.audio
+          launchedFromUid=2000 launchedFromPackage=null userId=0
+          app=ProcessRecord{1913aec 2703:dev.local.audio/u0a67}
+          Intent { flg=0x10000000 cmp=dev.local.audio/.MainActivity }
+          frontOfTask=true task=TaskRecord{866899f #3 A=dev.local.audio U=0 StackId=1 sz=2}
+          taskAffinity=dev.local.audio
+          realActivity=dev.local.audio/.MainActivity
+          baseDir=/data/app/dev.local.audio-nHaouU86LfS6kseRELmhcw==/base.apk
+          dataDir=/data/user/0/dev.local.audio
+          stateNotNeeded=false componentSpecified=true mActivityType=standard
+          compat={160dpi always-compat} labelRes=0x0 icon=0x7f040006 theme=0x7f090000
+          mLastReportedConfigurations:
+           mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=undefined} s.9}
+           mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 480, 800) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=standard} s.9}
+          CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 480, 800) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=standard} s.9}
+          taskDescription: label="null" icon=null iconResource=0 iconFilename=null primaryColor=fff5f5f5
+           backgroundColor=fffafafa
+           statusBarColor=ff757575
+           navigationBarColor=ff000000
+          readUriPermissions={UriPermission{12c8b5f content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2Ffinal-102-aac-negative.mp4 [user 0]}, UriPermission{7a5ecfe content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2Ffinal-102-no-audio.mp4 [user 0]}, UriPermission{f402523 content://com.android.providers.downloads.documents/document/1 [user 0]}, UriPermission{f7e5810 content://com.android.providers.downloads.documents/document/2 [user 0]}}
+          writeUriPermissions={UriPermission{12c8b5f content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2Ffinal-102-aac-negative.mp4 [user 0]}, UriPermission{7a5ecfe content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2Ffinal-102-no-audio.mp4 [user 0]}, UriPermission{f402523 content://com.android.providers.downloads.documents/document/1 [user 0]}, UriPermission{f7e5810 content://com.android.providers.downloads.documents/document/2 [user 0]}}
+          launchFailed=false launchCount=0 lastLaunchTime=-15m21s148ms
+          haveState=false icicle=null
+          state=PAUSED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_REMOVED
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=standard
+          waitingVisible=false nowVisible=true lastVisibleTime=-1m26s86ms
+          resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+
+    Running activities (most recent first):
+      TaskRecord{866899f #3 A=dev.local.audio U=0 StackId=1 sz=2}
+        Run #1: ActivityRecord{b32535a u0 android/com.android.internal.app.ChooserActivity t3}
+        Run #0: ActivityRecord{f325cc3 u0 dev.local.audio/.MainActivity t3}
+
+    mResumedActivity: ActivityRecord{b32535a u0 android/com.android.internal.app.ChooserActivity t3}
+    mLastPausedActivity: ActivityRecord{f325cc3 u0 dev.local.audio/.MainActivity t3}
+
+  Stack #0: type=home mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+
+    Task id #2
+    mBounds=Rect(0, 0 - 0, 0)
+    mMinWidth=-1
+    mMinHeight=-1
+    mLastNonFullscreenBounds=null
+    * TaskRecord{9522eb5 #2 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+      userId=0 effectiveUid=u0a30 mCallingUid=0 mUserSetupComplete=true mCallingPackage=null
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.Launcher}
+      realActivity=com.android.launcher3/.Launcher
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 activityType=2
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{839ca75 u0 com.android.launcher3/.Launcher t2}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{737394a 2377:com.android.launcher3/u0a30}
+      stackId=0
+      hasBeenVisible=true mResizeMode=RESIZE_MODE_RESIZEABLE mSupportsPictureInPicture=false isResizeable=true lastActiveTime=140883 (inactive for 922s)
+      * Hist #0: ActivityRecord{839ca75 u0 com.android.launcher3/.Launcher t2}
+          packageName=com.android.launcher3 processName=com.android.launcher3
+          launchedFromUid=0 launchedFromPackage=null userId=0
+          app=ProcessRecord{737394a 2377:com.android.launcher3/u0a30}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.Launcher }
+          frontOfTask=true task=TaskRecord{9522eb5 #2 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+          taskAffinity=null
+          realActivity=com.android.launcher3/.Launcher
+          baseDir=/system/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk
+          dataDir=/data/user/0/com.android.launcher3
+          stateNotNeeded=true componentSpecified=false mActivityType=home
+          compat={160dpi always-compat} labelRes=0x7f110035 icon=0x7f08001b theme=0x7f120002
+          mLastReportedConfigurations:
+           mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=undefined} s.5}
+           mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 480, 800) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=home} s.5}
+          CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw480dp w480dp h776dp 160dpi lrg long port finger qwerty/v/v tball/v winConfig={ mBounds=Rect(0, 0 - 480, 800) mAppBounds=Rect(0, 0 - 480, 800) mWindowingMode=fullscreen mActivityType=home} s.9}
+          OverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mActivityType=home}}
+          taskDescription: label="null" icon=null iconResource=0 iconFilename=null primaryColor=fff5f5f5
+           backgroundColor=fffafafa
+           statusBarColor=0
+           navigationBarColor=0
+          launchFailed=false launchCount=0 lastLaunchTime=-16m10s220ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=3892]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_NOT_SHOWN
+          fullscreen=true noDisplay=false immersive=false launchMode=2
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=home
+          waitingVisible=false nowVisible=false lastVisibleTime=-16m5s130ms
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+
+    Running activities (most recent first):
+      TaskRecord{9522eb5 #2 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+        Run #0: ActivityRecord{839ca75 u0 com.android.launcher3/.Launcher t2}
+
+    mLastPausedActivity: ActivityRecord{839ca75 u0 com.android.launcher3/.Launcher t2}
+
+  ResumedActivity: ActivityRecord{b32535a u0 android/com.android.internal.app.ChooserActivity t3}
+  mFocusedStack=ActivityStack{f3420bb stackId=1 type=standard mode=fullscreen visible=true translucent=false, 1 tasks} mLastFocusedStack=ActivityStack{f3420bb stackId=1 type=standard mode=fullscreen visible=true translucent=false, 1 tasks}
+  mCurTaskIdForUser={0=3}
+  mUserStackInFront={}
+  displayId=0 stacks=2
+   mHomeStack=ActivityStack{6cd19d8 stackId=0 type=home mode=fullscreen visible=false translucent=true, 1 tasks}
+  isHomeRecentsComponent=true  KeyguardController:
+    mKeyguardShowing=false
+    mAodShowing=false
+    mKeyguardGoingAway=false
+    mOccluded=false
+    mDismissingKeyguardActivity=null
+    mDismissalRequested=false
+    mVisibilityTransactionDepth=0
+  LockTaskController
+    mLockTaskModeState=NONE
+    mLockTaskModeTasks=
+    mLockTaskPackages (userId:packages)=
+      u0:[]

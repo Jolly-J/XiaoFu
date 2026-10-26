@@ -1,0 +1,96 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        3956f1d dev.local.audio/.MainActivity filter 424bdd0
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        be95592 dev.local.audio/androidx.profileinstaller.ProfileInstallReceiver filter 5908e82
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        be95592 dev.local.audio/androidx.profileinstaller.ProfileInstallReceiver filter d840f64
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        be95592 dev.local.audio/androidx.profileinstaller.ProfileInstallReceiver filter 94335cd
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        be95592 dev.local.audio/androidx.profileinstaller.ProfileInstallReceiver filter 4847993
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+
+Permissions:
+  Permission [dev.local.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (b581b63):
+    sourcePackage=dev.local.audio
+    uid=10067 gids=null type=0 prot=signature
+    perm=Permission{e6e0360 dev.local.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    packageSetting=PackageSetting{61ee019 dev.local.audio/10067}
+
+Registered ContentProviders:
+  dev.local.audio/androidx.core.content.FileProvider:
+    Provider{fc338de dev.local.audio/androidx.core.content.FileProvider}
+  dev.local.audio/androidx.startup.InitializationProvider:
+    Provider{b270abf dev.local.audio/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [dev.local.audio.androidx-startup]:
+    Provider{b270abf dev.local.audio/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{39ff58c dev.local.audio}
+  [dev.local.audio.files]:
+    Provider{fc338de dev.local.audio/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{39ff58c dev.local.audio}
+
+Key Set Manager:
+  [dev.local.audio]
+      Signing KeySets: 5
+
+Packages:
+  Package [dev.local.audio] (61ee019):
+    userId=10067
+    pkg=Package{e3464d5 dev.local.audio}
+    codePath=/data/app/dev.local.audio-nHaouU86LfS6kseRELmhcw==
+    resourcePath=/data/app/dev.local.audio-nHaouU86LfS6kseRELmhcw==
+    legacyNativeLibraryDir=/data/app/dev.local.audio-nHaouU86LfS6kseRELmhcw==/lib
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    versionCode=3 minSdk=26 targetSdk=35
+    versionName=1.0.2
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{39ff58c dev.local.audio}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/dev.local.audio
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-10-25 12:58:33
+    firstInstallTime=2026-10-25 10:18:35
+    lastUpdateTime=2026-10-25 12:59:46
+    signatures=PackageSignatures{4c604ea version:2, signatures:[d5aff2f4], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    declared permissions:
+      dev.local.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.INTERNET
+      dev.local.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.INTERNET: granted=true
+      dev.local.audio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+    User 0: ceDataInode=115160 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      gids=[3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=0
+
+
+Dexopt state:
+  [dev.local.audio]
+    path: /data/app/dev.local.audio-nHaouU86LfS6kseRELmhcw==/base.apk
+      x86_64: [status=speed] [reason=unknown]
+
+
+Compiler stats:
+  [dev.local.audio]
+    (No recorded stats)

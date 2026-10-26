@@ -1,0 +1,10 @@
+
+dev.local.audio.TranscriptionPresentationDeviceTest:.
+dev.local.audio.TranscriptionDeviceTest:.....
+dev.local.audio.ParallelTranscriptionDeviceTest:...
+
+Time: 10.676
+
+OK (9 tests)
+
+

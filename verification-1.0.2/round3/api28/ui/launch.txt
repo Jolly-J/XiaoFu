@@ -1,0 +1,7 @@
+Starting: Intent { cmp=dev.local.audio/.MainActivity }
+Status: ok
+Activity: dev.local.audio/.MainActivity
+ThisTime: 7781
+TotalTime: 7781
+WaitTime: 8327
+Complete

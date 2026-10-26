@@ -1,0 +1,11 @@
+TRACK 0 {max-bitrate=200000, track-id=1, level=4, mime=video/mp4v-es, profile=1, bitrate=3896, language=und, display-width=128, durationUs=2000000, display-height=96, width=128, max-input-size=210, frame-rate=10, height=96, csd-0=java.nio.HeapByteBuffer[pos=0 lim=47 cap=47]}
+TRACK 1 {max-bitrate=69615, sample-rate=44100, track-id=2, mime=audio/mp4a-latm, profile=2, bitrate=69615, language=und, aac-profile=2, encoder-delay=44, durationUs=2023220, channel-count=1, encoder-padding=980, max-input-size=278, csd-0=java.nio.HeapByteBuffer[pos=0 lim=5 cap=5]}
+SELECTED=1
+HEAD sample=0 time=0 track=1 size=258 flags=1 encryptedBit=0 read=258
+HEAD sample=1 time=23220 track=1 size=258 flags=1 encryptedBit=0 read=258
+HEAD sample=2 time=46440 track=1 size=146 flags=1 encryptedBit=0 read=146
+TAIL sample=85 time=1973700 track=1 size=179 flags=1 encryptedBit=0 read=179
+TAIL sample=86 time=1996920 track=1 size=241 flags=1 encryptedBit=0 read=241
+TAIL sample=87 time=2020140 track=1 size=5 flags=1 encryptedBit=0 read=5
+EOS sample=88 time=-1 track=-1 size=-1 flags=-1 encryptedBit=2 read=-1
+SUMMARY samples=88 bytes=17606 negative_pts_samples=0

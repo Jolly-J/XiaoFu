@@ -1,0 +1,19 @@
+{
+  "appSha256": "b4e70674b1c11511e2775bd413f08853eef1e13efd9f2e096b9b3958e533c520",
+  "testsSha256": "74ffd41e4752a51fd284e3cd08ae0d26f6babbc383fbe19dacc01783696866d3",
+  "api": 35,
+  "shortPassed": 36,
+  "longPassed": 1,
+  "totalPassed": 37,
+  "failed": 0,
+  "skipped": 0,
+  "longSeconds": 1345.821,
+  "wavSampleRate": 44100,
+  "wavChannels": 2,
+  "wavPcmBytes": 171462656,
+  "wavDurationSeconds": 972.0105215419501,
+  "sampledAppPssKiBMin": 32688,
+  "sampledAppPssKiBMax": 36673,
+  "outputsCleaned": true,
+  "stagingCleaned": true
+}

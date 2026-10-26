@@ -1,0 +1,21 @@
+{
+  "appSha256": "b4e70674b1c11511e2775bd413f08853eef1e13efd9f2e096b9b3958e533c520",
+  "testsSha256": "74ffd41e4752a51fd284e3cd08ae0d26f6babbc383fbe19dacc01783696866d3",
+  "api": 28,
+  "shortPassed": 35,
+  "shortFailed": 1,
+  "longPassed": 1,
+  "totalPassed": 36,
+  "failed": 1,
+  "skipped": 0,
+  "failure": "mp3TrackInMp4: API28 native MPEG4Extractor explicitly rejects this codec/container; retained failed test",
+  "longSeconds": 580.404,
+  "wavSampleRate": 44100,
+  "wavChannels": 2,
+  "wavPcmBytes": 171466752,
+  "wavDurationSeconds": 972.0337414965986,
+  "longAppPssKiBSnapshot": 87789,
+  "partialOutputsCleaned": true,
+  "oldSintelHistoryPreserved": true,
+  "stagingCleaned": true
+}

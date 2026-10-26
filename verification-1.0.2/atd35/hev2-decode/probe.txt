@@ -1,0 +1,8 @@
+ZERO_DELAY=false INPUT={max-bitrate=48000, sample-rate=22050, track-id=2, mime=audio/mp4a-latm, profile=29, bitrate=48000, language=eng, aac-profile=29, encoder-delay=0, durationUs=7987664, channel-count=1, encoder-padding=0, max-input-size=314, csd-0=java.nio.HeapByteBuffer[pos=0 lim=4 cap=4]}
+OUTPUT={sample-rate=44100, aac-drc-boost-level=127, mime=audio/raw, aac-drc-cut-level=127, max-output-channel-count=8, aac-max-output-channel_count=8, aac-target-ref-level=64, aac-drc-album-mode=0, channel-mask=12, encoder-delay=0, buffer-batch-max-output-size=0, buffer-batch-threshold-output-size=0, aac-drc-output-loudness=-1, channel-count=2, aac-drc-effect-type=3, aac-encoded-target-level=-1, encoder-padding=0}
+RESULT total_pcm_bytes=1409024 output_packets=173 EOS=true
+ZERO_DELAY=true INPUT={max-bitrate=48000, sample-rate=22050, track-id=2, mime=audio/mp4a-latm, profile=29, bitrate=48000, language=eng, aac-profile=29, encoder-delay=0, durationUs=7987664, channel-count=1, encoder-padding=0, max-input-size=314, csd-0=java.nio.HeapByteBuffer[pos=0 lim=4 cap=4]}
+OUTPUT={sample-rate=44100, aac-drc-boost-level=127, mime=audio/raw, aac-drc-cut-level=127, max-output-channel-count=8, aac-max-output-channel_count=8, aac-target-ref-level=64, aac-drc-album-mode=0, channel-mask=12, encoder-delay=0, buffer-batch-max-output-size=0, buffer-batch-threshold-output-size=0, aac-drc-output-loudness=-1, channel-count=2, aac-drc-effect-type=3, aac-encoded-target-level=-1, encoder-padding=0}
+RESULT total_pcm_bytes=1409024 output_packets=173 EOS=true
+FORTIFY: pthread_mutex_lock called on a destroyed mutex (0x7480ebc96ed8)
+FORTIFY: pthread_mutex_lock called on a destroyed mutex (0x7480ebc95fa8)

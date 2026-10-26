@@ -1,0 +1,42 @@
+{
+  "diagnosticSchema": 1,
+  "privacy": "metadata_only_no_key_uri_filename_content",
+  "runs": [
+    {
+      "run": 1,
+      "appVersion": "1.0.2",
+      "androidApi": 28,
+      "sourceScheme": "content",
+      "outputFormat": "SOURCE_SCAN",
+      "status": "FAILED",
+      "stage": "OPEN_SOURCE",
+      "errorCode": "NO_AUDIO_TRACK",
+      "elapsedMs": 2134,
+      "audioMime": null,
+      "trackCount": null,
+      "selectedTrack": null,
+      "sampleRate": null,
+      "channels": null,
+      "durationUs": null,
+      "descriptorStartOffset": 0,
+      "descriptorDeclaredLength": -1,
+      "sampleObservations": 0,
+      "validSamples": 0,
+      "negativePtsSamples": 0,
+      "encryptedValidSamples": 0,
+      "eosObserved": false,
+      "minValidPtsUs": null,
+      "maxValidPtsUs": null,
+      "outputBytes": null,
+      "firstSampleTimeUs": null,
+      "firstSampleTrack": null,
+      "firstSampleSize": null,
+      "firstSampleFlags": null,
+      "lastSampleTimeUs": null,
+      "lastSampleTrack": null,
+      "lastSampleSize": null,
+      "lastSampleFlags": null,
+      "recentSampleCount": 0
+    }
+  ]
+}

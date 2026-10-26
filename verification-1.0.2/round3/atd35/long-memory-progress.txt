@@ -1,0 +1,92 @@
+elapsed=2
+elapsed=71
+  Native Heap     2637     2504        0        0     6744    13416     5623     2559
+  Dalvik Heap     2424     2160        0        0     9920    12448     6224     6224
+         Native Heap:     2504                           6744
+           TOTAL PSS:    33782            TOTAL RSS:   133472      TOTAL SWAP (KB):        0
+elapsed=150
+elapsed=234
+  Native Heap     2925     2792        0        0     7028    13672     5912     2517
+  Dalvik Heap      860      596        0        0     8356     4320     2192     2128
+         Native Heap:     2792                           7028
+           TOTAL PSS:    32688            TOTAL RSS:   135772      TOTAL SWAP (KB):        0
+elapsed=297
+  Native Heap     2741     2608        0        0     6844    13672     5650     2891
+  Dalvik Heap     1752     1488        0        0     9248    12520     6292     6228
+         Native Heap:     2608                           6844
+           TOTAL PSS:    33408            TOTAL RSS:   136612      TOTAL SWAP (KB):        0
+elapsed=364
+  Native Heap     2912     2780        0        0     7004    19888    12028     2733
+  Dalvik Heap     2895     2632        0        0    10388     4400     2200     2200
+         Native Heap:     2780                           7004
+           TOTAL PSS:    35760            TOTAL RSS:   142820      TOTAL SWAP (KB):        0
+elapsed=441
+  Native Heap     2916     2784        0        0     7008    19888    12007     2755
+  Dalvik Heap     2211     1948        0        0     9704     4400     2200     2200
+         Native Heap:     2784                           7008
+           TOTAL PSS:    36088            TOTAL RSS:   143712      TOTAL SWAP (KB):        0
+elapsed=507
+  Native Heap     2920     2788        0        0     7008    19888    12005     2757
+  Dalvik Heap     2195     1932        0        0     9688     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36052            TOTAL RSS:   144096      TOTAL SWAP (KB):        0
+elapsed=583
+  Native Heap     2920     2788        0        0     7008    19888    12022     2740
+  Dalvik Heap     2455     2192        0        0     9948     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36609            TOTAL RSS:   144592      TOTAL SWAP (KB):        0
+elapsed=659
+  Native Heap     2920     2788        0        0     7008    19888    12037     2726
+  Dalvik Heap     2519     2256        0        0    10012     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36673            TOTAL RSS:   144656      TOTAL SWAP (KB):        0
+elapsed=726
+  Native Heap     2920     2788        0        0     7008    19888    12006     2756
+  Dalvik Heap     2179     1916        0        0     9672     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36333            TOTAL RSS:   144316      TOTAL SWAP (KB):        0
+elapsed=794
+  Native Heap     2920     2788        0        0     7008    19888    12004     2758
+  Dalvik Heap     2023     1760        0        0     9516     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36177            TOTAL RSS:   144164      TOTAL SWAP (KB):        0
+elapsed=860
+  Native Heap     2920     2788        0        0     7008    19888    12036     2726
+  Dalvik Heap     2123     1860        0        0     9616     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36277            TOTAL RSS:   144264      TOTAL SWAP (KB):        0
+elapsed=925
+  Native Heap     2920     2788        0        0     7008    19888    12038     2724
+  Dalvik Heap     2167     1904        0        0     9660     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36321            TOTAL RSS:   144308      TOTAL SWAP (KB):        0
+elapsed=1001
+  Native Heap     2920     2788        0        0     7008    19888    12046     2716
+  Dalvik Heap     2399     2136        0        0     9892     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36553            TOTAL RSS:   144540      TOTAL SWAP (KB):        0
+elapsed=1068
+  Native Heap     2920     2788        0        0     7008    19888    11998     2765
+  Dalvik Heap     2131     1868        0        0     9624     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36285            TOTAL RSS:   144272      TOTAL SWAP (KB):        0
+elapsed=1133
+  Native Heap     2920     2788        0        0     7008    19888    11984     2778
+  Dalvik Heap     1967     1704        0        0     9460     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36121            TOTAL RSS:   144108      TOTAL SWAP (KB):        0
+elapsed=1200
+  Native Heap     2920     2788        0        0     7008    19888    12044     2719
+  Dalvik Heap     2111     1848        0        0     9604     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36265            TOTAL RSS:   144252      TOTAL SWAP (KB):        0
+elapsed=1268
+  Native Heap     2920     2788        0        0     7008    19888    12041     2722
+  Dalvik Heap     2079     1816        0        0     9572     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36233            TOTAL RSS:   144220      TOTAL SWAP (KB):        0
+elapsed=1334
+  Native Heap     2920     2788        0        0     7008    19888    11994     2768
+  Dalvik Heap     2099     1836        0        0     9592     4400     2200     2200
+         Native Heap:     2788                           7008
+           TOTAL PSS:    36253            TOTAL RSS:   144240      TOTAL SWAP (KB):        0
