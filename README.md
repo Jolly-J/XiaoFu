@@ -4,7 +4,11 @@
 
 # 小蝠 XiaoFu
 
-**纯本地极速音轨提取 · 双大模型 AI 语音转文字 · 苹果级全贝塞尔圆角与原生预测式返回**
+**纯本地「视频提取音频」· AI 语音转文字（双大模型 ASR）· 原生预测式返回与全贝塞尔曲面**
+
+<p align="center">
+  <sub>Local Video-to-Audio Extractor & Speech-to-Text (ASR) App built with Jetpack Compose</sub>
+</p>
 
 [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-blue?style=flat-square&logo=android)](https://developer.android.com/)
 [![Target SDK](https://img.shields.io/badge/Target%20SDK-Android%2015%20(API%2035)-green?style=flat-square&logo=android)](https://developer.android.com/)
