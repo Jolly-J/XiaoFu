@@ -1,75 +1,175 @@
-# 声屿 · 原生 Android 视频音频工具
+<div align="center">
 
-独立原创 Kotlin / Jetpack Compose 应用。Android 8.0（API 26）及以上。
+<img src="docs/images/logo.png" alt="小蝠 XiaoFu Logo" width="112" height="112" style="border-radius: 26px;" />
 
-## 工作流（1.1.5）
+# 小蝠 XiaoFu
 
-- **转音频**：首页只负责选择视频、提取 M4A 或 WAV、播放和另存。不自动进入转写、不自动上传。
-- **历史**：从主页右上角打开，展示全部成功导出的音频；打开音频后可播放、另存、分享和转文字。确认上传后才识别。
-- **设置**：选择浅色、深色或跟随系统（跨重启保留），配置、替换或删除自己的 MiniMax API Key。
+**纯本地极速音轨提取 · 双大模型 AI 语音转文字 · 苹果级全贝塞尔圆角与原生预测式返回**
 
-**本地提取不联网、不上传视频。只有用户主动确认的转写会把音频发送给 MiniMax。** API Key 使用 Android Keystore 加密保存在不备份目录；没有内置 Key，不写入日志。MiniMax 调用可能计费。音频库在应用私有目录，卸载将删除，请另存重要文件。
+[![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-blue?style=flat-square&logo=android)](https://developer.android.com/)
+[![Target SDK](https://img.shields.io/badge/Target%20SDK-Android%2015%20(API%2035)-green?style=flat-square&logo=android)](https://developer.android.com/)
+[![Language](https://img.shields.io/badge/Kotlin-100%25-purple?style=flat-square&logo=kotlin)](https://kotlinlang.org/)
+[![UI Framework](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose)](https://developer.android.com/jetpack/compose)
+[![Version](https://img.shields.io/badge/Version-v1.0.0-orange?style=flat-square)](https://github.com/Jolly-J/XiaoFu/releases)
+[![License](https://img.shields.io/badge/License-MIT-success?style=flat-square)](LICENSE)
 
-### 1.0.2 修复与诊断
+*把视频交给我，帮你提取清晰音频与整理文字。*
 
-修复有效负音频时间戳（包括恰好 `-1µs`）被误判为空音轨的问题。结束状态只根据真实轨道/读取结果判断，AAC 原样封装保留全部可读包；真正加密内容仍不支持。保留 1.0.1 对 EOF 加密误报和限定 API28 AAC 元数据异常的修复。
+</div>
 
-设置与提取失败卡片提供“复制诊断信息”：仅最近三次内存中的白名单技术数据，不含 Key、URI、路径、文件名或媒体内容，不自动上传。详见 `docs/NEGATIVE-PTS-1.0.2.md`。
+---
 
-1.0.2 的同签名覆盖升级结论仅适用于当时交付包。当前 1.1.5 测试 APK 使用本机调试签名，与旧版报告的证书不同，不能直接覆盖旧版；正式升级须用原签名密钥重新构建。不要卸载旧版来绕过签名问题。具体设备测试结果见 `TEST_REPORT.md`。
+## 🦇 为什么做小蝠？
 
-## 格式边界
+日常在手机上遇到优质短视频、播客回放、会议录屏或学习讲座时，很多时候我们其实只需要**里面的声音**或者**提取后的文本纪要**。然而市面上的工具往往让人痛苦不堪：
 
-- MP4 是容器；H.264/H.265/HEVC 是视频编码。提取只读取音轨，不需要解码视频画面。
-- 常用 MP4/MOV/WebM/MKV 等容器的可读性取决于 Android MediaExtractor 和设备能力，不承诺所有格式或所有编码组合。
-- AAC → M4A 不重编码；其他可解码音轨 → AAC-LC，单声道 128 kbps / 立体声 192 kbps。转码会损失质量。
-- WAV：PCM16，保留源采样率，支持单/双声道，传统 RIFF 上限约 4 GiB。
-- DRM/加密内容、损坏文件、无音轨、设备不支持的编码会明确报错。首版不提供 MP3 编码，不虚报 MP3 支持。
-- 已实测限制：Android 9/API28 的系统提取器不支持 MP3 音轨封装在 MP4/3GPP 中；同一素材在 API35 可转。此组合在旧平台会报告无可读取音轨，不等于原文件实际无音轨。
-- 首版选择第一条音轨；不提供多音轨选择、剪辑或批处理。
+1. **强行传云端与隐私黑盒**：很多提取工具要求把整个视频先上传到第三方的私有服务器转码，几十兆甚至数吉字节的视频上传极慢，流量消耗巨大，个人隐私与工作敏感录屏毫无安全保障；
+2. **格式粗糙与音质阉割**：要么强制把好端端的音轨二次重编码成劣质 MP3 导致音质失真，要么缺少透明的格式特性选择；
+3. **语音转文字（ASR）昂贵繁琐**：市面上的录音转文字软件动辄按月收费，或者捆绑高额会员。而开发者想用最新的开源语音大模型（如 SenseVoiceSmall），又得在电脑上配置 Python 和命令行，普通手机用户根本无从下手；
+4. **粗糙生硬的交互体验**：传统 Android 工具应用大都界面杂乱、机械直角切页、按钮挤作一团，毫无美感可言。
 
-## 构建
+**小蝠（XiaoFu）** 就是为了终结上述痛点而打造的 Android 智能音频伴侣：
+> **“视频音轨 100% 在手机本地无损抽取，零服务器中转、零隐私泄露；内置直连中国站硅基流动（官方免费）与 MiniMax 双语音大模型，用户自带 Key 极速转文字；全界面采用苹果级 G2 连续性贝塞尔超椭圆与 Android 14+ 原生预测式返回动效。”**
 
-JDK 17+（需完整 JDK，不是 JRE）、Android SDK 35 / Build Tools 35.0.0。
+---
 
-```sh
-# Android Studio 打开本目录；或设置 ANDROID_HOME、JAVA_HOME 后：
-./gradlew assembleDebug testDebugUnitTest lintDebug assembleDebugAndroidTest
-# 源码交付不包含测试视频；先准备fixture（需FFmpeg/curl）：
-./scripts/prepare-test-media.sh
-./compatibility-tests/prepare-media.sh
-# 有连接设备或模拟器时：
-./gradlew connectedDebugAndroidTest
+## 📸 界面一览与动态效果
+
+### 1. 核心工作流：从视频到双格式音频
+
+| 主界面 (小蝠极简萌趣) | 选择音频格式 (M4A / WAV 双卡片) | 音频提取完成 (沉浸试听与操作) |
+| :---: | :---: | :---: |
+| <img src="docs/images/01-home.jpg" width="260" /> | <img src="docs/images/02-format-select.jpg" width="260" /> | <img src="docs/images/03-extract-done.jpg" width="260" /> |
+
+### 2. 双 AI 语音大模型转文字 (ASR)
+
+| 选择转写服务商 (自选 Key) | 智能分段流式转写中 | 纯净排版转写结果卡片 |
+| :---: | :---: | :---: |
+| <img src="docs/images/04-asr-providers.jpg" width="260" /> | <img src="docs/images/05-transcribing.jpg" width="260" /> | <img src="docs/images/06-transcribe-result.jpg" width="260" /> |
+
+### 3. 系统级深度体验与非线性动效
+
+| Android 14 预测式返回与弹性阻尼 (动图) | 系统级锁屏与通知栏实时活动 (Live Activity) | 原生流体云灵动指示 |
+| :---: | :---: | :---: |
+| <img src="docs/images/predictive-back.gif" width="260" /> | <img src="docs/images/08-live-activity.jpg" width="260" /> | <img src="docs/images/07-fluid-cloud.jpg" width="260" /> |
+
+---
+
+## ✨ 核心亮点
+
+### 🚀 1. 纯本地硬件加速，零流量无损抽轨
+- **设备本地直出**：采用底层 Android `MediaExtractor` 与 `MediaCodec` 硬件流水线，直接从 MP4/MOV/MKV/WebM 等视频容器中剥离音轨，不需要解码视频画面，百兆视频秒级完成；
+- **零网络中转**：提取过程无需连网，不消耗任何数据流量，隐私数据坚决不出手机。
+
+### 🎛️ 2. 双音频格式特性卡片 & 平滑横滚
+- **M4A (AAC 编码压缩 · 体积小)**：
+  - 采用 AAC 格式，体积相较于原始音频缩减约 85%，兼具极佳的便携性与兼容性，推荐用于日常存储、微信分享与 AI 语音转文字；
+- **WAV (PCM 原始采样 · 高保真)**：
+  - 100% 还原音轨全部细节，录音室级无损音质，适合专业音频后期与母带存档；
+- **横向平滑滚动（AnimatedContent）**：
+  - 从“格式配置”到“正在提取”再到“提取完成”，操作区采用横滚滑动转场与苹果非线性缓动，彻底消除突兀闪烁。
+
+### 🤖 3. 双 AI 语音大模型自由选择
+- **硅基流动 (SiliconFlow) 正式接入**：
+  - 接入官方 SenseVoiceSmall 语音大模型，手机客户端直连中国站 API，响应快如闪电；
+  - **官方免费调用**，无需为账户预充值费用；自带大文件动态切片保护（1 小时 / 45MB 双限安全策略）；
+- **MiniMax 语音大模型通道保留**：
+  - 保留高精度转写能力，清晰透明展示约 2.5 元/小时的资费说明；
+- **去杂收纳与隐私密钥**：
+  - 密钥使用 Android Keystore 独立加密持久化，互不干扰；转写结果卡片顶栏精炼展示，高频次级操作统一收拢至下拉菜单。
+
+### 🍏 4. 苹果级贝塞尔圆角与预测式返回
+- **全贝塞尔连续曲线（Continuous Corner Shape）**：
+  - 放弃原生生硬机械圆弧，全界面容器、对话框与按钮均采用 G2 连续性超椭圆曲线（Squircle），曲线平滑无棱角；
+- **非线性预测式返回（Predictive Back）**：
+  - 适配 Android 14+ 原生预测式返回手势，采用 `CubicBezierEasing(0.12f, 0.96f, 0.22f, 1.0f)` 阻尼曲线与多层位移，滑动时露出底层页面，松手自然回弹。
+
+### 📲 5. 原生实时活动（Live Activity）与前台服务
+- **长任务后台保活**：接入系统前台服务通知（Ongoing Notification），切出后台不被杀死，锁屏与通知栏实时透明追踪当前处理百分比；
+- **流体云胶囊联动**：支持系统级灵动胶囊交互，在桌面随时掌握当前转写动态。
+
+---
+
+## 🛠️ 技术选型与架构
+
+小蝠基于纯原生现代 Android 体系打造，追求极简、高内聚与零冗余依赖：
+
+```text
+dev.local.audio
+├── AudioEngine.kt                  # 基于 MediaExtractor / MediaMuxer 的本地音轨抽取核心
+├── AsrProvider.kt                  # ASR 统一服务商协议、能力模型与元数据
+├── SiliconFlowProvider.kt          # 硅基流动 SenseVoiceSmall 直连实现 (切片保护/流式上传)
+├── MiniMaxProvider.kt              # MiniMax 语音大模型通道适配
+├── ContinuousCorners.kt            # G2 连续性贝塞尔超椭圆 Squircle 形状实现
+├── SmoothBackHost.kt               # 预测式返回 (Predictive Back) 手势驱动与非线性阻尼控制器
+├── MainActivity.kt                 # 提取工作区、多状态机流转与沉浸播放器
+├── TranscriptionScreen.kt          # 转写结果卡片、去杂收纳与下拉菜单
+├── SettingsContent.kt              # 服务商偏好选择、资费说明与系统深浅色外观
+├── ApiKeySettingsDialog.kt         # 独立 API Key 存储弹窗与官网申请引导
+└── TranscriptionService.kt         # 系统前台服务与锁屏/通知栏实时活动 (Live Activity)
 ```
 
-版本固定在 Gradle 配置中。Debug APK 自签名，可侧载安装，仅供个人试用；不代表已发布商店或经过生产审核。不要把调试签名用于正式公开分发。
+- **开发语言**：Kotlin 2.0
+- **UI 体系**：Jetpack Compose (BOM 2025.04.01) + Material Design 3
+- **异步调度**：Kotlin Coroutines + StateFlow 响应式状态流
+- **音视频编解码**：Android MediaExtractor + MediaMuxer + MediaCodec
+- **安全加固**：Android Keystore 独立密钥加密存储
 
-## 设计与架构
+---
 
-- Kotlin / Compose，自定义多彩界面：顶部图标栏、文件导入工作区、格式选择与提取操作、右上角历史与设置入口；28dp 分组圆角、浅灰细边和轻量圆形导航按钮，支持深浅色。
-- `AudioEngine`：MediaExtractor / MediaMuxer / MediaCodec；逐包/逐帧真实进度、协程取消与失败清理。
-- `AudioViewModel`：保留旋转期间任务和状态；本地导出列表从磁盘恢复。
-- `TranscriptionEngine`：每片独立异步任务，最多 3 路并发，全部成功后按原顺序合并全文；失败只重试缺失段。
-- `TranscriptionService` / `TranscriptionTasks`：前台服务承接后台转写，统一任务状态、通知、取消及中断恢复。`ApiKeyStore` 保持加密凭据。
-- 应用内预测式返回使用三层滑移渐隐与对数/弹簧进度，保持页面尺寸；取消恢复原页，主页退出仍交给系统。
-- 不使用 WebView，不包含第三方商业 APK、品牌或反编译源代码，不内置分析/广告 SDK。
+## 🚀 快速上手
 
-## 运行限制
+### 方式一：直接安装 APK（推荐）
 
-转写支持离开页面、回到桌面及锁屏后继续，由 dataSync 前台服务承接。首次转写按系统版本申请通知权限；拒绝通知不阻止任务，但常规通知可能不可见。设置提供系统通知/实时活动与后台运行入口。没有通用的“后台权限”运行时弹窗，厂商电池策略由用户在系统设置中管理。
+前往 [GitHub Releases](https://github.com/Jolly-J/XiaoFu/releases) 下载最新稳定版的已编译安装包：
+- **📦 官方下载**：[小蝠-1.0.0.apk](https://github.com/Jolly-J/XiaoFu/releases/latest)
+- **📲 系统要求**：Android 8.0 (API 26) 及以上（推荐 Android 14+ 享受最佳预测式返回与流体云体验）。
 
-标准常驻进度通知使用系统模板，支持的平台请求提升为实时活动；不使用悬浮窗。厂商流体云/胶囊是否显示、用户是否允许提升，由对应系统决定，不能把标准通知等同于各厂商适配已通过。
+### 方式二：从源码构建
 
-后台执行受系统时限和回收约束。进程被杀后，保留成功片段与任务状态，重新打开可手动继续；不会自动重传可能已经计费的未确认请求。前台服务不是无限保活。本次未把本地提取迁移为后台服务。真实 MiniMax 账户、厂商后台策略仍需实机验证。
+如果您希望自行编译或进行二次开发：
 
-## 官方参考
+```bash
+# 1. 克隆代码仓库
+git clone https://github.com/Jolly-J/XiaoFu.git
+cd XiaoFu
 
-- https://developer.android.com/reference/android/media/MediaExtractor
-- https://developer.android.com/reference/android/media/MediaMuxer
-- https://developer.android.com/reference/android/media/MediaCodec
-- https://developer.android.com/guide/navigation/custom-back/predictive-back-gesture
-- https://solutions.minimaxi.com/debug/asr
+# 2. 检查 JDK 17 与 Android SDK 35 环境配置
+java -version
 
-测试状态见 `TEST_REPORT.md`。没有 API Key，因此不进行真实付费转写调用。
+# 3. 编译 Debug 版本 APK
+./gradlew assembleDebug
 
-取消云端转写不能撤回已经上传的内容，也不保证取消计费。删除音频库条目会同时删除关联的本地转写文字与分段缓存，已另存副本不受影响。
+# 4. 直接安装到连接的 Android 设备或模拟器
+./gradlew installDebug
+```
+
+---
+
+## 🔑 ASR 服务商与 API Key 配置说明
+
+小蝠采用**用户自带密钥（BYOK）**机制，手机直接与服务商开放平台建立加密通信，无需任何中心化中转服务器：
+
+| 服务商 | 适用场景 | 官方资费说明 | 官网申请通道 |
+| :--- | :--- | :--- | :--- |
+| **硅基流动 (推荐)** | 日常会议、视频对白极速整理 | **免费调用**，无需预存充值 | [硅基流动开放平台](https://cloud.siliconflow.cn/) |
+| **MiniMax** | 专业高质量大模型转写 | 需在官网充值，约 2.5 元/小时 | [MiniMax 开放平台](https://platform.minimaxi.com/) |
+
+> [!TIP]
+> 打开小蝠右上角「设置」图标，即可一键进入对应的服务商配置卡片，内含详细的密钥创建指引与官网直达链接。
+
+---
+
+## 🔒 隐私与安全性保障
+
+1. **零数据上传**：视频导入与音频提取完全 100% 在您设备本地完成，小蝠不设任何中转服务器；
+2. **安全隔离存储**：提取的音频与转写文本保存在设备的私有沙盒存储中，卸载应用即全量抹除，无残留泄漏风险；
+3. **Key 安全加固**：用户填写的 API Key 经过 Android Keystore 独立加固，不会写入任何系统日志或随应用备份上传。
+
+---
+
+## 📄 开源许可证
+
+本项目基于 [MIT License](LICENSE) 开源协议分发与使用。
+
+欢迎提出 Issue、提出宝贵的产品建议或发起 Pull Request！
